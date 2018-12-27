@@ -1,0 +1,618 @@
+/* fonts */
+@font-face {
+  font-family: "AvenirBold";
+  src: url("../fonts/AvenirNextCyr-Bold.ttf");
+}
+
+@font-face {
+  font-family: "AvenirReg";
+  src: url("../fonts/AvenirNextCyr-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ProximaNovaBlack";
+  src: url("../fonts/ProximaNova-Black.ttf");
+}
+
+@font-face {
+  font-family: "ProximaNovaBold";
+  src: url("../fonts/ProximaNova-Bold.ttf");
+}
+
+@font-face {
+  font-family: "ProximaNovaBoldRegular";
+  src: url("../fonts/ProximaNova-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ProximaNovaSemibold";
+  src: url("../fonts/ProximaNova-Semibold.ttf");
+}
+
+/* colors */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "ProximaNovaRegular", Helvetica, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: auto;
+  color: #464646;
+  /*font-weight: bold;*/
+}
+
+article {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: "ProximaNovaBold";
+  font-size: 18px;
+}
+
+.button {
+  padding: 5px 15px;
+  border: 3px solid #ffd007;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #ffd007, #9f8204);
+  padding: 8px 18px;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+h2 {
+  font-family: "ProximaNovaBold";
+  font-size: 48px;
+  color: black;
+  margin: 0 0 30px;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 190px;
+  height: 5px;
+  background-color: #ffd007;
+  margin-top: 5px;
+}
+
+#first-screen {
+  display: block;
+  width: 100%;
+  height: 950px;
+  background: url(../img/firstbg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#first-screen header {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.42);
+  border-bottom: #555354  3px solid;
+}
+
+#first-screen header article {
+  padding-top: 30px;
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#first-screen header article .logo {
+  width: 285px;
+  height: 75px;
+  background: url(../img/logo.png) no-repeat center;
+  background-size: cover;
+  margin-top: 5px;
+}
+
+#first-screen header article .right-side {
+  width: 830px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
+}
+
+#first-screen header article .right-side .contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#first-screen header article .right-side .contacts .contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 37px;
+}
+
+#first-screen header article .right-side .contacts .contact .ic-phone {
+  width: 30px;
+  height: 30px;
+  background: url(../img/phone.png) no-repeat center;
+  background-size: cover;
+  display: block;
+  margin-right: 15px;
+}
+
+#first-screen header article .right-side .contacts .contact a {
+  color: #ffd007;
+}
+
+#first-screen header article .right-side .contacts .contact .ic-mail {
+  width: 31px;
+  height: 23px;
+  background: url(../img/mail.png) no-repeat center;
+  background-size: cover;
+  display: block;
+  margin-right: 15px;
+}
+
+#first-screen header article .right-side nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#first-screen header article .right-side nav a {
+  height: 30px;
+}
+
+#first-screen header article .right-side nav a:hover {
+  border-bottom: #9a9999 2px solid;
+  box-sizing: border-box;
+}
+
+#first-screen .content {
+  margin-top: 80px;
+  width: 100%;
+  height: 100%;
+}
+
+#first-screen .content h1 {
+  font-family: "ProximaNovaBlack";
+  font-size: 60px;
+  color: white;
+  line-height: 1;
+  letter-spacing: 3px;
+  text-shadow: 3px 5px 46px #4e4e4e;
+}
+
+#first-screen .content .services {
+  margin-top: 40px;
+  height: 195px;
+  width: 668px;
+  background: #ffd007;
+  color: black;
+  font-family: "ProximaNovaBold";
+  font-size: 28px;
+}
+
+#first-screen .content .services ul {
+  padding-top: 17px;
+  margin-left: 20px;
+  width: 550px;
+  list-style-type: none;
+}
+
+#first-screen .content .services ul li {
+  padding-bottom: 7px;
+}
+
+#first-screen .content .contact-buttons {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#first-screen .content .scroll {
+  padding-top: 60px;
+  margin: 0 auto;
+  width: 30px;
+  height: 35px;
+  display: block;
+}
+
+#second-screen {
+  width: 100%;
+  height: 420px;
+  display: block;
+  padding-top: 60px;
+}
+
+#second-screen .wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#second-screen .wrap .left {
+  width: 480px;
+}
+
+#second-screen .wrap .left p {
+  line-height: 20pt;
+}
+
+#second-screen .wrap .right {
+  width: 460px;
+  margin-top: 35px;
+}
+
+#second-screen .wrap .right .up {
+  width: 100%;
+  height: 40px;
+  background: #313131;
+  padding-top: 15px;
+}
+
+#second-screen .wrap .right .up p {
+  color: white;
+  font-family: "ProximaNovaBold";
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#second-screen .wrap .right .down {
+  width: 430px;
+  height: 210px;
+  background: #e8e8e8;
+  padding: 30px 0 0 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+#second-screen .wrap .right .down .right-p {
+  color: #313131;
+  font-family: "ProximaNovaBold";
+  font-size: 18px;
+  margin-left: 30px;
+  width: 315px;
+}
+
+#second-screen .wrap .right .down .right-p p {
+  margin-bottom: 30px;
+}
+
+#second-screen .wrap .right .down .left-cups {
+  width: 90px;
+  margin-top: -10px;
+}
+
+#second-screen .wrap .right .down .left-cups .cups {
+  color: #ffd007;
+  font-family: "ProximaNovaBlack";
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#third-screen {
+  width: 100%;
+  height: 200px;
+  background: url(../img/thirdbg.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 90px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#third-screen .wrap {
+  text-align: center;
+}
+
+#third-screen .wrap .quot {
+  display: inline-block;
+  vertical-align: top;
+  width: 62px;
+  height: 50px;
+  background: url(../img/quots.png) no-repeat center;
+}
+
+#third-screen .wrap p {
+  font-family: "ProximaNovaSemibold";
+  display: inline-block;
+  color: white;
+  font-size: 24px;
+  width: 900px;
+  padding: 15px 0 0 25px;
+  text-align: left;
+}
+
+#forth-screen {
+  width: 100%;
+  height: 870px;
+  padding-top: 80px;
+}
+
+#forth-screen h3 {
+  font-family: "ProximaNovaBold";
+  font-size: 24px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+#forth-screen .content {
+  display: flex;
+  flex-direction: row;
+}
+
+#forth-screen .content .list {
+  width: 1040px;
+  padding-left: 70px;
+}
+
+#forth-screen .content .list p {
+  font-family: "ProximaNovaSemibold";
+  font-size: 20px;
+  color: #636363;
+  padding-bottom: 30px;
+  line-height: 25pt;
+}
+
+#forth-screen .line {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 670px;
+  background-color: #ffd007;
+  margin-top: -10px;
+}
+
+#fifth-screen {
+  width: 100%;
+  height: 220px;
+  padding-top: 60px;
+  background: #e8e8e8;
+}
+
+#fifth-screen .wrap {
+  text-align: center;
+}
+
+#fifth-screen .wrap .guaranty {
+  background: url(../img/star.png) no-repeat center;
+  width: 101px;
+  height: 154px;
+  display: inline-block;
+}
+
+#fifth-screen .wrap p {
+  font-family: "ProximaNovaSemibold";
+  display: inline-block;
+  color: black;
+  font-size: 24px;
+  width: 920px;
+  text-align: left;
+  vertical-align: top;
+  padding: 30px 0 0 40px;
+  line-height: 25pt;
+}
+
+#six-screen {
+  width: 100%;
+  height: 900px;
+}
+
+#six-screen h2 {
+  margin: 80px 0 0 0;
+}
+
+#six-screen .wrap {
+  margin-top: 100px;
+  width: 100%;
+}
+
+#six-screen .wrap .first-line, #six-screen .wrap .second-line {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+#six-screen .wrap .first-line .card, #six-screen .wrap .second-line .card {
+  width: 370px;
+  height: 285px;
+}
+
+#six-screen .wrap .first-line .card .cover, #six-screen .wrap .second-line .card .cover {
+  width: 100%;
+  height: 237px;
+  background: black;
+  margin-bottom: 20px;
+}
+
+#six-screen .wrap .first-line .card .cover .overlay, #six-screen .wrap .second-line .card .cover .overlay {
+  display: block;
+  width: 100%;
+  height: 237px;
+  background: url(../img/nl-cover.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap .first-line .card .cover .overlay:hover, #six-screen .wrap .second-line .card .cover .overlay:hover {
+  opacity: 0.8;
+}
+
+#six-screen .wrap .first-line .card .cover .beeline, #six-screen .wrap .second-line .card .cover .beeline {
+  background: url(../img/beeline.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap .first-line .card .cover .mts, #six-screen .wrap .second-line .card .cover .mts {
+  background: url(../img/mts.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap .first-line .card .cover .sushi, #six-screen .wrap .second-line .card .cover .sushi {
+  background: url(../img/sushi.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap .first-line .card .cover .dns, #six-screen .wrap .second-line .card .cover .dns {
+  background: url(../img/dns.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap .first-line .card .cover .teleru, #six-screen .wrap .second-line .card .cover .teleru {
+  background: url(../img/teleru.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap .first-line p, #six-screen .wrap .second-line p {
+  text-align: center;
+  text-transform: uppercase;
+  color: #5f5f5f;
+  font-family: "ProximaNovaSemibold";
+  font-size: 24px;
+}
+
+#six-screen .wrap .second-line {
+  margin-bottom: 100px;
+}
+
+#six-screen .wrap-click {
+  margin: 80px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#six-screen .wrap-click .upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+#six-screen .wrap-click .upper h3 {
+  font-family: "ProximaNovaBold";
+  font-size: 36px;
+  color: black;
+}
+
+#six-screen .wrap-click .upper h3:after {
+  content: "";
+  display: block;
+  width: 145px;
+  height: 5px;
+  background-color: #ffd007;
+  margin-top: 5px;
+}
+
+#six-screen .wrap-click .upper .button-close {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: #e7e7e7;
+}
+
+#six-screen .wrap-click .upper .button-close .close {
+  margin: 0 auto;
+  padding-top: 18px;
+  display: block;
+}
+
+#six-screen .wrap-click .upper .button-close:hover {
+  background: #ffd007;
+}
+
+#six-screen .wrap-click .slider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#six-screen .wrap-click .slider .main-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 515px;
+  margin-bottom: 50px;
+}
+
+#six-screen .wrap-click .slider .main-slide .arrow {
+  display: block;
+  width: 40px;
+  height: 70px;
+}
+
+#six-screen .wrap-click .slider .main-slide .left {
+  width: 40px;
+  height: 70px;
+  display: block;
+  background: url(/img/arrow-left.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap-click .slider .main-slide .left:hover {
+  background: url(/img/arrow-left2.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap-click .slider .main-slide .right {
+  width: 40px;
+  height: 70px;
+  display: block;
+  background: url(/img/arrow-right.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap-click .slider .main-slide .right:hover {
+  background: url(/img/arrow-right2.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap-click .slider .main-slide .slides {
+  display: block;
+  width: 800px;
+  height: 510px;
+  border: 5px solid white;
+  box-shadow: 3px 30px 80px #848484;
+  background: url(/img/nl/1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap-click .slider .slider-imges {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#six-screen .wrap-click .slider .slider-imges .slider-img {
+  display: block;
+  width: 170px;
+  height: 110px;
+  background: url(/img/nl/1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .wrap-click .slider .slider-imges .img-active {
+  border: 5px solid white;
+  box-shadow: 3px 30px 80px #848484;
+}
