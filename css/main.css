@@ -193,6 +193,10 @@ h2:after {
   text-shadow: 3px 5px 46px #4e4e4e;
 }
 
+#first-screen .content .quotes {
+  font-family: "AvenirBold";
+}
+
 #first-screen .content .services {
   margin-top: 40px;
   height: 195px;
