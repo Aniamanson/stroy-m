@@ -625,3 +625,46 @@ h2:after {
   border: 5px solid white;
   box-shadow: 3px 30px 80px #848484;
 }
+
+#seven-screen {
+  background: url(/img/sevenbg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#seven-screen h2 {
+  color: white;
+  padding-top: 80px;
+}
+
+#seven-screen h2:after {
+  width: 220px;
+}
+
+#seven-screen .ic-wrap {
+  width: 100%;
+  margin-top: 90px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#seven-screen .ic-wrap .card {
+  width: 310px;
+  margin-bottom: 75px;
+}
+
+#seven-screen .ic-wrap .card .icon {
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+#seven-screen .ic-wrap .card p {
+  font-family: "ProximaNovaBold";
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 23pt;
+}
