@@ -631,6 +631,47 @@ h2:after {
     }
 }
 
+#seven-screen {
+    background: url(/img/sevenbg.jpg) no-repeat center;
+    background-size: cover;
 
+    h2 {
+        color: white;
+        padding-top: 80px;
+    }
+    h2:after {
+        width: 220px;
+    }
+
+    .ic-wrap {
+        width: 100%;
+        margin-top: 90px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card {
+            width: 310px;
+            margin-bottom: 75px;
+
+            .icon {
+                display: block;
+                height: 100px;
+                margin: 0 auto;
+                padding-bottom: 30px;
+            }
+
+            p {
+                font-family: "ProximaNovaBold";
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 23pt;
+            }
+        }
+
+    }
+}
 
 
