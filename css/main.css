@@ -89,6 +89,14 @@ h2:after {
   margin-top: 5px;
 }
 
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 #first-screen {
   display: block;
   width: 100%;
@@ -419,13 +427,12 @@ h2:after {
   height: 900px;
 }
 
-#six-screen h2 {
-  margin: 80px 0 0 0;
+#six-screen .wrap {
+  width: 100%;
 }
 
-#six-screen .wrap {
-  margin-top: 100px;
-  width: 100%;
+#six-screen .wrap h2 {
+  margin: 80px 0 100px 0;
 }
 
 #six-screen .wrap .first-line, #six-screen .wrap .second-line {
@@ -500,8 +507,6 @@ h2:after {
 #six-screen .wrap-click {
   margin: 80px 0 0 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 #six-screen .wrap-click .upper {

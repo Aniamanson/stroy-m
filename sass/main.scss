@@ -73,6 +73,14 @@ h2:after {
     margin-top: 5px;
 }
 
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
 
 
 
@@ -418,14 +426,13 @@ h2:after {
     width: 100%;
     height: 900px;
 
-    h2 {
-        margin: 80px 0 0 0;
-        
-    }
-
     .wrap {
-        margin-top: 100px;
         width: 100%;
+
+        h2 {
+            margin: 80px 0 100px 0;
+            
+        }
 
         .first-line, .second-line {
             width: 100%;
@@ -500,8 +507,7 @@ h2:after {
     .wrap-click {
         margin: 80px 0 0 0;
         width: 100%;
-        display: flex;
-        flex-direction: column;
+
 
         .upper {
             display: flex;
