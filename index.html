@@ -163,13 +163,13 @@
                     </div>
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay  beeline" onclick="hiddenPortfolio(); return false;" href="#"></a>
+                            <a class="overlay  beeline" onclick="Modal.open(this); return false;" href="#"></a>
                         </div>
                         <p>БИЛАЙН</p>
                     </div>
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay mts"></a>
+                            <a class="overlay mts" onclick="Modal.open(this); return false;"></a>
                         </div>
                         <p>МТС</p>
                     </div>
@@ -198,8 +198,8 @@
             
             <div id="portfolio-modal" class="wrap-click hidden">
                 <div class="upper">
-                    <h3>NL STORE</h3>
-                    <div class="button-close" onclick="closeModal(); return false;">
+                    <h3 id="albumName">NL STORE</h3>
+                    <div class="button-close" onclick="Modal.close(); return false;">
                         <img class="close" src="img/close.png">
                     </div>
                 </div>
