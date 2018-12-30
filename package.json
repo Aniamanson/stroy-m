@@ -1,0 +1,25 @@
+{
+  "name": "stroy-m",
+  "version": "1.0.0",
+  "description": "landing for stroy-m",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp sass:watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aniamanson/stroy-m.git"
+  },
+  "author": "Vershkova Anna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aniamanson/stroy-m/issues"
+  },
+  "homepage": "https://github.com/Aniamanson/stroy-m#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
