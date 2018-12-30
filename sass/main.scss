@@ -621,6 +621,13 @@ h2:after {
                     background-size: cover;
                 }
 
+                .slider-img:hover {
+                    box-shadow: inset 0px 0px 20px 100px rgba(0,0,0,0.42); 
+                    
+                    
+                }
+
+
                 .img-active {
                     border: 5px solid white;
                     box-shadow: 3px 30px 80px #848484;
