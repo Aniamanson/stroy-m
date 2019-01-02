@@ -97,6 +97,38 @@ h2:after {
   display: none;
 }
 
+#six-screen .arrow, #ten-screen .arrow {
+  display: block;
+  width: 40px;
+  height: 70px;
+}
+
+#six-screen .left, #ten-screen .left {
+  width: 40px;
+  height: 70px;
+  display: block;
+  background: url(/img/arrow-left.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .left:hover, #ten-screen .left:hover {
+  background: url(/img/arrow-left2.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .right, #ten-screen .right {
+  width: 40px;
+  height: 70px;
+  display: block;
+  background: url(/img/arrow-right.png) no-repeat center;
+  background-size: cover;
+}
+
+#six-screen .right:hover, #ten-screen .right:hover {
+  background: url(/img/arrow-right2.png) no-repeat center;
+  background-size: cover;
+}
+
 #first-screen {
   display: block;
   width: 100%;
@@ -563,38 +595,6 @@ h2:after {
   margin-bottom: 50px;
 }
 
-#six-screen .wrap-click .slider .main-slide .arrow {
-  display: block;
-  width: 40px;
-  height: 70px;
-}
-
-#six-screen .wrap-click .slider .main-slide .left {
-  width: 40px;
-  height: 70px;
-  display: block;
-  background: url(/img/arrow-left.png) no-repeat center;
-  background-size: cover;
-}
-
-#six-screen .wrap-click .slider .main-slide .left:hover {
-  background: url(/img/arrow-left2.png) no-repeat center;
-  background-size: cover;
-}
-
-#six-screen .wrap-click .slider .main-slide .right {
-  width: 40px;
-  height: 70px;
-  display: block;
-  background: url(/img/arrow-right.png) no-repeat center;
-  background-size: cover;
-}
-
-#six-screen .wrap-click .slider .main-slide .right:hover {
-  background: url(/img/arrow-right2.png) no-repeat center;
-  background-size: cover;
-}
-
 #six-screen .wrap-click .slider .main-slide .slides {
   display: block;
   width: 800px;
@@ -824,4 +824,81 @@ h2:after {
   bottom: 2px;
   left: 2px;
   background: url(/img/check.png) no-repeat center;
+}
+
+#ten-screen {
+  height: 370px;
+}
+
+#ten-screen article {
+  height: auto;
+}
+
+#ten-screen article h2 {
+  padding-top: 80px;
+  margin-bottom: 60px;
+}
+
+#ten-screen article h2:after {
+  width: 295px;
+}
+
+#ten-screen article .slider {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#ten-screen article .slider .slides {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+  align-items: center;
+}
+
+#eleven-screen {
+  height: 1260px;
+  background: #f6f5f5;
+}
+
+#eleven-screen h2 {
+  padding-top: 80px;
+  margin-bottom: 40px;
+}
+
+#eleven-screen .map {
+  height: 700px;
+}
+
+#eleven-screen .areas {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#eleven-screen .areas .table {
+  height: 170px;
+}
+
+#eleven-screen .areas .table p {
+  font-family: "ProximaNovaBold";
+  font-size: 20px;
+  color: #464646;
+  margin-bottom: 15px;
+}
+
+#eleven-screen .areas .table p .dot {
+  display: none;
+  width: 12px;
+  height: 12px;
+  background: url(/img/dot.png) no-repeat center;
+  background-size: cover;
+  margin-right: 12px;
+}
+
+#eleven-screen .areas .table p .active {
+  display: inline-block;
 }

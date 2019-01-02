@@ -362,7 +362,9 @@
             <p>Заполните контактную форму и мы свяжемся с вами<br>
                 в течение 5 минут</p>
             <form name="callOrder" method="post" action="#" id="action">
-                <input type="text" placeholder="Имя" autocomplete="off">
+                <input type="text" id="name" value=" Имя" onfocus="if (this.value == ' Имя') 
+                {this.value = '';}" onblur="if (this.value == '') 
+                {this.value = ' Имя';}">
                 <input type="text" placeholder="Телефон" autocomplete="off">
                 <input type="submit" value="Заказать звонок" class="button">
                 <div class="checkbox-wrap">
@@ -373,6 +375,63 @@
                     </label>
                 </div>  
             </form>
+        </article>
+    </section>
+    <section id="ten-screen">
+        <article>
+            <h2>Наши клиенты / партнеры</h2>
+            <div class="slider">
+                <div class="arrow left"></div>
+                <div class="slides">
+                    <img src="/img/logo1.png" alt="" class="slide visible">
+                    <img src="/img/logo2.png" alt="" class="slide visible">
+                    <img src="/img/logo3.png" alt="" class="slide visible">
+                    <img src="/img/logo4.png" alt="" class="slide visible">
+                    <img src="/img/logo5.png" alt="" class="slide hidden">
+                    <img src="/img/logo6.png" alt="" class="slide hidden">
+                    <img src="/img/logo7.png" alt="" class="slide hidden">
+                    <img src="/img/logo8.png" alt="" class="slide hidden">
+                    <img src="/img/logo9.png" alt="" class="slide hidden">
+                    <img src="/img/logo10.png" alt="" class="slide hidden">
+                    <img src="/img/logo11.png" alt="" class="slide hidden">
+                    <img src="/img/logo12.png" alt="" class="slide hidden">
+                    <img src="/img/logo13.png" alt="" class="slide hidden">
+                    <img src="/img/logo14.png" alt="" class="slide hidden">
+                    <img src="/img/logo15.png" alt="" class="slide hidden">
+                    <img src="/img/logo16.png" alt="" class="slide hidden">
+                </div>
+                <div class="arrow right"></div>
+            </div>
+        </article> 
+    </section>
+    <section id="eleven-screen">
+        <article>
+            <h2>География реализованных объектов<br>
+                на карте России</h2>
+            <div class="map"></div>
+            <div class="areas">
+                <div class="table">
+                    <p><span class="dot active"></span>Свердловская область</p>
+                    <p><span class="dot"></span>Новосибирская область</p>
+                    <p><span class="dot"></span>Пермская область</p>
+                    <p><span class="dot"></span>Удмуртская республика</p>
+                    <p><span class="dot"></span>Республика Башкортостан</p>
+                </div>
+                <div class="table">
+                    <p><span class="dot"></span>Республика Татарстан</p>
+                    <p><span class="dot"></span>Чувашская республика</p>
+                    <p><span class="dot"></span>Ульяновская область</p>
+                    <p><span class="dot"></span>Самарская область</p>
+                    <p><span class="dot"></span>Саратовская область</p>
+                </div>
+                <div class="table">
+                    <p><span class="dot"></span>Нижегородская область</p>
+                    <p><span class="dot"></span>Краснодарский край</p>
+                    <p><span class="dot"></span>Ставропольский край</p>
+                    <p><span class="dot"></span>Ямало-Ненецкий автономный округ</p>
+                    <p><span class="dot"></span>Ханты-Мансийский автономный округ</p>
+                </div>
+            </div>
         </article>
     </section>
     <script src="js/wow.min.js"></script>
