@@ -45,3 +45,14 @@
     modal.close = closeModal;
     window.Modal = modal;
 }());
+
+document.onkeydown = function (e) {
+    switch(e.keyCode) {
+        case 27: console.log('ESC'); 
+            Modal.close();
+            break;
+        case 39: console.log('right'); break;
+        case 37: console.log('left'); break;
+    }
+    console.log(e.keyCode);
+}
