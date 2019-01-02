@@ -487,7 +487,9 @@ h2:after {
                         display: block;
                         width: 100%;
                         height: 237px;
-                        background: url(../img/nl-cover.jpg) no-repeat center;
+                        background-image: url(../img/nl-cover.jpg);
+                        background-repeat: no-repeat;
+                        background-position: center;
                         background-size: cover;
                     }
                     .overlay:hover {
@@ -495,28 +497,22 @@ h2:after {
                     }
 
                     .beeline {
-                        background: url(../img/beeline.jpg) no-repeat center;
-                        background-size: cover;
+                        background-image: url(../img/beeline.jpg);
                     }
 
                     .mts {
-                        background: url(../img/mts.jpg) no-repeat center;
-                        background-size: cover; 
+                        background-image: url(../img/mts.jpg);
                     }
 
                     .sushi {
-                        background: url(../img/sushi.jpg) no-repeat center;
-                        background-size: cover;
+                        background-image: url(../img/sushi.jpg);
                     }
 
                     .dns {
-                        background: url(../img/dns.jpg) no-repeat center;
-                        background-size: cover;
-                    }
+                        background-image: url(../img/dns.jpg);
 
                     .teleru {
-                        background: url(../img/teleru.jpg) no-repeat center;
-                        background-size: cover;
+                        background-image: url(../img/teleru.jpg);
                     }
                 }
 
@@ -593,16 +589,15 @@ h2:after {
                 height: 515px;
                 margin-bottom: 50px;
 
-
-
-
                 .slides {
                     display: block;
                     width: 800px;
                     height: 510px;
                     border: 5px solid white;
                     box-shadow: 3px 30px 80px #848484;
-                    background: url(/img/nl/1.jpg) no-repeat center;
+                    background-image: url(/img/nl/1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
                     background-size: cover;
                 }
             }
@@ -618,7 +613,9 @@ h2:after {
                     display: block;
                     width: 170px;
                     height: 110px;
-                    background: url(/img/nl/1.jpg) no-repeat center;
+                    background-image: url(/img/nl/1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
                     background-size: cover;
                 }
 

@@ -491,7 +491,9 @@ h2:after {
   display: block;
   width: 100%;
   height: 237px;
-  background: url(../img/nl-cover.jpg) no-repeat center;
+  background-image: url(../img/nl-cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -500,8 +502,7 @@ h2:after {
 }
 
 #six-screen .wrap .first-line .card .cover .beeline, #six-screen .wrap .second-line .card .cover .beeline {
-  background: url(../img/beeline.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/beeline.jpg);
 }
 
 #six-screen .wrap .first-line .card .cover .mts, #six-screen .wrap .second-line .card .cover .mts {
