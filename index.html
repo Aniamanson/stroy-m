@@ -157,19 +157,19 @@
                 <div class="first-line">
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay" onclick="Modal.open(this); return false;" href="#"></a>
+                            <a class="overlay" onclick="Modal.open(this, 'nl'); return false;" href="#"></a>
                         </div>
                         <p>NL STORE</p>
                     </div>
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay  beeline" onclick="Modal.open(this); return false;" href="#"></a>
+                            <a class="overlay  beeline" onclick="Modal.open(this, 'beeline'); return false;" href="#"></a>
                         </div>
                         <p>БИЛАЙН</p>
                     </div>
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay mts" onclick="Modal.open(this); return false;" href="#"></a>
+                            <a class="overlay mts" onclick="Modal.open(this, 'mts'); return false;" href="#"></a>
                         </div>
                         <p>МТС</p>
                     </div>
@@ -177,19 +177,19 @@
                 <div class="second-line">
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay sushi" onclick="Modal.open(this); return false;" href="#"></a>
+                            <a class="overlay sushi" onclick="Modal.open(this, 'sushi'); return false;" href="#"></a>
                         </div>
                         <p>СУШИ-МАСТЕР</p>
                     </div>
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay dns" onclick="Modal.open(this); return false;" href="#"></a>
+                            <a class="overlay dns" onclick="Modal.open(this, 'dns'); return false;" href="#"></a>
                         </div>
                         <p>DNS</p>
                     </div>
                     <div class="card">
                         <div class="cover">
-                            <a class="overlay teleru" onclick="Modal.open(this); return false;" href="#"></a>
+                            <a class="overlay teleru" onclick="Modal.open(this, 'teleru'); return false;" href="#"></a>
                         </div>
                         <p>ТЕЛЕФОН.РУ</p>
                     </div>
@@ -199,30 +199,25 @@
             <div id="portfolio-modal" class="wrap-click hidden">
                 <div class="upper">
                     <h3 id="albumName">NL STORE</h3>
-                    <div class="button-close" onclick="Modal.close(); return false;">
+                    <a class="button-close" href="#" onclick="Modal.close(); return false;">
                         <img class="close" src="img/close.png">
-                    </div>
+                    </a>
                 </div>
                 <div class="slider">
                     <div class="main-slide">
                         <div class="arrow left"></div>
                         <div class="slides">
-                            <img src="" alt="" class="slide slide-active">
-                            <img src="" alt="" class="slide">
-                            <img src="" alt="" class="slide">
-                            <img src="" alt="" class="slide">
-                            <img src="" alt="" class="slide">
-                            <img src="" alt="" class="slide">
+                            <img id="slider-view" src="" alt="" class="slide">
                         </div>
                         <div class="arrow right"></div>
                     </div>
-                    <div class="slider-imges">
-                        <a href="" class="slider-img img-active"></a>
-                        <a href="" class="slider-img"></a>
-                        <a href="" class="slider-img"></a>
-                        <a href="" class="slider-img"></a>
-                        <a href="" class="slider-img"></a>
-                        <a href="" class="slider-img"></a>
+                    <div class="slider-images">
+                        <a href="#" class="slider-img img-active"></a>
+                        <a href="#" class="slider-img"></a>
+                        <a href="#" class="slider-img"></a>
+                        <a href="#" class="slider-img"></a>
+                        <a href="#" class="slider-img"></a>
+                        <a href="#" class="slider-img"></a>
                     </div>
                 </div>
             </div>
