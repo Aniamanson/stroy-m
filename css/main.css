@@ -506,23 +506,19 @@ h2:after {
 }
 
 #six-screen .wrap .first-line .card .cover .mts, #six-screen .wrap .second-line .card .cover .mts {
-  background: url(../img/mts.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/mts.jpg);
 }
 
 #six-screen .wrap .first-line .card .cover .sushi, #six-screen .wrap .second-line .card .cover .sushi {
-  background: url(../img/sushi.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/sushi.jpg);
 }
 
 #six-screen .wrap .first-line .card .cover .dns, #six-screen .wrap .second-line .card .cover .dns {
-  background: url(../img/dns.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/dns.jpg);
 }
 
 #six-screen .wrap .first-line .card .cover .teleru, #six-screen .wrap .second-line .card .cover .teleru {
-  background: url(../img/teleru.jpg) no-repeat center;
-  background-size: cover;
+  background-image: url(../img/teleru.jpg);
 }
 
 #six-screen .wrap .first-line p, #six-screen .wrap .second-line p {
@@ -602,7 +598,9 @@ h2:after {
   height: 510px;
   border: 5px solid white;
   box-shadow: 3px 30px 80px #848484;
-  background: url(/img/nl/1.jpg) no-repeat center;
+  background-image: url(/img/nl/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -618,7 +616,9 @@ h2:after {
   display: block;
   width: 170px;
   height: 110px;
-  background: url(/img/nl/1.jpg) no-repeat center;
+  background-image: url(/img/nl/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 

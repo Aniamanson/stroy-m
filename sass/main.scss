@@ -462,8 +462,7 @@ h2:after {
         width: 100%;
 
         h2 {
-            margin: 80px 0 100px 0;
-            
+            margin: 80px 0 100px 0;  
         }
 
         .first-line, .second-line {
@@ -492,6 +491,7 @@ h2:after {
                         background-position: center;
                         background-size: cover;
                     }
+
                     .overlay:hover {
                         opacity: 0.8;
                     }
@@ -510,6 +510,7 @@ h2:after {
 
                     .dns {
                         background-image: url(../img/dns.jpg);
+                    }
 
                     .teleru {
                         background-image: url(../img/teleru.jpg);
@@ -910,7 +911,4 @@ h2:after {
             }
         }
     }
-
-
-
 }
