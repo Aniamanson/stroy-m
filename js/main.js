@@ -16,11 +16,11 @@
 
         //загружаем список изображений слайдера
         let path = albumsPath + folder + '/';
-        sliderView[0].style.background = 'url('+ path + '0' + '.jpg) no-repeat center';
+        sliderView[0].style.backgroundImage = 'url('+ path + '0' + '.jpg)';
         
         //превьюшки к сладеру
         for (let i = 0; i < 6; i++ ){
-            sliderThumbs[i].style.background = 'url('+ path + i + '.jpg) no-repeat center';
+            sliderThumbs[i].style.backgroundImage = 'url('+ path + i + '.jpg)';
         }
         // console.log(name, folder);
     }
