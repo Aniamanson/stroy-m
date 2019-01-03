@@ -71,5 +71,10 @@ document.onkeydown = function (e) {
         case 39: console.log('right'); break;
         case 37: console.log('left'); break;
     }
-    console.log(e.keyCode);
+    // console.log(e.keyCode);
 }
+
+$(function () {
+    $(".tel").mask("+7(000) 000-00-00");
+  });
+

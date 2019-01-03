@@ -357,10 +357,10 @@
             <p>Заполните контактную форму и мы свяжемся с вами<br>
                 в течение 5 минут</p>
             <form name="callOrder" method="post" action="#" id="action">
-                <input type="text" id="name" value=" Имя" onfocus="if (this.value == ' Имя') 
+                <input type="text" id="name" value="ФИО" autocomplete="off" onfocus="if (this.value == 'ФИО') 
                 {this.value = '';}" onblur="if (this.value == '') 
-                {this.value = ' Имя';}">
-                <input type="text" placeholder="Телефон" autocomplete="off">
+                {this.value = 'ФИО';}">
+                <input type="text" placeholder="Телефон" class="tel">
                 <input type="submit" value="Заказать звонок" class="button">
                 <div class="checkbox-wrap">
                     <label>
@@ -429,7 +429,69 @@
             </div>
         </article>
     </section>
+    <section id="twelwe-screen">
+        <div class="content">
+            <article>
+                <div class="upper">
+                    <h2>Контакты</h2>
+                    <a href="" class="button-up"></a>
+                </div>
+                <div class="left">
+                    <div class="contact">
+                        <div class="ic-phone"></div>
+                        <a href="tel:+79058007767">+7 (905) 800-77-67</a>
+                        <p>Директор Геннадий Александрович</p>
+                    </div>
+                    <div class="contact">
+                        <div class="ic-phone"></div>
+                        <a href="tel:+79190001234">+7 (919) 000-12-34</a>
+                        <p>Замдиректора Сергей Николаевич</p>
+                    </div>
+                    <div class="contact">
+                        <div class="ic-phone"></div>
+                        <a href="tel:+79194445555">+7 (919) 444-55-55</a>
+                        <p>Тех. Директор Владимир Владимирович</p>
+                    </div>
+                    <div class="contact">
+                        <div class="ic-mail"></div>
+                        <a href="mailto:yk_7@mail.ru?subject=Вопрос по строительным услугам">yk_7@mail.ru</a>
+                    </div>
+                </div>
+                <div class="right">
+                    <form name="callOrder" method="post" action="#" id="action">
+                        <input type="text" id="name" value="ФИО" autocomplete="off" onfocus="if (this.value == 'ФИО') 
+                        {this.value = '';}" onblur="if (this.value == '') 
+                        {this.value = 'ФИО';}">
+                        <input type="text" placeholder="Телефон" class="tel">
+                        <input type="submit" value="Заказать звонок" class="button">
+                        <div class="checkbox-wrap">
+                            <label>
+                                <input type="checkbox" class="checkbox" id="changes-check">
+                                <span class="checkbox-custom"></span>
+                                Согласие на обработку персональных данных
+                            </label>
+                        </div>  
+                    </form>
+                </div>
+            </article>
+            <div class="footer">
+                <article>
+                    <div class="logo"></div>
+                    <nav>
+                        <a href="#first-screen">Главная</a>
+                        <a href="#second-screen">О нас</a>
+                        <a href="#third-screen">Портфолио</a>
+                        <a href="#forth-screen">Услуги</a>
+                        <a href="#eighth-screen">Наши клиенты и партнеры</a>
+                        <a href="#nineth-screen">Контакты</a>
+                    </nav>
+                </article>
+            </div>
+        </div>
+    </section>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
