@@ -86,7 +86,4 @@ document.onkeydown = function (e) {
     // console.log(e.keyCode);
 }
 
-$(function () {
-    $(".tel").mask("+7(000) 000-00-00");
-});
 
