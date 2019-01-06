@@ -108,7 +108,6 @@
     }
 
     function close(){
-        console.log(this.modal);
         this.modal.style.display = 'none';
     }
 
