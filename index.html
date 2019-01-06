@@ -26,7 +26,7 @@
                             <div class="ic-mail"></div>
                             <a href="mailto:yk_7@mail.ru?subject=Вопрос по строительным услугам">yk_7@mail.ru</a>
                         </div>
-                        <a class="button">Обратный звонок</a>
+                        <a class="button" onclick="Modal.open('backcall'); return false;">Обратный звонок</a>
                     </div>
                     <nav>
                         <a href="#first-screen">Главная</a>
@@ -359,7 +359,7 @@
             <form name="callOrder" id="action">
                 <input type="text" placeholder="ФИО">
                 <input type="text" placeholder="Телефон">
-                <input type="button" value="Заказать звонок" class="button" id="myBtn">
+                <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal2')">
                 <div class="checkbox-wrap">
                     <label>
                         <input type="checkbox" class="checkbox" id="changes-check">
@@ -470,7 +470,7 @@
                                         Согласие на обработку персональных данных
                                     </label>
                                 </div>  
-                            <input type="button" value="Заказать звонок" class="button" id="myBtn" onclick="Modal.open('thankyouModal')">
+                            <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal')">
                         </form>
                     </div>
                 </div>
@@ -494,7 +494,7 @@
     </section>
     <div id="thankyouModal" class="modal">
         <div class="modal-content">
-            <a class="close-modal" onclick="Modal.close()">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
             </a>
             <p class="headline">Спасибо за обращение!</p>
@@ -502,6 +502,43 @@
                 в ближайшее время.</p>
         </div>
     </div>
+
+    <div id="thankyouModal2" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <p class="headline">Спасибо за обращение!</p>
+            <p>Наш менеджер свяжется с вами<br>
+                в ближайшее время.</p>
+        </div>
+    </div>
+
+    <div id="backcall" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <div class="modal-wrap">
+                <p>Заполните контактную форму и мы свяжемся с вами<br>
+                    в течение 5 минут</p>
+                <form name="callOrder" id="action">
+                    <input type="text" placeholder="ФИО">
+                    <input type="text" placeholder="Телефон">
+                    <input type="button" value="Заказать звонок" class="button">
+                    <div class="checkbox-wrap">
+                        <label>
+                            <input type="checkbox" class="checkbox" id="changes-check">
+                            <span class="checkbox-custom"></span>
+                            Согласие на обработку персональных данных
+                        </label>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <script src="js/wow.min.js"></script>
     <!-- <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.mask.min.js"></script> -->

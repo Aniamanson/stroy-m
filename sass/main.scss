@@ -90,12 +90,12 @@ h2:after {
         width: 40px;
         height: 70px;
         display: block;
-        background: url(/img/arrow-left.png) no-repeat center;
+        background: url(img/arrow-left.png) no-repeat center;
         background-size: cover;
     }
     
     .left:hover {
-        background: url(/img/arrow-left2.png) no-repeat center;
+        background: url(img/arrow-left2.png) no-repeat center;
         background-size: cover; 
     }
     
@@ -103,12 +103,12 @@ h2:after {
         width: 40px;
         height: 70px;
         display: block;
-        background: url(/img/arrow-right.png) no-repeat center;
+        background: url(img/arrow-right.png) no-repeat center;
         background-size: cover;
     }
     
     .right:hover {
-        background: url(/img/arrow-right2.png) no-repeat center;
+        background: url(img/arrow-right2.png) no-repeat center;
         background-size: cover; 
     }
 }
@@ -192,6 +192,7 @@ input:hover {
     color: white;
     padding: 5px 13px 7px 13px;
     border: 3px solid $yellow;
+    font-family: "ProximaNovaBold"
 }
 
 .button:hover {
@@ -222,7 +223,7 @@ input:hover {
         width: 20px;
         height: 20px;
         border-radius: 2px;
-        background-color: #bababa;;
+        background-color: #bababa;
         margin-right: 10px; 
         vertical-align:-3px;
     }
@@ -235,7 +236,7 @@ input:hover {
         right: 2px;
         bottom: 2px;
         left: 2px;
-        background: url(/img/check.png) no-repeat center;
+        background: url(img/check.png) no-repeat center;
     }
 }
 
@@ -284,6 +285,44 @@ input:hover {
         p {
             font-size: 24px;
             text-align: center;
+        }
+
+
+    }
+}
+
+#backcall {
+    .modal-content {
+        height: 345px;
+
+        .modal-wrap {
+            padding: 50px 0 0 60px;
+
+            p {
+                font-family: "ProximaNovaBold";
+                font-size: 30px;
+                color: black;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+
+            input:hover {
+                border-bottom: 2px solid $dark-g;
+                color:$dark-g;
+            }
+
+            .button {
+                color: black;
+            }
+            
+            .button:hover {
+                border: none;
+                background: $yellow;
+            }
+
+            .checkbox:checked + .checkbox-custom:before {
+                background: url(img/check2.png) no-repeat center;
+            }
         }
     }
 }
@@ -735,7 +774,7 @@ input:hover {
                     height: 510px;
                     border: 5px solid white;
                     box-shadow: 3px 30px 80px #848484;
-                    background-image: url(/img/nl/1.jpg);
+                    background-image: url(img/nl/1.jpg);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -753,7 +792,7 @@ input:hover {
                     display: block;
                     width: 170px;
                     height: 110px;
-                    background-image: url(/img/nl/1.jpg);
+                    background-image: url(img/nl/1.jpg);
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -776,7 +815,7 @@ input:hover {
 }
 
 #seven-screen {
-    background: url(/img/sevenbg.jpg) no-repeat center;
+    background: url(img/sevenbg.jpg) no-repeat center;
     background-size: cover;
 
     h2 {
@@ -881,7 +920,7 @@ input:hover {
 }
 
 #nine-screen {
-    background: url(/img/ninebg.jpg) no-repeat center;
+    background: url(img/ninebg.jpg) no-repeat center;
     background-size: cover;
     height: 458px;
 
@@ -969,7 +1008,7 @@ input:hover {
                     display: none;
                     width: 12px;
                     height: 12px;
-                    background: url(/img/dot.png) no-repeat center;
+                    background: url(img/dot.png) no-repeat center;
                     background-size: cover;
                     margin-right: 12px;
                     
@@ -984,7 +1023,7 @@ input:hover {
 }
 
 #twelwe-screen {
-    background: url(/img/footerbg.jpg) center no-repeat;
+    background: url(img/footerbg.jpg) center no-repeat;
     background-size: cover;
     padding-top: 80px;
     height: 620px;
