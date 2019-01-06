@@ -65,7 +65,6 @@
 
     function getAlbumName (name){
         return name.parentNode.parentNode.getElementsByTagName('p')[0].textContent;
-
     }
 
     function hiddenPortfolio (){
@@ -98,24 +97,22 @@
     window.Portfolio = exportPortfolio;
 }());
 
-var modal = getElementById('myModal');
-var close = getElementsByClassName('close-modal')[0];
-var btn = getElementById('myBtn');
+;(function(){
+    function exportModal(){}
+    let modal = {};
 
-btn.onclick = function (event) {
-    modal.style.display = "block";
-    event.preventDefault();
-    console.log('jryj');
-}
+    function open(name){
+        this.modal = document.getElementById(name);
+        this.modal.style.display = 'block';
+        console.log(name);
+    }
 
-close.onclick = function (event) {
-    modal.style.display = "none";
-    event.preventDefault();
-}
+    function close(){
+        console.log(this.modal);
+        this.modal.style.display = 'none';
+    }
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    } 
-    event.preventDefault();
-}
+    exportModal.open = open;
+    exportModal.close = close;
+    window.Modal = exportModal;
+}());
