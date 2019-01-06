@@ -1,5 +1,5 @@
 ;(function(){
-    function modal(value){}
+    function exportPortfolio(){}
 
     let portfolio = document.getElementById('portfolio-gallery');
     let portfolioModal = document.getElementById('portfolio-modal');
@@ -18,7 +18,7 @@
         //загружаем список изображений слайдера
         sliderView[0].style.backgroundImage = 'url(img/'+ activeFolder + '/0.jpg)';
         
-        //превьюшки к сладеру
+        //превьюшки к слайдеру
         for (let i = 0; i < 6; i++ ){
             sliderThumbs[i].style.backgroundImage = 'url(img/' + activeFolder + '/' + i +'.jpg)';
             sliderThumbs[i].setAttribute('id', i);
@@ -27,64 +27,76 @@
         }
     }
 
+    function close (){
+        portfolioModal.classList.remove('visible');
+        portfolioModal.classList.add('hidden');
+        portfolio.classList.remove('hidden');
+        activeImg = 0;
+    }
+
     function nextImg() {
         (activeImg >= 5) ? activeImg = 0 : activeImg++;
         sliderView[0].style.backgroundImage = 'url(img/'+ activeFolder + '/'+ activeImg +'.jpg)';
+        resetActiveImg();
     }
 
     function prevImg() {
         (activeImg <= 0) ? activeImg = 5 : activeImg--;
         sliderView[0].style.backgroundImage = 'url(img/'+ activeFolder + '/'+ activeImg +'.jpg)';
+        resetActiveImg();
     }
 
     function handler(e){
         activeImg = e.srcElement.id;
         sliderView[0].style.backgroundImage = e.srcElement.style.backgroundImage;
-        // TODO: доделать смену класса для активного изображения
-        e.srcElement.classList.add('img-active');
+        resetActiveImg();
+        e.preventDefault(); //отмена перезагрузки страницы при клике
     }
 
-
-    function closeModal (){
-        portfolioModal.classList.remove('visible');
-        portfolioModal.classList.add('hidden');
-        portfolio.classList.remove('hidden');
-        activeImg = 0;
-    };
+    function resetActiveImg(){
+        for (let i = 0; i < 6; i++ ){
+            if(i == activeImg) {
+                sliderThumbs[i].className = 'slider-img img-active';
+            } else {
+                sliderThumbs[i].classList.remove('img-active');
+            }
+        }
+    }
 
     function getAlbumName (name){
         return name.parentNode.parentNode.getElementsByTagName('p')[0].textContent;
 
     }
-    
+
     function hiddenPortfolio (){
         portfolio.classList.add('hidden');
         portfolioModal.classList.remove('hidden');
         portfolioModal.classList.add('visible');
-    };
-
-    //export
-    modal.open = open;
-    modal.close = closeModal;
-    modal.nextImg = nextImg;
-    modal.prevImg = prevImg;
-    window.Modal = modal;
-}());
-
-document.onkeydown = function (e) {
-    switch(e.keyCode) {
-        case 27: console.log('ESC'); 
-            Modal.close();
-            break;
-        case 39: console.log('right'); 
-            Modal.nextImg();
-            break;
-        case 37: console.log('left'); 
-            Modal.prevImg();
-            break;
     }
-    // console.log(e.keyCode);
-}
+
+    document.onkeydown = function (e) {
+        switch(e.keyCode) {
+            case 27: 
+                //console.log('ESC'); 
+                close();
+            break;
+            case 39: 
+                //console.log('right'); 
+                nextImg();
+            break;
+            case 37: 
+                //console.log('left'); 
+                prevImg();
+            break;
+        }
+    }
+
+    exportPortfolio.open = open;
+    exportPortfolio.close = close;
+    exportPortfolio.nextImg = nextImg;
+    exportPortfolio.prevImg = prevImg;
+    window.Portfolio = exportPortfolio;
+}());
 
 var modal = getElementById('myModal');
 var close = getElementsByClassName('close-modal')[0];
@@ -107,4 +119,3 @@ window.onclick = function (event) {
     } 
     event.preventDefault();
 }
-
