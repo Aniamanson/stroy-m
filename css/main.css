@@ -129,6 +129,127 @@ h2:after {
   background-size: cover;
 }
 
+.upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav a {
+  height: 30px;
+}
+
+nav a:hover {
+  border-bottom: #9a9999 2px solid;
+  box-sizing: border-box;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ic-phone {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-right: 15px;
+  background: url(../img/phone.png) no-repeat center;
+  background-size: cover;
+}
+
+input {
+  width: 220px;
+  height: 40px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #bababa;
+  background: none;
+  text-align: center;
+  font-family: "ProximaNovaSemibold";
+  font-size: 20px;
+  color: #bababa;
+  margin-right: 40px;
+}
+
+input::placeholder {
+  color: #bababa;
+}
+
+input::placeholder:hover {
+  color: white;
+}
+
+input:hover {
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.button {
+  color: white;
+  padding: 5px 13px 7px 13px;
+  border: 3px solid #ffd007;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, #ffd007, #9f8204);
+  padding: 8px 16px 10px 16px;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.checkbox-wrap {
+  margin-top: 40px;
+}
+
+.checkbox-wrap .checkbox {
+  display: none;
+}
+
+.checkbox-wrap label {
+  display: block;
+  font-family: "ProximaNovaSemibold";
+  font-size: 18px;
+}
+
+.checkbox-wrap .checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #bababa;
+  margin-right: 10px;
+  vertical-align: -3px;
+}
+
+.checkbox-wrap .checkbox:checked + .checkbox-custom:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  left: 2px;
+  background: url(/img/check.png) no-repeat center;
+}
+
 #first-screen {
   display: block;
   width: 100%;
@@ -175,19 +296,7 @@ h2:after {
 }
 
 #first-screen header article .right-side .contacts .contact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   margin-right: 37px;
-}
-
-#first-screen header article .right-side .contacts .contact .ic-phone {
-  width: 30px;
-  height: 30px;
-  background: url(../img/phone.png) no-repeat center;
-  background-size: cover;
-  display: block;
-  margin-right: 15px;
 }
 
 #first-screen header article .right-side .contacts .contact a {
@@ -201,21 +310,6 @@ h2:after {
   background-size: cover;
   display: block;
   margin-right: 15px;
-}
-
-#first-screen header article .right-side nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#first-screen header article .right-side nav a {
-  height: 30px;
-}
-
-#first-screen header article .right-side nav a:hover {
-  border-bottom: #9a9999 2px solid;
-  box-sizing: border-box;
 }
 
 #first-screen .content {
@@ -281,33 +375,27 @@ h2:after {
   padding-top: 60px;
 }
 
-#second-screen .wrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#second-screen .wrap .left {
+#second-screen .left {
   width: 480px;
 }
 
-#second-screen .wrap .left p {
+#second-screen .left p {
   line-height: 20pt;
 }
 
-#second-screen .wrap .right {
+#second-screen .right {
   width: 460px;
   margin-top: 35px;
 }
 
-#second-screen .wrap .right .up {
+#second-screen .right .up {
   width: 100%;
   height: 40px;
   background: #313131;
   padding-top: 15px;
 }
 
-#second-screen .wrap .right .up p {
+#second-screen .right .up p {
   color: white;
   font-family: "ProximaNovaBold";
   text-align: center;
@@ -315,7 +403,7 @@ h2:after {
   text-transform: uppercase;
 }
 
-#second-screen .wrap .right .down {
+#second-screen .right .down {
   width: 430px;
   height: 210px;
   background: #e8e8e8;
@@ -324,7 +412,7 @@ h2:after {
   flex-direction: row;
 }
 
-#second-screen .wrap .right .down .right-p {
+#second-screen .right .down .right-p {
   color: #313131;
   font-family: "ProximaNovaBold";
   font-size: 18px;
@@ -332,16 +420,16 @@ h2:after {
   width: 315px;
 }
 
-#second-screen .wrap .right .down .right-p p {
+#second-screen .right .down .right-p p {
   margin-bottom: 30px;
 }
 
-#second-screen .wrap .right .down .left-cups {
+#second-screen .right .down .left-cups {
   width: 90px;
   margin-top: -10px;
 }
 
-#second-screen .wrap .right .down .left-cups .cups {
+#second-screen .right .down .left-cups .cups {
   color: #ffd007;
   font-family: "ProximaNovaBlack";
   font-size: 30px;
@@ -538,20 +626,13 @@ h2:after {
   width: 100%;
 }
 
-#six-screen .wrap-click .upper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 60px;
-}
-
-#six-screen .wrap-click .upper h3 {
+#six-screen .wrap-click h3 {
   font-family: "ProximaNovaBold";
   font-size: 36px;
   color: black;
 }
 
-#six-screen .wrap-click .upper h3:after {
+#six-screen .wrap-click h3:after {
   content: "";
   display: block;
   width: 145px;
@@ -560,30 +641,30 @@ h2:after {
   margin-top: 5px;
 }
 
-#six-screen .wrap-click .upper .button-close {
+#six-screen .wrap-click .button-close {
   display: block;
   width: 70px;
   height: 70px;
   background: #e7e7e7;
 }
 
-#six-screen .wrap-click .upper .button-close .close {
+#six-screen .wrap-click .button-close .close {
   margin: 0 auto;
   padding-top: 18px;
   display: block;
 }
 
-#six-screen .wrap-click .upper .button-close:hover {
+#six-screen .wrap-click .button-close:hover {
   background: #ffd007;
 }
 
-#six-screen .wrap-click .slider {
+#six-screen .slider {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#six-screen .wrap-click .slider .main-slide {
+#six-screen .slider .main-slide {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -592,7 +673,7 @@ h2:after {
   margin-bottom: 50px;
 }
 
-#six-screen .wrap-click .slider .main-slide .slides {
+#six-screen .slider .main-slide .slides {
   display: block;
   width: 800px;
   height: 510px;
@@ -604,7 +685,7 @@ h2:after {
   background-size: cover;
 }
 
-#six-screen .wrap-click .slider .slider-images {
+#six-screen .slider .slider-images {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -612,7 +693,7 @@ h2:after {
   align-items: center;
 }
 
-#six-screen .wrap-click .slider .slider-images .slider-img {
+#six-screen .slider .slider-images .slider-img {
   display: block;
   width: 170px;
   height: 110px;
@@ -622,11 +703,11 @@ h2:after {
   background-size: cover;
 }
 
-#six-screen .wrap-click .slider .slider-images .slider-img:hover {
+#six-screen .slider .slider-images .slider-img:hover {
   box-shadow: inset 0px 0px 20px 100px rgba(0, 0, 0, 0.42);
 }
 
-#six-screen .wrap-click .slider .slider-images .img-active {
+#six-screen .slider .slider-images .img-active {
   border: 5px solid white;
   box-shadow: 3px 30px 80px #848484;
 }
@@ -758,75 +839,6 @@ h2:after {
   margin-bottom: 45px;
 }
 
-#nine-screen input {
-  width: 220px;
-  height: 40px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid #bababa;
-  background: none;
-  text-align: center;
-  font-family: "ProximaNovaSemibold";
-  font-size: 20px;
-  color: #bababa;
-  margin-right: 40px;
-}
-
-#nine-screen input:hover {
-  border-bottom: 2px solid white;
-  color: white;
-}
-
-#nine-screen .button {
-  padding: 5px 13px 7px 13px;
-  border: 3px solid #ffd007;
-}
-
-#nine-screen .button:hover {
-  background: linear-gradient(to bottom, #ffd007, #9f8204);
-  padding: 8px 16px 10px 16px;
-  border: none;
-  color: black;
-  cursor: pointer;
-}
-
-#nine-screen .checkbox-wrap {
-  margin-top: 40px;
-}
-
-#nine-screen .checkbox-wrap .checkbox {
-  display: none;
-}
-
-#nine-screen .checkbox-wrap label {
-  display: block;
-  font-family: "ProximaNovaSemibold";
-  font-size: 18px;
-}
-
-#nine-screen .checkbox-wrap .checkbox-custom {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 2px;
-  background-color: #bababa;
-  margin-right: 10px;
-  vertical-align: -3px;
-}
-
-#nine-screen .checkbox-wrap .checkbox:checked + .checkbox-custom:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  bottom: 2px;
-  left: 2px;
-  background: url(/img/check.png) no-repeat center;
-}
-
 #ten-screen {
   height: 370px;
 }
@@ -902,4 +914,128 @@ h2:after {
 
 #eleven-screen .areas .table p .active {
   display: inline-block;
+}
+
+#twelwe-screen {
+  background: url(/img/footerbg.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#twelwe-screen h2 {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+#twelwe-screen .button-up {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: #ffd007;
+}
+
+#twelwe-screen .button-up .up {
+  margin: 0 auto;
+  padding-top: 23px;
+  display: block;
+}
+
+#twelwe-screen .button-up:hover {
+  background: #cca602;
+}
+
+#twelwe-screen .left {
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+}
+
+#twelwe-screen .left .contact {
+  margin-bottom: 40px;
+}
+
+#twelwe-screen .left .contact a {
+  color: #ffd007;
+  margin-right: 17px;
+  font-size: 20px;
+}
+
+#twelwe-screen .left .contact .ic-phone-none {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-right: 15px;
+}
+
+#twelwe-screen .left .contact .ic-mail-2 {
+  width: 38px;
+  height: 30px;
+  display: block;
+  margin-right: 15px;
+  background: url(../img/mail-footer.png) no-repeat center;
+  background-size: cover;
+}
+
+#twelwe-screen .left .contact p {
+  color: white;
+  font-family: "ProximaNovaBold";
+  font-size: 20px;
+}
+
+#twelwe-screen .right {
+  margin: -20px;
+  width: 400px;
+  display: flex;
+}
+
+#twelwe-screen .right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#twelwe-screen .right form input {
+  margin: 0 0 27px 0;
+  width: 390px;
+}
+
+#twelwe-screen .right form .checkbox-wrap {
+  margin: 15px 0 40px 0;
+}
+
+#twelwe-screen .right form label {
+  color: #acb3ba;
+  font-size: 16px;
+}
+
+#twelwe-screen .right form .button {
+  width: 195px;
+}
+
+#twelwe-screen .footer {
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.42);
+  border-top: #2f2f30  3px solid;
+}
+
+#twelwe-screen .footer .wrapper {
+  height: 50px;
+  margin-top: 20px;
+  align-items: flex-end;
+}
+
+#twelwe-screen .footer .logo {
+  width: 190px;
+  height: 50px;
+  background: url(../img/logo.png) no-repeat center;
+  background-size: cover;
+}
+
+#twelwe-screen .footer nav {
+  width: 900px;
 }

@@ -113,7 +113,131 @@ h2:after {
     }
 }
 
+.upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
 
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+        height: 30px;
+    }
+
+    a:hover {
+        border-bottom: #9a9999 2px solid;
+        box-sizing:border-box;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+}
+
+
+.ic-phone {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 15px;
+    background: url(../img/phone.png) no-repeat center;
+    background-size: cover;
+}
+
+input {
+    width: 220px;
+    height: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #bababa;
+    background: none;
+    text-align: center;
+    font-family: "ProximaNovaSemibold";
+    font-size: 20px;
+    color: #bababa;
+    margin-right: 40px;
+
+  
+}
+input::placeholder {
+    color: #bababa;
+}
+
+input::placeholder:hover {
+    color:white;
+}
+
+input:hover {
+    border-bottom: 2px solid white;
+    color:white;
+}
+
+
+.button {
+    color: white;
+    padding: 5px 13px 7px 13px;
+    border: 3px solid $yellow;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #ffd007, #9f8204);
+    padding: 8px 16px 10px 16px;;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.checkbox-wrap {
+    margin-top: 40px;
+
+    .checkbox {
+        display: none;
+    }
+    
+    label {
+        display: block; 
+        font-family: "ProximaNovaSemibold";
+        font-size: 18px;
+        
+    }
+
+    .checkbox-custom {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: #bababa;;
+        margin-right: 10px; 
+        vertical-align:-3px;
+    }
+
+    .checkbox:checked + .checkbox-custom:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background: url(/img/check.png) no-repeat center;
+    }
+}
 
 
 #first-screen {
@@ -157,25 +281,12 @@ h2:after {
                     justify-content: flex-end;
 
                     .contact {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        margin-right: 37px;  
-                        .ic-phone {
-                            width: 30px;
-                            height: 30px;
-                            background: url(../img/phone.png) no-repeat center;
-                            background-size: cover;
-                            display: block;
-                            margin-right: 15px;
-                        }
+                        margin-right: 37px;
 
                         a {
                             color: $yellow;
                         }
 
-                    }
-                    .contact {
                         .ic-mail {
                             width: 31px;
                             height: 23px;
@@ -186,22 +297,6 @@ h2:after {
                         }
                     }
 
-
-                }
-
-                nav {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-
-                    a {
-                        height: 30px;
-                    }
-
-                    a:hover {
-                        border-bottom: #9a9999 2px solid;
-                        box-sizing:border-box;
-                    }
                 }
             }
         }
@@ -275,10 +370,7 @@ h2:after {
     display: block;
     padding-top: 60px;
 
-    .wrap {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+
 
         .left {
             width: 480px;
@@ -341,7 +433,6 @@ h2:after {
                 }
             }
         }
-    }
 }
 
 #third-screen {
@@ -537,13 +628,6 @@ h2:after {
         margin: 80px 0 0 0;
         width: 100%;
 
-
-        .upper {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 60px;
-
             h3 {
                 font-family: "ProximaNovaBold";
                 font-size: 36px;
@@ -634,7 +718,6 @@ h2:after {
 
             }
         }
-    }
 }
 
 #seven-screen {
@@ -764,75 +847,7 @@ h2:after {
         margin-bottom: 45px;
     }
 
-    input {
-        width: 220px;
-        height: 40px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 2px solid #bababa;
-        background: none;
-        text-align: center;
-        font-family: "ProximaNovaSemibold";
-        font-size: 20px;
-        color: #bababa;
-        margin-right: 40px;
-    }
-
-    input:hover {
-        border-bottom: 2px solid white;
-        color:white;
-    }
-
     
-    .button {
-        padding: 5px 13px 7px 13px;
-        border: 3px solid $yellow;
-    }
-    
-    .button:hover {
-        background: linear-gradient(to bottom, #ffd007, #9f8204);
-        padding: 8px 16px 10px 16px;;
-        border: none;
-        color: black;
-        cursor: pointer;
-    }
-
-    .checkbox-wrap {
-        margin-top: 40px;
-
-        .checkbox {
-            display: none;
-        }
-        
-        label {
-            display: block; 
-            font-family: "ProximaNovaSemibold";
-            font-size: 18px;
-        }
-    
-        .checkbox-custom {
-            position: relative;
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border-radius: 2px;
-            background-color: #bababa;;
-            margin-right: 10px; 
-            vertical-align:-3px;
-        }
-    
-        .checkbox:checked + .checkbox-custom:before {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            bottom: 2px;
-            left: 2px;
-            background: url(/img/check.png) no-repeat center;
-        }
-    }
 }
 
 #ten-screen {
@@ -911,4 +926,136 @@ h2:after {
             }
         }
     }
+}
+
+#twelwe-screen {
+    background: url(/img/footerbg.jpg) center no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    h2{
+        padding: 0px;
+        margin: 0px;
+        color: white;
+    }
+
+    .button-up {
+        display: block;
+        width: 70px;
+        height: 70px;
+        background: $yellow;
+
+        .up {
+            margin: 0 auto;
+            padding-top: 23px;
+            display: block;
+        }
+    }
+
+    .button-up:hover {
+        background: #cca602;
+    }
+
+    .left {
+        width: 680px;
+        display: flex;
+        flex-direction: column;
+
+        .contact {
+            margin-bottom: 40px;
+
+            a {
+                color: $yellow;
+                margin-right: 17px;
+                font-size: 20px;
+            }
+
+            .ic-phone-none {
+                width: 30px;
+                height: 30px;
+                display: block;
+                margin-right: 15px;
+            }
+    
+            .ic-mail-2 {
+                width: 38px;
+                height: 30px;
+                display: block;
+                margin-right: 15px;
+                background: url(../img/mail-footer.png) no-repeat center;
+                background-size: cover;
+            }
+
+            p {
+                color: white;
+                font-family: "ProximaNovaBold";
+                font-size: 20px;
+            }
+        }
+    }
+
+    .right {
+        margin: -20px;
+        width: 400px;
+        display: flex;
+
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                margin: 0 0 27px 0;
+                width: 390px;
+            }
+    
+            .checkbox-wrap {
+                margin: 15px 0 40px 0;
+            }
+    
+            label {
+                color: #acb3ba;
+                font-size: 16px;
+            }
+    
+            .button {
+                width: 195px;
+            }
+        }
+
+
+    }
+
+
+
+    .footer {
+        height: 110px;
+        background-color: rgba(0,0,0,0.42); 
+        border-top: #2f2f30  3px solid;
+
+        .wrapper {
+            height: 50px;
+            margin-top: 20px;
+            align-items: flex-end;
+        }
+
+        .logo { 
+            width: 190px;
+            height: 50px;
+            background: url(../img/logo.png) no-repeat center;
+            background-size: cover;
+        }
+
+        nav {
+            width: 900px;
+        }
+    }
+
+
 }
