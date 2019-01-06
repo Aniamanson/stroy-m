@@ -86,4 +86,25 @@ document.onkeydown = function (e) {
     // console.log(e.keyCode);
 }
 
+var modal = getElementById('myModal');
+var close = getElementsByClassName('close-modal')[0];
+var btn = getElementById('myBtn');
+
+btn.onclick = function (event) {
+    modal.style.display = "block";
+    event.preventDefault();
+    console.log('jryj');
+}
+
+close.onclick = function (event) {
+    modal.style.display = "none";
+    event.preventDefault();
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    } 
+    event.preventDefault();
+}
 

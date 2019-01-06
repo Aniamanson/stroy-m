@@ -356,10 +356,10 @@
             <h2>Остались вопросы?</h2>
             <p>Заполните контактную форму и мы свяжемся с вами<br>
                 в течение 5 минут</p>
-            <form name="callOrder" method="post" action="#" id="action">
+            <form name="callOrder" id="action">
                 <input type="text" placeholder="ФИО">
                 <input type="text" placeholder="Телефон">
-                <input type="submit" value="Заказать звонок" class="button">
+                <input type="button" value="Заказать звонок" class="button" id="myBtn">
                 <div class="checkbox-wrap">
                     <label>
                         <input type="checkbox" class="checkbox" id="changes-check">
@@ -459,7 +459,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <form name="callOrder" method="post" action="#" id="action">
+                        <form name="callOrder" id="action">
                             <input type="text" placeholder="ФИО">
                             <input type="text" placeholder="Телефон">
                             <input type="text" placeholder="Вопрос">
@@ -470,7 +470,7 @@
                                         Согласие на обработку персональных данных
                                     </label>
                                 </div>  
-                            <input type="submit" value="Заказать звонок" class="button">
+                            <input type="button" value="Заказать звонок" class="button" id="myBtn">
                         </form>
                     </div>
                 </div>
@@ -492,6 +492,16 @@
             </article>
         </div>
     </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <a class="close-modal">
+                <img class="close" src="img/close.png">
+            </a>
+            <p class="headline">Спасибо за обращение!</p>
+            <p>Наш менеджер свяжется с вами<br>
+                в ближайшее время.</p>
+        </div>
+    </div>
     <script src="js/wow.min.js"></script>
     <!-- <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.mask.min.js"></script> -->
