@@ -758,6 +758,7 @@ input:hover {
 
 #six-screen .slider .slider-images .slider-img:hover {
   box-shadow: inset 0px 0px 20px 100px rgba(0, 0, 0, 0.42);
+  box-shadow: 3px 30px 80px #848484;
 }
 
 #six-screen .slider .slider-images .img-active {
