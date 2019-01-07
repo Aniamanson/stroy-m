@@ -5,15 +5,16 @@
     let portfolioModal = document.getElementById('portfolio-modal');
     let sliderView = document.getElementsByClassName('slides');
     let sliderThumbs = document.getElementsByClassName('slider-img');
+    let albumName = document.getElementById('albumName');
     let activeFolder = 'nl';
     let activeImg = 0;
 
     function open(name, folder){
-        hiddenPortfolio();
+        activeImg = 0;
         activeFolder = folder;
-
-        let albumName = document.getElementById('albumName');
         albumName.textContent = getAlbumName(name);
+        hiddenPortfolio();
+        resetActiveImg();
 
         //загружаем список изображений слайдера
         sliderView[0].style.backgroundImage = 'url(img/'+ activeFolder + '/0.jpg)';
@@ -31,7 +32,6 @@
         portfolioModal.classList.remove('visible');
         portfolioModal.classList.add('hidden');
         portfolio.classList.remove('hidden');
-        activeImg = 0;
     }
 
     function nextImg() {
@@ -104,7 +104,7 @@
     function open(name){
         this.modal = document.getElementById(name);
         this.modal.style.display = 'block';
-        console.log(name);
+        // console.log(name);
     }
 
     function close(){
@@ -114,4 +114,21 @@
     exportModal.open = open;
     exportModal.close = close;
     window.Modal = exportModal;
+}());
+
+;(function(){
+    function exportСarousel(){}
+    let carouselContainer = document.getElementsByClassName('slides');
+    console.log(carouselContainer[0]);
+
+    function next(name){
+
+    }
+
+    function prev(){
+    }
+
+    exportСarousel.next = next;
+    exportСarousel.prev = prev;
+    window.Carousel = exportСarousel;
 }());
