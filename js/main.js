@@ -31,7 +31,7 @@
         portfolioModal.classList.remove('visible');
         portfolioModal.classList.add('hidden');
         portfolio.classList.remove('hidden');
-        activeImg = 0;
+        resetActiveImg();
     }
 
     function nextImg() {

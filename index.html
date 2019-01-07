@@ -53,9 +53,9 @@
                     </ul>
                 </div>
                 <div class="contact-buttons">
-                    <a class="button">Предложить объект</a>
-                    <a class="button">Пригласить в тендер</a>
-                    <a class="button">Вызов прораба / мастера</a>
+                    <a class="button" onclick="Modal.open('offer'); return false;">Предложить объект</a>
+                    <a class="button" onclick="Modal.open('tender'); return false;">Пригласить в тендер</a>
+                    <a class="button" onclick="Modal.open('master'); return false;">Вызов прораба / мастера</a>
                 </div>
                 <a class="scroll">
                     <img src="img/scroll.png">
@@ -538,6 +538,44 @@
         </div>
     </div>
 
+    <div id="tender" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <div class="modal-wrap">
+                <p>Пригласить в тендер</p>
+                <form name="callOrder" id="action">
+                    <input type="text" placeholder="ФИО">
+                    <input type="text" placeholder="Телефон">
+                    <input type="text" placeholder="E-mail">
+                    <input type="button" value="Отправить приглашение" class="button">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="offer" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <div class="modal-wrap">
+                <div class="left">
+                    <p>Предложить объект</p>
+                    <form name="callOrder" id="action">
+                        <input type="text" placeholder="ФИО">
+                        <input type="text" placeholder="Название организации">
+                        <input type="text" placeholder="Телефон">
+                </div>
+                <div class="right">
+                    <textarea placeholder="Информация о заказе" cols="30" rows="10"></textarea>
+                </div>
+                <input type="button" value="Отправить заявку" class="button">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="js/wow.min.js"></script>
     <!-- <script src="js/jquery-3.3.1.min.js"></script>
