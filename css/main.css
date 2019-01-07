@@ -298,15 +298,15 @@ input:hover {
   text-align: center;
 }
 
-#backcall .modal-content {
+#backcall .modal-content, #tender .modal-content, #master .modal-content, #offer .modal-content {
   height: 345px;
 }
 
-#backcall .modal-content .modal-wrap {
+#backcall .modal-content .modal-wrap, #tender .modal-content .modal-wrap, #master .modal-content .modal-wrap, #offer .modal-content .modal-wrap {
   padding: 50px 0 0 60px;
 }
 
-#backcall .modal-content .modal-wrap p {
+#backcall .modal-content .modal-wrap p, #tender .modal-content .modal-wrap p, #master .modal-content .modal-wrap p, #offer .modal-content .modal-wrap p {
   font-family: "ProximaNovaBold";
   font-size: 30px;
   color: black;
@@ -314,22 +314,67 @@ input:hover {
   text-align: left;
 }
 
-#backcall .modal-content .modal-wrap input:hover {
+#backcall .modal-content .modal-wrap input:hover, #tender .modal-content .modal-wrap input:hover, #master .modal-content .modal-wrap input:hover, #offer .modal-content .modal-wrap input:hover {
   border-bottom: 2px solid #313131;
   color: #313131;
 }
 
-#backcall .modal-content .modal-wrap .button {
+#backcall .modal-content .modal-wrap .button, #tender .modal-content .modal-wrap .button, #master .modal-content .modal-wrap .button, #offer .modal-content .modal-wrap .button {
   color: black;
 }
 
-#backcall .modal-content .modal-wrap .button:hover {
+#backcall .modal-content .modal-wrap .button:hover, #tender .modal-content .modal-wrap .button:hover, #master .modal-content .modal-wrap .button:hover, #offer .modal-content .modal-wrap .button:hover {
   border: none;
   background: #ffd007;
 }
 
-#backcall .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before {
+#backcall .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #tender .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #master .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #offer .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before {
   background: url(../img/check2.png) no-repeat center;
+}
+
+#tender .modal-content {
+  width: 495px;
+  height: 465px;
+}
+
+#tender .modal-content .modal-wrap {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 310px;
+}
+
+#tender .modal-content p {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#tender .modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tender .modal-content form input {
+  margin: 0 0 27px 0;
+  width: 300px;
+}
+
+#tender .modal-content form .button {
+  margin-top: 30px;
+}
+
+#offer .modal-content {
+  height: 490px;
+  display: flex;
+  align-items: center;
+}
+
+#offer .modal-content .left {
+  width: 300px;
+}
+
+#offer .modal-content .right {
+  width: 430px;
 }
 
 #first-screen {
@@ -952,7 +997,7 @@ input:hover {
   justify-content: space-between;
 }
 
-#ten-screen article .slider .slides {
+#ten-screen article .slider .carousel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

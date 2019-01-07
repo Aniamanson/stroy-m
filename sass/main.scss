@@ -291,7 +291,7 @@ input:hover {
     }
 }
 
-#backcall {
+#backcall, #tender, #master, #offer {
     .modal-content {
         height: 345px;
 
@@ -325,6 +325,58 @@ input:hover {
             }
         }
     }
+}
+
+#tender {
+
+    .modal-content {
+        width: 495px;
+        height: 465px;
+
+        .modal-wrap {
+            padding-top: 50px;
+            margin: 0 auto;
+            width: 310px;
+        }
+
+        p {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                margin: 0 0 27px 0;
+                width: 300px;
+            }
+    
+            .button {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+#offer {
+    .modal-content {
+        height: 490px;
+        display: flex;
+        align-items: center;
+
+        .left {
+            width: 300px;
+        }
+
+        .right {
+            width:430px;
+        }
+    
+    }
+
 }
 
 
@@ -965,7 +1017,7 @@ input:hover {
             flex-direction: row;
             justify-content: space-between;
 
-            .slides {
+            .carousel {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
