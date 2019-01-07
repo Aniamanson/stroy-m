@@ -334,7 +334,7 @@ input:hover {
         height: 465px;
 
         .modal-wrap {
-            padding-top: 50px;
+            padding: 50px 0 0 0;
             margin: 0 auto;
             width: 310px;
         }
@@ -361,22 +361,83 @@ input:hover {
     }
 }
 
-#offer {
+#offer, #master {
+
     .modal-content {
         height: 490px;
+        
+        .content-wrap {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        width: 960px;
 
-        .left {
-            width: 300px;
-        }
+            .modal-wrap {
+                height: 265px;
+                padding: 0 75px 0 75px;
 
-        .right {
-            width:430px;
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    .wrap {
+                        display: flex;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin-bottom: 50px;
+
+                        .left {
+                            width: 300px;
+        
+                            input {
+                                margin: 0 0 27px 0;
+                                width: 290px;
+                            }
+                        }
+                    
+                        .right {
+                            width:430px;
+                            align-self: flex-end;
+        
+                            textarea {
+                                resize: none;
+                                width: 426px;
+                                height: 148px;
+                                margin-bottom: 20px;
+                                border: 2px solid #bababa;
+                                padding: 15px 0 0 15px;
+        
+                                &::placeholder {
+                                    color: #bababa;
+                                    font-family: "ProximaNovaSemibold";
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .button {
+                        color: black;
+                        margin: 0 auto;
+                    }
+        
+                    .button:hover {
+                        border: none;
+                        background: $yellow;
+                    }
+                }
+            }
         }
-    
+    }
+}
+
+#master {
+    .modal-content {
+        height: 420px;
     }
 
+    textarea {
+        height: 100px;
+    }
 }
 
 

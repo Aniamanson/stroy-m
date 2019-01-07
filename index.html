@@ -560,22 +560,51 @@
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
             </a>
-            <div class="modal-wrap">
-                <div class="left">
-                    <p>Предложить объект</p>
+            <div class="content-wrap">
+                <div class="modal-wrap">
                     <form name="callOrder" id="action">
-                        <input type="text" placeholder="ФИО">
-                        <input type="text" placeholder="Название организации">
-                        <input type="text" placeholder="Телефон">
+                        <div class="wrap">
+                            <div class="left">
+                                <p>Предложить объект</p>
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Название организации">
+                                    <input type="text" placeholder="Телефон">
+                            </div>
+                            <div class="right">
+                                <textarea placeholder="Информация о заказе"></textarea>
+                            </div>
+                        </div>
+                        <input type="button" value="Отправить заявку" class="button">
+                    </form>
                 </div>
-                <div class="right">
-                    <textarea placeholder="Информация о заказе" cols="30" rows="10"></textarea>
-                </div>
-                <input type="button" value="Отправить заявку" class="button">
-                </form>
             </div>
         </div>
     </div>
+
+    <div id="master" class="modal">
+            <div class="modal-content">
+                <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                    <img class="close" src="img/close.png">
+                </a>
+                <div class="content-wrap">
+                    <div class="modal-wrap">
+                        <form name="callOrder" id="action">
+                            <div class="wrap">
+                                <div class="left">
+                                    <p>Вызов прораба</p>
+                                        <input type="text" placeholder="ФИО">
+                                        <input type="text" placeholder="Телефон">
+                                </div>
+                                <div class="right">
+                                    <textarea placeholder="Информация о заказе"></textarea>
+                                </div>
+                            </div>
+                            <input type="button" value="Позвоните мне!" class="button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="js/wow.min.js"></script>
     <!-- <script src="js/jquery-3.3.1.min.js"></script>
