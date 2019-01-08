@@ -97,6 +97,15 @@ h2:after {
   display: none;
 }
 
+.menu {
+  display: block;
+  background: url(../img/menu.png) no-repeat center;
+  background-size: cover;
+  width: 48px;
+  height: 39px;
+  cursor: pointer;
+}
+
 #six-screen .arrow, #ten-screen .arrow {
   display: block;
   width: 40px;
@@ -548,7 +557,7 @@ input:hover {
   justify-content: space-between;
 }
 
-#first-screen .content .scroll {
+#first-screen .content #scroll {
   padding-top: 60px;
   margin: 0 auto;
   width: 30px;
@@ -1067,7 +1076,7 @@ input:hover {
 }
 
 #eleven-screen {
-  height: 1260px;
+  height: 1060px;
   background: #f6f5f5;
 }
 
@@ -1076,12 +1085,32 @@ input:hover {
   margin-bottom: 40px;
 }
 
-#eleven-screen .map {
-  height: 700px;
+#eleven-screen #map {
+  height: 454px;
+  width: 766px;
+  position: relative;
+  margin: 0 auto;
+  background: scroll url(../img/map.png) 0 0 no-repeat;
+}
+
+#eleven-screen #map #map-canvas {
+  width: 766px;
+  height: 454px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+#eleven-screen #map #map-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 
 #eleven-screen .areas {
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1127,20 +1156,20 @@ input:hover {
   color: white;
 }
 
-#twelwe-screen .button-up {
+#twelwe-screen #button-up {
   display: block;
   width: 70px;
   height: 70px;
   background: #ffd007;
 }
 
-#twelwe-screen .button-up .up {
+#twelwe-screen #button-up .up {
   margin: 0 auto;
   padding-top: 23px;
   display: block;
 }
 
-#twelwe-screen .button-up:hover {
+#twelwe-screen #button-up:hover {
   background: #cca602;
 }
 

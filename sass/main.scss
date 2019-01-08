@@ -1,3 +1,5 @@
+
+
 /* fonts */
 @font-face {font-family: "AvenirBold"; src: url("../fonts/AvenirNextCyr-Bold.ttf")};
 @font-face {font-family: "AvenirReg"; src: url("../fonts/AvenirNextCyr-Regular.ttf")};
@@ -77,6 +79,15 @@ h2:after {
 
 .hidden {
     display: none;
+}
+
+.menu {
+    display: block;
+    background: url(../img/menu.png) no-repeat center;
+    background-size: cover;
+    width: 48px;
+    height: 39px;
+    cursor: pointer;
 }
 
 #six-screen, #ten-screen {
@@ -553,7 +564,7 @@ input:hover {
             justify-content: space-between;
         }
 
-        .scroll {
+        #scroll {
             padding-top: 60px;
             margin: 0 auto;
             width: 30px;
@@ -1090,7 +1101,7 @@ input:hover {
 }
 
 #eleven-screen {
-    height: 1260px;
+    height: 1060px;
     background: #f6f5f5;
 
     h2 {
@@ -1098,12 +1109,34 @@ input:hover {
         margin-bottom: 40px; 
     }
 
-    .map {
-        height: 700px;
+    #map {
+        height: 454px;
+        width:766px;
+        position:relative;
+        margin:0 auto;
+        background:scroll url(../img/map.png) 0 0 no-repeat;
+
+        #map-canvas {
+            width:766px;
+            height:454px;
+            position:absolute;
+            left:0;
+            top:0;
+            opacity:1;
+        }
+
+        #map-img {
+            position:absolute;
+            left:0;
+            top:0;
+            opacity:0; 
+        }
     }
 
+
+
     .areas {
-        margin-top: 50px;
+        margin-top: 70px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1151,7 +1184,7 @@ input:hover {
         color: white;
     }
 
-    .button-up {
+    #button-up {
         display: block;
         width: 70px;
         height: 70px;
@@ -1164,7 +1197,7 @@ input:hover {
         }
     }
 
-    .button-up:hover {
+    #button-up:hover {
         background: #cca602;
     }
 

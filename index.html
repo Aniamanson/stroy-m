@@ -13,7 +13,7 @@
 </head>
 <body>
     <section id="first-screen">
-        <header>
+        <header class="wow fadeInDown">
             <article>
                 <div class="logo"></div>
                 <div class="right-side">
@@ -28,17 +28,18 @@
                         </div>
                         <a class="button" onclick="Modal.open('backcall'); return false;">Обратный звонок</a>
                     </div>
+                    <!-- <div class="menu hidden" onclick="Modal.open('mobile'); return false;"></div> -->
                     <nav>
                         <a href="#first-screen">Главная</a>
                         <a href="#second-screen">О нас</a>
-                        <a href="#third-screen">Портфолио</a>
-                        <a href="#forth-screen">Услуги</a>
-                        <a href="#eighth-screen">Наши клиенты и партнеры</a>
-                        <a href="#nineth-screen">Контакты</a>
+                        <a href="#six-screen">Портфолио</a>
+                        <a href="#eight-screen">Услуги</a>
+                        <a href="#ten-screen">Наши клиенты и партнеры</a>
+                        <a href="#twelwe-screen">Контакты</a>
                     </nav>
                 </div>  
             </article>
-            </header>
+        </header>
         <article>
             <div class="content">
                 <h1>Полный комплекс<br>
@@ -52,13 +53,13 @@
                         <li>- Дизайн коммерческих помещений</li>
                     </ul>
                 </div>
-                <div class="contact-buttons">
+                <div class="contact-buttons wow bounceInUp">
                     <a class="button" onclick="Modal.open('offer'); return false;">Предложить объект</a>
                     <a class="button" onclick="Modal.open('tender'); return false;">Пригласить в тендер</a>
                     <a class="button" onclick="Modal.open('master'); return false;">Вызов прораба / мастера</a>
                 </div>
-                <a class="scroll">
-                    <img src="img/scroll.png">
+                <a href="#second-screen" id="scroll">
+                    <img src="img/scroll.png" class="wow bounce" style="animation-delay: 2s">
                 </a>
             </div>
         </article>
@@ -72,7 +73,7 @@
     <section id="second-screen">
         <article>
             <div class="wrapper">
-                <div class="left">
+                <div class="left wow fadeInLeft">
                     <h2>О компании</h2>
                     <p>Строй М входит в группу компаний, работающую на<br>
                         строительном рынке с 2007 года. Наша работа – это<br>
@@ -85,7 +86,7 @@
                         инженерных и отделочных работ.
                     </p>
                 </div>
-                <div class="right">
+                <div class="right wow fadeInRight">
                         <div class="up"><p>факты о нашей компании в цифрах</p></div>
                         <div class="down">
                             <div class="left-cups">
@@ -107,7 +108,7 @@
     </section>
     <section id="third-screen">
         <article>
-            <div class="wrap">
+            <div class="wrap wow zoomIn" style="animation-delay: 0.5s">
                 <div class="quot"></div>
                 <p>Основной специализацией компании «Строй М» является отделка, ремонт<br>
                     и реконструкция коммерческой недвижимости. Выполняем для заказчиков<br>
@@ -141,7 +142,7 @@
     </section>
     <section id="fifth-screen">
         <article>
-            <div class="wrap">
+            <div class="wrap wow zoomIn" style="animation-delay: 0.5s">
                 <div class="guaranty"></div>
                 <p>Мы прекрасно понимаем, что репутация - наиболее ценный из наших активов,<br>
                     и стараемся соответствовать самым высоким требованиям, предъявленными<br>
@@ -353,7 +354,7 @@
     </section>
     <section id="nine-screen">
         <article>
-            <h2>Остались вопросы?</h2>
+            <h2 class="wow bounce" style="animation-delay: 0.5s">Остались вопросы?</h2>
             <p>Заполните контактную форму и мы свяжемся с вами<br>
                 в течение 5 минут</p>
             <form name="callOrder" id="action">
@@ -401,7 +402,10 @@
         <article>
             <h2>География реализованных объектов<br>
                 на карте России</h2>
-            <div class="map"></div>
+            <div id="map">
+                <canvas id="map-canvas" width="766" height="454"></canvas>
+                <img id="map-img" src="./map.png" width="766" height="454" usemap="#map-map-add">
+            </div>
             <div class="areas">
                 <div class="table">
                     <p><span class="dot active"></span>Свердловская область</p>
@@ -432,7 +436,7 @@
             <article>
                 <div class="upper">
                     <h2>Контакты</h2>
-                    <a href="" class="button-up">
+                    <a href="#first-screen" id="button-up">
                         <img src="img/arrow-up.png" alt="" class="up">
                     </a>
                 </div>
@@ -483,15 +487,33 @@
                     <nav>
                         <a href="#first-screen">Главная</a>
                         <a href="#second-screen">О нас</a>
-                        <a href="#third-screen">Портфолио</a>
-                        <a href="#forth-screen">Услуги</a>
-                        <a href="#eighth-screen">Наши клиенты и партнеры</a>
-                        <a href="#nineth-screen">Контакты</a>
+                        <a href="#six-screen">Портфолио</a>
+                        <a href="#eight-screen">Услуги</a>
+                        <a href="#ten-screen">Наши клиенты и партнеры</a>
+                        <a href="#twelwe-screen">Контакты</a>
                     </nav>
                 </div>
             </article>
         </div>
     </section>
+
+    <div id="mobile" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <div class="modal-wrap">
+                <p>Меню</p>
+                <a href="#first-screen">Главная</a>
+                <a href="#second-screen">О нас</a>
+                <a href="#six-screen">Портфолио</a>
+                <a href="#eight-screen">Услуги</a>
+                <a href="#ten-screen">Наши клиенты и партнеры</a>
+                <a href="#twelwe-screen">Контакты</a>
+            </div>
+        </div>
+    </div>
+
     <div id="thankyouModal" class="modal">
         <div class="modal-content">
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
@@ -606,9 +628,10 @@
             </div>
         </div>
 
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <!-- <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.mask.min.js"></script> -->
+    <script>new WOW().init();</script>
     <script src="js/main.js"></script>
 </body>
 </html>
