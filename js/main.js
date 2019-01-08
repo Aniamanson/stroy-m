@@ -118,16 +118,37 @@
 
 ;(function(){
     function exportСarousel(){}
-    let carouselContainer = document.getElementsByClassName('slides');
-    console.log(carouselContainer[0]);
+    let carouselContainer = document.getElementsByClassName('carousel');
+    let nodes = carouselContainer[0].children;   
+    let step = 0;
 
-    function next(name){
-
+    function start(){
+        for (let i = 0; i < nodes.length; i++) {
+            (i <= 2  ) ? nodes[i].className = 'visible' : nodes[i].className = 'hidden'
+        }
+        step = 0;
     }
 
+    function next(){
+        step++;
+        if (step < nodes.length && step != (nodes.length-2)){
+            for (let i = 0; i < nodes.length; i++) {
+                (i >= step && i < (step + 3) ) ? nodes[i].className = 'visible' : nodes[i].className = 'hidden'
+            }
+        } else {
+            start();
+        }
+    }
+    
     function prev(){
+        step--;
+        if (step < 0) { step = nodes.length - 3; }
+        for (let i = 0; i < nodes.length; i++) {
+            (i >= step && i < (step + 3) ) ? nodes[i].className = 'visible' : nodes[i].className = 'hidden'
+        }
     }
 
+    start();
     exportСarousel.next = next;
     exportСarousel.prev = prev;
     window.Carousel = exportСarousel;
