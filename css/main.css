@@ -97,6 +97,15 @@ h2:after {
   display: none;
 }
 
+.menu {
+  display: block;
+  background: url(../img/menu.png) no-repeat center;
+  background-size: cover;
+  width: 48px;
+  height: 39px;
+  cursor: pointer;
+}
+
 #six-screen .arrow, #ten-screen .arrow {
   display: block;
   width: 40px;
@@ -338,7 +347,7 @@ input:hover {
 }
 
 #tender .modal-content .modal-wrap {
-  padding-top: 50px;
+  padding: 50px 0 0 0;
   margin: 0 auto;
   width: 310px;
 }
@@ -363,18 +372,79 @@ input:hover {
   margin-top: 30px;
 }
 
-#offer .modal-content {
+#offer .modal-content, #master .modal-content {
   height: 490px;
-  display: flex;
-  align-items: center;
 }
 
-#offer .modal-content .left {
+#offer .modal-content .content-wrap, #master .modal-content .content-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap, #master .modal-content .content-wrap .modal-wrap {
+  height: 265px;
+  padding: 0 75px 0 75px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form, #master .modal-content .content-wrap .modal-wrap form {
+  display: flex;
+  flex-direction: column;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .wrap, #master .modal-content .content-wrap .modal-wrap form .wrap {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .wrap .left, #master .modal-content .content-wrap .modal-wrap form .wrap .left {
   width: 300px;
 }
 
-#offer .modal-content .right {
+#offer .modal-content .content-wrap .modal-wrap form .wrap .left input, #master .modal-content .content-wrap .modal-wrap form .wrap .left input {
+  margin: 0 0 27px 0;
+  width: 290px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .wrap .right, #master .modal-content .content-wrap .modal-wrap form .wrap .right {
   width: 430px;
+  align-self: flex-end;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .wrap .right textarea, #master .modal-content .content-wrap .modal-wrap form .wrap .right textarea {
+  resize: none;
+  width: 426px;
+  height: 148px;
+  margin-bottom: 20px;
+  border: 2px solid #bababa;
+  padding: 15px 0 0 15px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .wrap .right textarea::placeholder, #master .modal-content .content-wrap .modal-wrap form .wrap .right textarea::placeholder {
+  color: #bababa;
+  font-family: "ProximaNovaSemibold";
+  font-size: 20px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .button, #master .modal-content .content-wrap .modal-wrap form .button {
+  color: black;
+  margin: 0 auto;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .button:hover, #master .modal-content .content-wrap .modal-wrap form .button:hover {
+  border: none;
+  background: #ffd007;
+}
+
+#master .modal-content {
+  height: 420px;
+}
+
+#master textarea {
+  height: 100px;
 }
 
 #first-screen {
@@ -487,7 +557,7 @@ input:hover {
   justify-content: space-between;
 }
 
-#first-screen .content .scroll {
+#first-screen .content #scroll {
   padding-top: 60px;
   margin: 0 auto;
   width: 30px;
@@ -1006,7 +1076,7 @@ input:hover {
 }
 
 #eleven-screen {
-  height: 1260px;
+  height: 1060px;
   background: #f6f5f5;
 }
 
@@ -1015,12 +1085,32 @@ input:hover {
   margin-bottom: 40px;
 }
 
-#eleven-screen .map {
-  height: 700px;
+#eleven-screen #map {
+  height: 454px;
+  width: 766px;
+  position: relative;
+  margin: 0 auto;
+  background: scroll url(../img/map.png) 0 0 no-repeat;
+}
+
+#eleven-screen #map #map-canvas {
+  width: 766px;
+  height: 454px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+}
+
+#eleven-screen #map #map-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 
 #eleven-screen .areas {
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1066,20 +1156,20 @@ input:hover {
   color: white;
 }
 
-#twelwe-screen .button-up {
+#twelwe-screen #button-up {
   display: block;
   width: 70px;
   height: 70px;
   background: #ffd007;
 }
 
-#twelwe-screen .button-up .up {
+#twelwe-screen #button-up .up {
   margin: 0 auto;
   padding-top: 23px;
   display: block;
 }
 
-#twelwe-screen .button-up:hover {
+#twelwe-screen #button-up:hover {
   background: #cca602;
 }
 
