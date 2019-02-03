@@ -1,0 +1,3 @@
+/* svg { height: 50vw; } */
+path { fill: rgb(163, 163, 163); transition: .6 fill; }
+path:hover { fill: rgb(112, 112, 112); }

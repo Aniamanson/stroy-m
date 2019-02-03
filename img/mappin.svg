@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg3904"
+   version="1.1"
+   viewBox="0 0 21.166666 26.458334"
+   height="100"
+   width="80">
+  <defs
+     id="defs3898" />
+  <metadata
+     id="metadata3901">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://artlibre.org/licence/lal" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://artlibre.org/licence/lal">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-270.54164)"
+     id="layer1">
+    <path
+       d="m 10.583256,270.9009 a 10.157272,10.202992 0 0 0 -10.15728235,10.20297 10.157272,10.202992 0 0 0 2.54767205,6.7391 c -0.0057,0.006 -0.011123,0.0104 -0.016731,0.0157 l 7.5816133,8.78224 7.648911,-8.77046 c -0.0019,-0.003 -0.0048,-0.006 -0.0067,-0.009 a 10.157272,10.202992 0 0 0 2.559954,-6.75777 10.157272,10.202992 0 0 0 -10.157282,-10.20297 z m 0,1.70712 a 8.7207927,8.4962174 0 0 1 8.720839,8.49585 8.7207927,8.4962174 0 0 1 -8.720839,8.49633 8.7207927,8.4962174 0 0 1 -8.7208385,-8.49633 8.7207927,8.4962174 0 0 1 8.7208385,-8.49585 z m -4.0665462,12.67084 0.031656,-8.65713 0.7988176,-9.5e-4 3.4014556,3.75334 3.468486,-3.74776 0.787533,-0.006 v 8.69636 h -2.26206 v -3.86505 l -1.843149,1.93252 h -0.256921 l -1.8431675,-1.93811 v 3.87622 H 6.5149511 Z"
+       style="fill:#ffdd55;stroke-width:0.29210991"
+       id="path3887" />
+  </g>
+</svg>

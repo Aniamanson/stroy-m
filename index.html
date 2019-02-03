@@ -8,7 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/map.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ecca37">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#000000">
 
 </head>
 <body>
@@ -402,10 +411,12 @@
         <article>
             <h2>География реализованных объектов<br>
                 на карте России</h2>
-            <div id="map">
-                <canvas id="map-canvas" width="766" height="454"></canvas>
-                <img id="map-img" src="./map.png" width="766" height="454" usemap="#map-map-add">
-            </div>
+                <!-- <div id="map">
+                    <canvas id="map-canvas" width="766" height="454"></canvas>
+                </div> -->
+                <object id="map-obj" type="image/svg+xml" data="img/map.svg" height="454">
+                    <!-- <img id="map-img" src="img/map.svg" height="454"> -->
+                </object>
             <div class="areas">
                 <div class="table">
                     <p><span class="dot active"></span>Свердловская область</p>
@@ -630,6 +641,8 @@
 
     
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/svg.min.js"></script>
+    <script src="js/raphael.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>new WOW().init();</script>
     <script src="js/main.js"></script>
