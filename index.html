@@ -411,33 +411,30 @@
         <article>
             <h2>География реализованных объектов<br>
                 на карте России</h2>
-                <!-- <div id="map">
-                    <canvas id="map-canvas" width="766" height="454"></canvas>
-                </div> -->
-                <object id="map-obj" type="image/svg+xml" data="img/map.svg" height="454">
+                <object id="map" type="image/svg+xml" data="img/map.svg"  height="454">
                     <!-- <img id="map-img" src="img/map.svg" height="454"> -->
                 </object>
             <div class="areas">
                 <div class="table">
-                    <p><span class="dot active"></span>Свердловская область</p>
-                    <p><span class="dot"></span>Новосибирская область</p>
-                    <p><span class="dot"></span>Пермская область</p>
-                    <p><span class="dot"></span>Удмуртская республика</p>
-                    <p><span class="dot"></span>Республика Башкортостан</p>
+                    <p data-area="SverdlovskOblast"><span class="dot active"></span>Свердловская область</p>
+                    <p data-area="NovosibirskOblast"><span class="dot"></span>Новосибирская область</p>
+                    <p data-area="PermKrai"><span class="dot"></span>Пермская область</p>
+                    <p data-area="Udmurtia"><span class="dot"></span>Удмуртская республика</p>
+                    <p data-area="Bashkortostan"><span class="dot"></span>Республика Башкортостан</p>
                 </div>
                 <div class="table">
-                    <p><span class="dot"></span>Республика Татарстан</p>
-                    <p><span class="dot"></span>Чувашская республика</p>
-                    <p><span class="dot"></span>Ульяновская область</p>
-                    <p><span class="dot"></span>Самарская область</p>
-                    <p><span class="dot"></span>Саратовская область</p>
+                    <p data-area="Tatarstan"><span class="dot"></span>Республика Татарстан</p>
+                    <p data-area="Chuvashia"><span class="dot"></span>Чувашская республика</p>
+                    <p data-area="UlyanovskOblast"><span class="dot"></span>Ульяновская область</p>
+                    <p data-area="SamaraOblast"><span class="dot"></span>Самарская область</p>
+                    <p data-area="SaratovOblast"><span class="dot"></span>Саратовская область</p>
                 </div>
                 <div class="table">
-                    <p><span class="dot"></span>Нижегородская область</p>
-                    <p><span class="dot"></span>Краснодарский край</p>
-                    <p><span class="dot"></span>Ставропольский край</p>
-                    <p><span class="dot"></span>Ямало-Ненецкий автономный округ</p>
-                    <p><span class="dot"></span>Ханты-Мансийский автономный округ</p>
+                    <p data-area="NizhnyNovgorodOblast"><span class="dot"></span>Нижегородская область</p>
+                    <p data-area="KrasnodarKrai"><span class="dot"></span>Краснодарский край</p>
+                    <p data-area="StavropolKrai"><span class="dot"></span>Ставропольский край</p>
+                    <p data-area="YamaloNenetsAutDistrict"><span class="dot"></span>Ямало-Ненецкий автономный округ</p>
+                    <p data-area="KhantiaMansia"><span class="dot"></span>Ханты-Мансийский автономный округ</p>
                 </div>
             </div>
         </article>
@@ -641,8 +638,8 @@
 
     
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/svg.min.js"></script>
-    <script src="js/raphael.min.js"></script>
+    <!-- <script src="js/svg.min.js"></script> -->
+    <script src="js/snap.svg-min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>new WOW().init();</script>
     <script src="js/main.js"></script>
