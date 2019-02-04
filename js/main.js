@@ -196,14 +196,36 @@ $(document).ready(function(){
             for (let i = 0; i < element.length; i++) {
                 const d = element[i];
                 d.addEventListener('mouseover', handler);
+                d.addEventListener('mouseout', handlerOut);
             }
         }
 
         function handler(e){
-            let id = "#pin" + e.srcElement.dataset.area;
-            console.log(e.srcElement.dataset.area);
-            s.select(id).transform(t);
+            let id = "pin" + e.srcElement.dataset.area;
+            let obj = document.getElementById('map');
+            let svgDoc = obj.contentDocument;
+            let pin = svgDoc.getElementById(id).getElementsByTagName('path')[0];
+            let circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
 
+            pin.classList.remove("st4");
+            pin.classList.add("yellow");
+
+            circle.classList.remove("st3");
+            circle.classList.add("white");
+        }
+
+        function handlerOut(e){
+            let id = "pin" + e.srcElement.dataset.area;
+            let obj = document.getElementById('map');
+            let svgDoc = obj.contentDocument;
+            let pin = svgDoc.getElementById(id).getElementsByTagName('path')[0];
+            let circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
+
+            pin.classList.remove("yellow");
+            pin.classList.add("st4");
+
+            circle.classList.remove("white");
+            circle.classList.add("st3");
         }
 
 
