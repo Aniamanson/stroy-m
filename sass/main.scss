@@ -1111,8 +1111,7 @@ input:hover {
 
     #map {
         height: 454px;
-        width:766px;
-        position:relative;
+        width:100%;
         margin:0 auto;
         // background:scroll url(../img/map.svg) 0 0 no-repeat;
 
@@ -1149,6 +1148,7 @@ input:hover {
                 font-size: 20px;
                 color: #464646;
                 margin-bottom: 15px;
+                cursor: pointer;
 
                 .dot {
                     display: none;
@@ -1164,6 +1164,7 @@ input:hover {
                     display: inline-block;
                 }
             }
+
         }
     }
 }

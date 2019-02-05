@@ -187,9 +187,6 @@ $(document).ready(function(){
 ;(function(){
     function exportMap(){};
         let areas = document.getElementsByClassName('areas');
-        let s = Snap("#map");
-        let t = new Snap.Matrix()
-        t.scale(50, 50);
 
         for (let i = 0; i < areas[0].children.length; i++) {
             const element = areas[0].children[i].getElementsByTagName('p');
@@ -207,11 +204,11 @@ $(document).ready(function(){
             let pin = svgDoc.getElementById(id).getElementsByTagName('path')[0];
             let circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
 
-            pin.classList.remove("st4");
+            pin.classList.remove("gray");
             pin.classList.add("yellow");
 
-            circle.classList.remove("st3");
-            circle.classList.add("white");
+            circle.classList.remove("yellow");
+            circle.classList.add("gray");
         }
 
         function handlerOut(e){
@@ -222,40 +219,13 @@ $(document).ready(function(){
             let circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
 
             pin.classList.remove("yellow");
-            pin.classList.add("st4");
+            pin.classList.add("gray");
 
-            circle.classList.remove("white");
-            circle.classList.add("st3");
+            circle.classList.remove("gray");
+            circle.classList.add("white");
         }
 
 
         // exportMap.select = selectCity;
         // window.Map = exportMap;
-})();
-
-
-(function(){
-    // let s = Snap("#map");
-    // // let t = s.text(50, 50, "WebDesignMagazine");
-
-    // Snap.load("/img/mappin.svg", function (f) {
-    //     g = f.select("g");
-    //     let pin = s.append(g);
-    // });
-
-    // var t = new Snap.Matrix()
-    // t.translate(0, -100);
-        
-    // s.mousemove(function (m){
-    //     let id = "#" + m.path[0].id;
-    //     s.select(id).transform(t);
-    //     s.select(id).attr({ fill: "#ffdd55"  });
-    //     console.log("Sss", s.select(id).getPointAtLength());
-    // })
-
-    // s.mouseout(function (m){
-    //     // let id = "#" + m.path[0].id;
-    //     // s.select(id).attr({ fill: "gray" }).animate({r: 100}, 2000)
-    // })
-
 })();

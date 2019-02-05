@@ -1087,8 +1087,7 @@ input:hover {
 
 #eleven-screen #map {
   height: 454px;
-  width: 766px;
-  position: relative;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1124,6 +1123,7 @@ input:hover {
   font-size: 20px;
   color: #464646;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 #eleven-screen .areas .table p .dot {
