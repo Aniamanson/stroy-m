@@ -1142,6 +1142,7 @@ input:hover {
 
         .table {
             height: 170px;
+            width: 380px;
 
             p {
                 font-family: "ProximaNovaBold";
@@ -1150,20 +1151,21 @@ input:hover {
                 margin-bottom: 15px;
                 cursor: pointer;
 
-                .dot {
+                span {
                     display: none;
                     width: 12px;
                     height: 12px;
                     background: url(../img/dot.png) no-repeat center;
                     background-size: cover;
                     margin-right: 12px;
-                    
                 }
 
-                .active {
-                    display: inline-block;
-                }
             }
+
+            p:hover span {
+                display: inline-block;
+            }
+
 
         }
     }
@@ -1279,6 +1281,10 @@ input:hover {
         height: 110px;
         background-color: rgba(0,0,0,0.42); 
         border-top: #2f2f30  3px solid;
+
+        article {
+            height: auto;
+        }
 
         .wrapper {
             height: 50px;

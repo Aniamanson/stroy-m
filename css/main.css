@@ -1116,6 +1116,7 @@ input:hover {
 
 #eleven-screen .areas .table {
   height: 170px;
+  width: 380px;
 }
 
 #eleven-screen .areas .table p {
@@ -1126,7 +1127,7 @@ input:hover {
   cursor: pointer;
 }
 
-#eleven-screen .areas .table p .dot {
+#eleven-screen .areas .table p span {
   display: none;
   width: 12px;
   height: 12px;
@@ -1135,7 +1136,7 @@ input:hover {
   margin-right: 12px;
 }
 
-#eleven-screen .areas .table p .active {
+#eleven-screen .areas .table p:hover span {
   display: inline-block;
 }
 
@@ -1244,6 +1245,10 @@ input:hover {
   height: 110px;
   background-color: rgba(0, 0, 0, 0.42);
   border-top: #2f2f30  3px solid;
+}
+
+#twelwe-screen .footer article {
+  height: auto;
 }
 
 #twelwe-screen .footer .wrapper {
