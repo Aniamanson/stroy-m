@@ -185,7 +185,6 @@ $(document).ready(function(){
 });
 
 ;(function(){
-    function exportMap(){};
         let areas = document.getElementsByClassName('areas');
 
         for (let i = 0; i < areas[0].children.length; i++) {
@@ -198,11 +197,8 @@ $(document).ready(function(){
         }
 
         function handler(e){
-            let id = "pin" + e.srcElement.dataset.area;
-            let obj = document.getElementById('map');
-            let svgDoc = obj.contentDocument;
-            let pin = svgDoc.getElementById(id).getElementsByTagName('path')[0];
-            let circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
+            let pin = findEl(e).pin;
+            let circle = findEl(e).circle;
 
             pin.classList.remove("gray");
             pin.classList.add("yellow");
@@ -212,11 +208,8 @@ $(document).ready(function(){
         }
 
         function handlerOut(e){
-            let id = "pin" + e.srcElement.dataset.area;
-            let obj = document.getElementById('map');
-            let svgDoc = obj.contentDocument;
-            let pin = svgDoc.getElementById(id).getElementsByTagName('path')[0];
-            let circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
+            let pin = findEl(e).pin;
+            let circle = findEl(e).circle;
 
             pin.classList.remove("yellow");
             pin.classList.add("gray");
@@ -225,7 +218,65 @@ $(document).ready(function(){
             circle.classList.add("white");
         }
 
+        function findEl(e){
+            let arr = {
+                'pin': '',
+                'circle': ''
+            };
+            let id = "pin" + e.srcElement.dataset.area;
+            let obj = document.getElementById('map');
+            let svgDoc = obj.contentDocument;
+            arr.pin = svgDoc.getElementById(id).getElementsByTagName('path')[0];
+            arr.circle = svgDoc.getElementById(id).getElementsByTagName('circle')[0];
 
-        // exportMap.select = selectCity;
-        // window.Map = exportMap;
+            return arr;
+        }
+})();
+
+;(function(){
+    function exportMail(){};
+
+    function test(e){
+        console.log('this:', e.elements[0].value);
+        console.log('Submit click');
+
+        Modal.close();
+        Modal.open('thankyouModal');
+        e.reset();
+        return false;
+    }
+
+    function send(e){
+        if(e === "up"){
+          var data = { "name": $("#name").val(), "tel":$("#tel").val() };
+        }
+
+        $.ajax({
+          type: "POST",
+          url: "send_mail.php",
+          data: data,
+          success: function(e){ 
+            var resp = JSON.parse(e);
+            if(!resp.errmsg){
+              vex.dialog.alert('Готово! Мы скоро вам перезвоним!')
+              $(".errmsg").hide()
+              $("#name").val("")
+              $("#name2").val("")
+              $("#tel").val("")
+              $("#tel2").val("")
+            } 
+            else {
+              $(".errmsg").show()
+              vex.dialog.alert('Ошибка ввода, необходимо заполнить все поля!')
+            }
+          },
+          fail: function(err){ console.log('error: '+ err) }
+        });
+        return false;
+    }
+      
+
+    exportMail.test = test;
+    exportMail.send = send;
+    window.Mail = exportMail;
 })();

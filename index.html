@@ -369,7 +369,7 @@
             <form name="callOrder" id="action">
                 <input type="text" placeholder="ФИО">
                 <input type="text" placeholder="Телефон">
-                <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal2')">
+                <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal')">
                 <div class="checkbox-wrap">
                     <label>
                         <input type="checkbox" class="checkbox" id="changes-check">
@@ -411,7 +411,7 @@
         <article>
             <h2>География реализованных объектов<br>
                 на карте России</h2>
-                <object id="map" type="image/svg+xml" data="img/map.svg" height="100%">
+                <object id="map" type="image/svg+xml" data="img/map.svg" height="100%" width="100%">
                     <img id="map-img" src="img/map.svg"> 
                 </object>
             <div class="areas">
@@ -505,7 +505,7 @@
         </div>
     </section>
 
-    <div id="mobile" class="modal">
+    <!-- <div id="mobile" class="modal">
         <div class="modal-content">
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
@@ -520,20 +520,9 @@
                 <a href="#twelwe-screen">Контакты</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id="thankyouModal" class="modal">
-        <div class="modal-content">
-            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
-                <img class="close" src="img/close.png">
-            </a>
-            <p class="headline">Спасибо за обращение!</p>
-            <p>Наш менеджер свяжется с вами<br>
-                в ближайшее время.</p>
-        </div>
-    </div>
-
-    <div id="thankyouModal2" class="modal">
         <div class="modal-content">
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
@@ -552,13 +541,13 @@
             <div class="modal-wrap">
                 <p>Заполните контактную форму и мы свяжемся с вами<br>
                     в течение 5 минут</p>
-                <form name="callOrder" id="action">
-                    <input type="text" placeholder="ФИО">
-                    <input type="text" placeholder="Телефон">
-                    <input type="button" value="Заказать звонок" class="button">
+                <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
+                    <input name="name" type="text" placeholder="ФИО" required>
+                    <input name="phone" type="text" placeholder="Телефон" required>
+                    <input type="submit" value="Заказать звонок" class="button">
                     <div class="checkbox-wrap">
                         <label>
-                            <input type="checkbox" class="checkbox" id="changes-check">
+                            <input name="pdn" type="checkbox" class="checkbox" id="changes-check" required>
                             <span class="checkbox-custom"></span>
                             Согласие на обработку персональных данных
                         </label>
@@ -575,11 +564,11 @@
             </a>
             <div class="modal-wrap">
                 <p>Пригласить в тендер</p>
-                <form name="callOrder" id="action">
-                    <input type="text" placeholder="ФИО">
-                    <input type="text" placeholder="Телефон">
-                    <input type="text" placeholder="E-mail">
-                    <input type="button" value="Отправить приглашение" class="button">
+                <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
+                    <input type="text" placeholder="ФИО" required="">
+                    <input type="text" placeholder="Телефон" required="">
+                    <input type="text" placeholder="E-mail" required="">
+                    <input type="submit" value="Отправить приглашение" class="button">
                 </form>
             </div>
         </div>
@@ -592,7 +581,7 @@
             </a>
             <div class="content-wrap">
                 <div class="modal-wrap">
-                    <form name="callOrder" id="action">
+                    <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
                         <div class="wrap">
                             <div class="left">
                                 <p>Предложить объект</p>
@@ -604,7 +593,7 @@
                                 <textarea placeholder="Информация о заказе"></textarea>
                             </div>
                         </div>
-                        <input type="button" value="Отправить заявку" class="button">
+                        <input type="submit" value="Отправить заявку" class="button">
                     </form>
                 </div>
             </div>
@@ -618,7 +607,7 @@
                 </a>
                 <div class="content-wrap">
                     <div class="modal-wrap">
-                        <form name="callOrder" id="action">
+                        <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
                             <div class="wrap">
                                 <div class="left">
                                     <p>Вызов прораба</p>
@@ -629,7 +618,7 @@
                                     <textarea placeholder="Информация о заказе"></textarea>
                                 </div>
                             </div>
-                            <input type="button" value="Позвоните мне!" class="button">
+                            <input type="submit" value="Позвоните мне!" class="button">
                         </form>
                     </div>
                 </div>
