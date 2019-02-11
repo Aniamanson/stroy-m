@@ -1,11 +1,12 @@
 <?php
 $name = htmlspecialchars($_POST['name']);
 $tel = htmlspecialchars($_POST['tel']);
+$form = htmlspecialchars($_POST['form']);
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
-$to = 'evn88@ya.com';
+$to = 'evn88@ya.ru';
 $subject = 'Сообщение с сайта [Перезвонить]';
 
 $message = '

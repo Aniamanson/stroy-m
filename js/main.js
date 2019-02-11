@@ -101,9 +101,22 @@
     function exportModal(){}
     let modal = {};
 
-    function open(name){
+    function open(name, arg){
         this.modal = document.getElementById(name);
         this.modal.style.display = 'block';
+
+        if(arg && typeof(arg)==='object'){
+            console.log('arg', arg);
+            this.modal.style.zIndex = "999";
+            let ul = document.getElementById("message_list_err");
+            ul.innerHTML= "";
+            for (let i = 0; i < arg.length; i++) {
+                const message = arg[i].message;
+                let li = document.createElement("li");
+                li.appendChild(document.createTextNode(message));
+                ul.appendChild(li);
+            }
+        }
     }
 
     function close(){
@@ -246,7 +259,6 @@ $(document).ready(function(){
             });
         }
 
-        // console.log(err);
         for(let i=0; i<e.length; i++){
             if(e.elements[i].type === 'text'){
                 if(e.elements[i].value == ''){
@@ -257,30 +269,35 @@ $(document).ready(function(){
                 }
             }
         }
-
-        // console.log(err.length);
-        return (err.length === 0) ? err : true;
+        return (err.length === 0) ? true : err;
     }
 
     function test(e){
-        let valid = validator(e)
+        let valid = validator(e);
+        let maildata = [];
+        console.log('result:', valid)
         if(typeof(valid) === 'boolean' && valid === true){
-            console.log("валидно");
+            for(let i=0; i<e.length; i++){
+                if(e.elements[i].type === 'text'){
+                    maildata.push({
+                        formName : e.elements[i].name,
+                        message : e.elements[i].value
+                    });
+                }
+            }
+            sender(maildata);
+            Modal.close();
+            Modal.open('thankyouModal');
+            e.reset();
         } else {
-            console.log(valid);
+            Modal.close();
+            Modal.open('errorModal', valid);
+            console.log("ошибка");
         }
-
-        Modal.close();
-        Modal.open('thankyouModal');
-        e.reset();
         return false;
     }
 
-    function send(e){
-        if(e === "up"){
-          var data = { "name": $("#name").val(), "tel":$("#tel").val() };
-        }
-
+    function sender(e){
         $.ajax({
           type: "POST",
           url: "send_mail.php",
@@ -288,16 +305,10 @@ $(document).ready(function(){
           success: function(e){ 
             var resp = JSON.parse(e);
             if(!resp.errmsg){
-              vex.dialog.alert('Готово! Мы скоро вам перезвоним!')
-              $(".errmsg").hide()
-              $("#name").val("")
-              $("#name2").val("")
-              $("#tel").val("")
-              $("#tel2").val("")
+                console.log('сообщение отправлено');
             } 
             else {
-              $(".errmsg").show()
-              vex.dialog.alert('Ошибка ввода, необходимо заполнить все поля!')
+                console.log('что-то пошло не так');
             }
           },
           fail: function(err){ console.log('error: '+ err) }
@@ -307,6 +318,6 @@ $(document).ready(function(){
       
 
     exportMail.test = test;
-    exportMail.send = send;
+    // exportMail.send = sender;
     window.Mail = exportMail;
 })();
