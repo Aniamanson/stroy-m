@@ -236,9 +236,39 @@ $(document).ready(function(){
 ;(function(){
     function exportMail(){};
 
+    function validator(e){
+        let err = [];
+
+        if(!e.elements.namedItem('pdn').checked) {
+            err.push({
+                formName : "pnd",
+                message : "Необходимо согласие на обработку персональных данных"
+            });
+        }
+
+        // console.log(err);
+        for(let i=0; i<e.length; i++){
+            if(e.elements[i].type === 'text'){
+                if(e.elements[i].value == ''){
+                    err.push({
+                        formName : e.elements[i].name,
+                        message : 'Необходимо заполнить поле ' + e.elements[i].name
+                    });
+                }
+            }
+        }
+
+        // console.log(err.length);
+        return (err.length === 0) ? err : true;
+    }
+
     function test(e){
-        console.log('this:', e.elements[0].value);
-        console.log('Submit click');
+        let valid = validator(e)
+        if(typeof(valid) === 'boolean' && valid === true){
+            console.log("валидно");
+        } else {
+            console.log(valid);
+        }
 
         Modal.close();
         Modal.open('thankyouModal');
