@@ -302,7 +302,7 @@ input:hover {
     }
 }
 
-#backcall, #tender, #master, #offer {
+#backcall, #tender, #master, #offer, #errorModal {
     .modal-content {
         height: 345px;
 
@@ -334,6 +334,21 @@ input:hover {
             .checkbox:checked + .checkbox-custom:before {
                 background: url(../img/check2.png) no-repeat center;
             }
+        }
+    }
+}
+
+#errorModal {
+    #message_list_err {
+        margin: 0 auto;
+        padding-top: 20px;
+        width: 500px;
+        list-style: none;
+        color: #b2141d;
+        font-size: 18px;
+
+        li {
+            padding-top: 10px;
         }
     }
 }
