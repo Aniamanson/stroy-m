@@ -249,9 +249,13 @@ $(document).ready(function(){
 ;(function(){
     function exportMail(){};
 
+    /*
+    * @param {object} e current form
+    * @result {object} or {boolean}
+    */
     function validator(e){
         let err = [];
-
+        //валидируем нажатие согласия на обработку ПДн
         if(!e.elements.namedItem('pdn').checked) {
             err.push({
                 formName : "pnd",
@@ -259,6 +263,7 @@ $(document).ready(function(){
             });
         }
 
+        //валидируем все остальные поля формы
         for(let i=0; i<e.length; i++){
             if(e.elements[i].type === 'text'){
                 if(e.elements[i].value == ''){
@@ -272,7 +277,8 @@ $(document).ready(function(){
         return (err.length === 0) ? true : err;
     }
 
-    function test(e){
+    //Сообщаем пользователю результ и отправляем сообщение
+    function send(e){
         let valid = validator(e);
         let maildata = [];
         console.log('result:', valid)
@@ -286,9 +292,10 @@ $(document).ready(function(){
                 }
             }
             sender(maildata);
+
             Modal.close();
             Modal.open('thankyouModal');
-            e.reset();
+            e.reset(); //сборс полей формы
         } else {
             Modal.close();
             Modal.open('errorModal', valid);
@@ -298,6 +305,7 @@ $(document).ready(function(){
     }
 
     function sender(e){
+        $ = window.$;
         $.ajax({
           type: "POST",
           url: "send_mail.php",
@@ -316,8 +324,6 @@ $(document).ready(function(){
         return false;
     }
       
-
-    exportMail.test = test;
-    // exportMail.send = sender;
+    exportMail.send = send;
     window.Mail = exportMail;
 })();

@@ -555,7 +555,7 @@
             <div class="modal-wrap">
                 <p>Заполните контактную форму и мы свяжемся с вами<br>
                     в течение 5 минут</p>
-                <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
+                <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;">
                     <input name="name" type="text" placeholder="ФИО" required>
                     <input name="phone" type="text" placeholder="Телефон" >
                     <input type="submit" value="Заказать звонок" class="button">
