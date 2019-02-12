@@ -533,6 +533,20 @@
         </div>
     </div>
 
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <p class="headline">Ошибка!</p>
+            <p>Введенные вами данные некорректны,<br>
+                проверьте следующие поля:</p>
+                <ul id="message_list_err">
+                    <li>Вы должны дать соглашение на обработку персональных данных</li>
+                </ul>
+        </div>
+    </div>
+
     <div id="backcall" class="modal">
         <div class="modal-content">
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
