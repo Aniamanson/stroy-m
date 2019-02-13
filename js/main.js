@@ -248,11 +248,16 @@ $(document).ready(function(){
 
 ;(function(){
     function exportMail(){};
+    let fName = {
+        "pdn"       :"Согласие на обработку персональных данных",
+        "phone"     : "Телефон",
+        "name"      : "ФИО",
+        "email"     : "E-mail",
+        "orgname"   : "Название организации",
+        "question"  : "Вопрос",
+    }
 
-    /*
-    * @param {object} e current form
-    * @result {object} or {boolean}
-    */
+
     function validator(e){
         let err = [];
         //валидируем нажатие согласия на обработку ПДн
@@ -269,7 +274,7 @@ $(document).ready(function(){
                 if(e.elements[i].value == ''){
                     err.push({
                         formName : e.elements[i].name,
-                        message : 'Необходимо заполнить поле ' + e.elements[i].name
+                        message : 'Необходимо заполнить поле ' + fName[e.elements[i].name]
                     });
                 }
             }
@@ -280,17 +285,15 @@ $(document).ready(function(){
     //Сообщаем пользователю результ и отправляем сообщение
     function send(e){
         let valid = validator(e);
-        let maildata = [];
+        let maildata = {};
         console.log('result:', valid)
         if(typeof(valid) === 'boolean' && valid === true){
             for(let i=0; i<e.length; i++){
                 if(e.elements[i].type === 'text'){
-                    maildata.push({
-                        formName : e.elements[i].name,
-                        message : e.elements[i].value
-                    });
+                    maildata[e.elements[i].name] = e.elements[i].value
                 }
             }
+            console.log('maildata: ', maildata)
             sender(maildata);
 
             Modal.close();
@@ -304,19 +307,21 @@ $(document).ready(function(){
         return false;
     }
 
-    function sender(e){
-        $ = window.$;
+    function sender(data){
         $.ajax({
           type: "POST",
           url: "send_mail.php",
           data: data,
           success: function(e){ 
+           console.log('response',e)
             var resp = JSON.parse(e);
             if(!resp.errmsg){
                 console.log('сообщение отправлено');
             } 
             else {
-                console.log('что-то пошло не так');
+                Modal.close();
+                Modal.open('othererrorModal');
+                console.log('что-то пошло не так', resp);
             }
           },
           fail: function(err){ console.log('error: '+ err) }

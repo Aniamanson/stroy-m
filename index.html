@@ -366,9 +366,9 @@
             <h2 class="wow bounce" style="animation-delay: 0.5s">Остались вопросы?</h2>
             <p>Заполните контактную форму и мы свяжемся с вами<br>
                 в течение 5 минут</p>
-            <form name="callOrder" id="action">
-                <input type="text" placeholder="ФИО">
-                <input type="text" placeholder="Телефон">
+            <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;"></form>
+                <input name="name" type="text" placeholder="ФИО">
+                <input name="phone" type="text" placeholder="Телефон">
                 <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal')">
                 <div class="checkbox-wrap">
                     <label>
@@ -471,10 +471,10 @@
                         </div>
                     </div>
                     <div class="right">
-                        <form name="callOrder" id="action">
-                            <input type="text" placeholder="ФИО">
-                            <input type="text" placeholder="Телефон">
-                            <input type="text" placeholder="Вопрос">
+                        <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;">
+                            <input name="name" type="text" placeholder="ФИО">
+                            <input name="phone" type="text" placeholder="Телефон">
+                            <input name="question" type="text" placeholder="Вопрос">
                             <div class="checkbox-wrap">
                                     <label>
                                         <input type="checkbox" class="checkbox" id="changes-check">
@@ -547,6 +547,16 @@
         </div>
     </div>
 
+    <div id="othererrorModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-modal" onclick="Modal.close(); return false;">
+                <img class="close" src="img/close.png">
+            </a>
+            <p class="headline">Произошла ошибка!</p>
+            <p>Попробуйте выполнить действие позже</p>
+        </div>
+    </div>
+<!-------------------------------------------------------------------->
     <div id="backcall" class="modal">
         <div class="modal-content">
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
@@ -555,9 +565,10 @@
             <div class="modal-wrap">
                 <p>Заполните контактную форму и мы свяжемся с вами<br>
                     в течение 5 минут</p>
-                <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;">
-                    <input name="name" type="text" placeholder="ФИО" required>
-                    <input name="phone" type="text" placeholder="Телефон" >
+                <form name="callOrder" id="action1" onSubmit="Mail.send(this); return false;">
+                    <input name="name" type="text" placeholder="ФИО" required="">
+                    <input name="phone" type="text" placeholder="Телефон" required="">
+                    <input name="formtype" type="hidden" value="Обратный звонок">
                     <input type="submit" value="Заказать звонок" class="button">
                     <div class="checkbox-wrap">
                         <label>
@@ -578,10 +589,17 @@
             </a>
             <div class="modal-wrap">
                 <p>Пригласить в тендер</p>
-                <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
-                    <input type="text" placeholder="ФИО" required="">
-                    <input type="text" placeholder="Телефон" required="">
-                    <input type="text" placeholder="E-mail" required="">
+                <form name="callOrder" id="action2" onSubmit="Mail.send(this); return false;">
+                    <input name="name" type="text" placeholder="ФИО" required="">
+                    <input name="phone" type="text" placeholder="Телефон" required="">
+                    <input name="email" type="text" placeholder="E-mail" required="">
+                    <div class="checkbox-wrap">
+                        <label>
+                            <input name="pdn" type="checkbox" class="checkbox" id="changes-check">
+                            <span class="checkbox-custom"></span>
+                            Согласие на обработку персональных данных
+                        </label>
+                    </div>  
                     <input type="submit" value="Отправить приглашение" class="button">
                 </form>
             </div>
@@ -595,17 +613,24 @@
             </a>
             <div class="content-wrap">
                 <div class="modal-wrap">
-                    <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
+                    <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;">
                         <div class="wrap">
                             <div class="left">
                                 <p>Предложить объект</p>
-                                    <input type="text" placeholder="ФИО">
-                                    <input type="text" placeholder="Название организации">
-                                    <input type="text" placeholder="Телефон">
+                                    <input name="name" type="text" placeholder="ФИО" required="">
+                                    <input name="orgname" type="text" placeholder="Название организации" required="">
+                                    <input name="phone" type="text" placeholder="Телефон" required="">
                             </div>
                             <div class="right">
-                                <textarea placeholder="Информация о заказе"></textarea>
+                                <textarea name="orderinfo" placeholder="Информация о заказе" required=""></textarea>
                             </div>
+                            <div class="checkbox-wrap">
+                                <label>
+                                    <input name="pdn" type="checkbox" class="checkbox" id="changes-check">
+                                    <span class="checkbox-custom"></span>
+                                    Согласие на обработку персональных данных
+                                </label>
+                            </div>  
                         </div>
                         <input type="submit" value="Отправить заявку" class="button">
                     </form>
@@ -621,16 +646,23 @@
                 </a>
                 <div class="content-wrap">
                     <div class="modal-wrap">
-                        <form name="callOrder" id="action" onSubmit="return Mail.test(this)">
+                        <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;">
                             <div class="wrap">
                                 <div class="left">
                                     <p>Вызов прораба</p>
-                                        <input type="text" placeholder="ФИО">
-                                        <input type="text" placeholder="Телефон">
+                                        <input name="name" type="text" placeholder="ФИО" required="">
+                                        <input name="phone" type="text" placeholder="Телефон" required="">
                                 </div>
                                 <div class="right">
-                                    <textarea placeholder="Информация о заказе"></textarea>
+                                    <textarea name="orderinfo" placeholder="Информация о заказе" required=""></textarea>
                                 </div>
+                                <div class="checkbox-wrap">
+                                    <label>
+                                        <input name="pdn" type="checkbox" class="checkbox" id="changes-check">
+                                        <span class="checkbox-custom"></span>
+                                        Согласие на обработку персональных данных
+                                    </label>
+                                </div>  
                             </div>
                             <input type="submit" value="Позвоните мне!" class="button">
                         </form>

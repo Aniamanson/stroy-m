@@ -1,27 +1,37 @@
 <?php
-$name = htmlspecialchars($_POST['name']);
-$tel = htmlspecialchars($_POST['tel']);
-$form = htmlspecialchars($_POST['form']);
+foreach($_POST as $key => $val){
+    $arr[$key] = htmlspecialchars($val);
+}
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 $to = 'evn88@ya.ru';
-$subject = 'Сообщение с сайта [Перезвонить]';
+$subject = 'Сообщение с сайта Строй-М';
+
+function datalist($e){
+    foreach($e as $key => $val){
+        $data .= '<li><b>'.$key.':</b> '.$val.'</li>'; 
+    };
+    return $data;
+};
 
 $message = '
     <html>
     <head>
-        <title>Сообщение с сайта</title>
+        <title>Сообщение с сайта Строй-М</title>
     </head>
     <body>
-        <h1>'.$name.'</h1> 
-        <p>просит перезвонить по номеру: <a href="tel:'.$tel.'">'.$tel.'</a></p>
+        <h1>Сообщение от '.$arr['name'].'</h1> 
+        <p>Телефон: <a href="tel:'.$arr['phone'].'">'.$arr['phone'].'</a></p>
+        <p>Данные с сайта:</p>
+        <ul>'.datalist($arr).'</ul>
     </body>
     </html> 
 ';
 
-if($name && $tel){
+
+if($arr['name'] && $arr['phone'] && count($arr)>0){
     $response = [
         "message" => $message,
         "errmsg" => false
@@ -31,7 +41,7 @@ if($name && $tel){
 }
 else {
     $response = [
-        "message" => "ошибка",
+        "message" => "ошибка данных",
         "errmsg" => true
     ];
 }
