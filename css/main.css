@@ -356,18 +356,18 @@ input:hover {
 
 #tender .modal-content {
   width: 495px;
-  height: 465px;
+  height: 520px;
 }
 
 #tender .modal-content .modal-wrap {
   padding: 50px 0 0 0;
   margin: 0 auto;
-  width: 310px;
+  width: 400px;
 }
 
 #tender .modal-content p {
   margin-bottom: 40px;
-  text-align: center;
+  text-align: center !important;
 }
 
 #tender .modal-content form {
@@ -381,8 +381,16 @@ input:hover {
   width: 300px;
 }
 
+#tender .modal-content form .checkbox-wrap {
+  margin-top: 15px;
+}
+
+#tender .modal-content form .checkbox-wrap label {
+  font-size: 16px;
+}
+
 #tender .modal-content form .button {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 #offer .modal-content, #master .modal-content {
@@ -410,7 +418,7 @@ input:hover {
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #offer .modal-content .content-wrap .modal-wrap form .wrap .left, #master .modal-content .content-wrap .modal-wrap form .wrap .left {
@@ -440,6 +448,11 @@ input:hover {
   color: #bababa;
   font-family: "ProximaNovaSemibold";
   font-size: 20px;
+}
+
+#offer .modal-content .content-wrap .modal-wrap form .wrap .checkbox-wrap, #master .modal-content .content-wrap .modal-wrap form .wrap .checkbox-wrap {
+  margin: 0 auto;
+  padding-top: 15px;
 }
 
 #offer .modal-content .content-wrap .modal-wrap form .button, #master .modal-content .content-wrap .modal-wrap form .button {

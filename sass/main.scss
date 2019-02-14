@@ -357,17 +357,18 @@ input:hover {
 
     .modal-content {
         width: 495px;
-        height: 465px;
+        height: 520px;
+
 
         .modal-wrap {
             padding: 50px 0 0 0;
             margin: 0 auto;
-            width: 310px;
+            width: 400px;
         }
 
         p {
             margin-bottom: 40px;
-            text-align: center;
+            text-align: center !important;
         }
 
         form {
@@ -379,9 +380,18 @@ input:hover {
                 margin: 0 0 27px 0;
                 width: 300px;
             }
+
+            .checkbox-wrap {
+                margin-top: 15px;
+                
+                label {
+                    font-size: 16px;
+                }
+                
+            }
     
             .button {
-                margin-top: 30px;
+                margin-top: 50px;
             }
         }
     }
@@ -410,7 +420,7 @@ input:hover {
                         align-items: flex-start;
                         flex-wrap: wrap;
                         justify-content: space-between;
-                        margin-bottom: 50px;
+                        margin-bottom: 30px;
 
                         .left {
                             width: 300px;
@@ -439,6 +449,11 @@ input:hover {
                                     font-size: 20px;
                                 }
                             }
+                        }
+
+                        .checkbox-wrap {
+                            margin: 0 auto;
+                            padding-top: 15px;
                         }
                     }
                     .button {
