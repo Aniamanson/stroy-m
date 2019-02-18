@@ -11,6 +11,7 @@ $subject = 'Сообщение с сайта Строй-М';
 
 function datalist($e){
     foreach($e as $key => $val){
+        if($key !== "name" and $key !== "phone")
         $data .= '<li><b>'.$key.':</b> '.$val.'</li>'; 
     };
     return $data;
@@ -24,7 +25,7 @@ $message = '
     <body>
         <h1>Сообщение от '.$arr['name'].'</h1> 
         <p>Телефон: <a href="tel:'.$arr['phone'].'">'.$arr['phone'].'</a></p>
-        <p>Данные с сайта:</p>
+        <p>Другие данные с сайта:</p>
         <ul>'.datalist($arr).'</ul>
     </body>
     </html> 

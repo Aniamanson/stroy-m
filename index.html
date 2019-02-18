@@ -366,13 +366,13 @@
             <h2 class="wow bounce" style="animation-delay: 0.5s">Остались вопросы?</h2>
             <p>Заполните контактную форму и мы свяжемся с вами<br>
                 в течение 5 минут</p>
-            <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;"></form>
-                <input name="name" type="text" placeholder="ФИО">
-                <input name="phone" type="text" placeholder="Телефон">
-                <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal')">
+            <form name="callOrder1" id="action1" onSubmit="Mail.send(this); return false" method="POST">
+                <input name="name" type="text" placeholder="ФИО" required>
+                <input name="phone" type="text" placeholder="Телефон" required>
+                <input type="submit" value="Заказать звонок" class="button">
                 <div class="checkbox-wrap">
                     <label>
-                        <input type="checkbox" class="checkbox" id="changes-check">
+                        <input type="checkbox" name="pdn" class="checkbox" id="changes-check" required>
                         <span class="checkbox-custom"></span>
                         Согласие на обработку персональных данных
                     </label>
@@ -471,18 +471,18 @@
                         </div>
                     </div>
                     <div class="right">
-                        <form name="callOrder" id="action" onSubmit="Mail.send(this); return false;">
-                            <input name="name" type="text" placeholder="ФИО">
-                            <input name="phone" type="text" placeholder="Телефон">
-                            <input name="question" type="text" placeholder="Вопрос">
+                        <form name="callOrder2" id="action2" onSubmit="Mail.send(this); return false;">
+                            <input name="name" type="text" placeholder="ФИО" required>
+                            <input name="phone" type="text" placeholder="Телефон" required>
+                            <input name="question" type="text" placeholder="Вопрос" required>
                             <div class="checkbox-wrap">
                                     <label>
-                                        <input type="checkbox" class="checkbox" id="changes-check">
+                                        <input type="checkbox" name="pdn" class="checkbox" id="changes-check" required>
                                         <span class="checkbox-custom"></span>
                                         Согласие на обработку персональных данных
                                     </label>
                                 </div>  
-                            <input type="button" value="Заказать звонок" class="button" onclick="Modal.open('thankyouModal')">
+                            <input type="submit" value="Заказать звонок" class="button">
                         </form>
                     </div>
                 </div>

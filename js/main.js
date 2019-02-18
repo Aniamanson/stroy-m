@@ -264,7 +264,7 @@ $(document).ready(function(){
         if(!e.elements.namedItem('pdn').checked) {
             err.push({
                 formName : "pnd",
-                message : "Необходимо согласие на обработку персональных данных"
+                message : "Необходимо ваше согласие на обработку персональных данных"
             });
         }
 
@@ -294,10 +294,7 @@ $(document).ready(function(){
                 }
             }
             console.log('maildata: ', maildata)
-            sender(maildata);
-
-            Modal.close();
-            Modal.open('thankyouModal');
+            sender(maildata, e);
             e.reset(); //сборс полей формы
         } else {
             Modal.close();
@@ -307,7 +304,7 @@ $(document).ready(function(){
         return false;
     }
 
-    function sender(data){
+    function sender(data, self){
         $.ajax({
           type: "POST",
           url: "send_mail.php",
@@ -316,6 +313,8 @@ $(document).ready(function(){
            console.log('response',e)
             var resp = JSON.parse(e);
             if(!resp.errmsg){
+                Modal.close();
+                self.Modal.open('thankyouModal');
                 console.log('сообщение отправлено');
             } 
             else {
