@@ -265,7 +265,7 @@ input:hover {
     background: rgba(0,0,0,0.6);
 
     .modal-content {
-        margin: 15% auto;
+        margin: 12% auto;
         width: 960px;
         height: 275px;
         background: white;
@@ -810,10 +810,10 @@ input:hover {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
 
             .card {
-                width: 370px;
+                width: 320px;
                 height: 285px;
 
                 .cover {
@@ -951,7 +951,7 @@ input:hover {
 
                 .slider-img {
                     display: block;
-                    width: 170px;
+                    width: 150px;
                     height: 110px;
                     background-image: url(../img/nl/1.jpg);
                     background-repeat: no-repeat;
@@ -1122,6 +1122,7 @@ input:hover {
     
         .slider {
             height: 80px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -1131,7 +1132,16 @@ input:hover {
                 flex-direction: row;
                 justify-content: space-between;
                 width: 1000px;
-                align-items: center;  
+                align-items: center; 
+                padding: 0 30px 0 30px;
+
+                img {
+                    height: 45px;
+                } 
+            } 
+
+            .arrow {
+                width: 45px;
             }
         }
     }
