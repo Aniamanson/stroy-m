@@ -24,7 +24,6 @@
             sliderThumbs[i].style.backgroundImage = 'url(img/' + activeFolder + '/' + i +'.jpg)';
             sliderThumbs[i].setAttribute('id', i);
             sliderThumbs[i].addEventListener('click', handler);
-
         }
     }
 
@@ -270,7 +269,7 @@ $(document).ready(function(){
 
         //валидируем все остальные поля формы
         for(let i=0; i<e.length; i++){
-            if(e.elements[i].type === 'text'){
+            if(e.elements[i].type === 'text' || e.elements[i].type === 'textarea'){
                 if(e.elements[i].value == ''){
                     err.push({
                         formName : e.elements[i].name,
@@ -286,15 +285,15 @@ $(document).ready(function(){
     function send(e){
         let valid = validator(e);
         let maildata = {};
-        console.log('result:', valid)
+        // console.log('result:', valid)
         if(typeof(valid) === 'boolean' && valid === true){
             for(let i=0; i<e.length; i++){
-                if(e.elements[i].type === 'text'){
+                if(e.elements[i].type === 'text' || e.elements[i].type === 'textarea'){
                     maildata[e.elements[i].name] = e.elements[i].value
                 }
             }
-            console.log('maildata: ', maildata)
-            sender(maildata, e);
+            // console.log('maildata: ', maildata)
+            sender(maildata);
             e.reset(); //сборс полей формы
         } else {
             Modal.close();
@@ -304,17 +303,17 @@ $(document).ready(function(){
         return false;
     }
 
-    function sender(data, self){
+    function sender(data){
         $.ajax({
           type: "POST",
           url: "send_mail.php",
           data: data,
           success: function(e){ 
-           console.log('response',e)
+        //    console.log('response',e)
             var resp = JSON.parse(e);
             if(!resp.errmsg){
                 Modal.close();
-                self.Modal.open('thankyouModal');
+                Modal.open('thankyouModal');
                 console.log('сообщение отправлено');
             } 
             else {
