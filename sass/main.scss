@@ -1,4 +1,3 @@
-@import 'response';
 
 /* fonts */
 @font-face {font-family: "AvenirBold"; src: url("../fonts/AvenirNextCyr-Bold.ttf")};
@@ -28,6 +27,7 @@ body {
     height: auto;
     color: #464646;
     /*font-weight: bold;*/
+    overflow-x: hidden;
 }
 
 article {
@@ -79,15 +79,6 @@ h2:after {
 
 .hidden {
     display: none;
-}
-
-.menu {
-    display: block;
-    background: url(../img/menu.png) no-repeat center;
-    background-size: cover;
-    width: 48px;
-    height: 39px;
-    cursor: pointer;
 }
 
 #six-screen, #ten-screen {
@@ -502,13 +493,28 @@ input:hover {
             flex-direction: row;
             justify-content: space-between;
 
-            .logo { 
-                width: 200px;
-                height: 57px;
-                background: url(../img/logo.png) no-repeat center;
-                background-size: cover;
-                margin-bottom: 18px;
-                align-self: center;
+            .left-side {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                .logo { 
+                    width: 200px;
+                    height: 57px;
+                    background: url(../img/logo.png) no-repeat center;
+                    background-size: cover;
+                    margin-bottom: 18px;
+                    align-self: center;
+                }
+
+                .menu {
+                    display: none;
+                    background: url(../img/menu.png) no-repeat center;
+                    background-size: cover;
+                    width: 48px;
+                    height: 39px;
+                    cursor: pointer;
+                }
             }
 
             .right-side {
@@ -657,6 +663,14 @@ input:hover {
                     font-size: 18px; 
                     margin-left: 30px;
                     width: 315px;
+
+                    span {
+                        display: none;
+                        color: $yellow;
+                        font-family: "ProximaNovaBlack";
+                        font-size: 30px; 
+
+                    }
 
                     p {
                         margin-bottom: 30px;
@@ -1322,8 +1336,6 @@ input:hover {
 
     }
 
-
-
     .footer {
         height: 110px;
         background-color: rgba(0,0,0,0.42); 
@@ -1350,6 +1362,7 @@ input:hover {
             width: 800px;
         }
     }
-
-
 }
+
+
+@import "response";

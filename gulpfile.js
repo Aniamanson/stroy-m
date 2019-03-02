@@ -7,8 +7,10 @@ var gulp = require('gulp'),
 sass.compiler = require('node-sass');
  
 gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+  // return gulp.src('./sass/**/*.scss')
+  return gulp.src('./sass/main.scss')
+    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
+    // .pipe(concat('all.scss'))
     .pipe(gulp.dest('./css'))
     .pipe(livereload());
 });
