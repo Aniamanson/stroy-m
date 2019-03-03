@@ -103,6 +103,8 @@
                 width: auto;
                 padding: 15px 25px;
                 text-align: center;
+                font-size: 20px;
+                line-height: 20pt;
         
                 br {
                     display: none;
@@ -135,6 +137,12 @@
         height: auto;
 
         article .wrap {
+            flex-direction: column;
+            width: auto;
+
+            .guaranty {
+                height: 120px;
+            }
             p {
                 width: auto;
                 padding: 15px 25px;
@@ -142,6 +150,48 @@
         
                 br {
                     display: none;
+                }
+            }
+        }
+    }
+
+    #six-screen {
+        height: auto;
+
+        article {
+            #portfolio-gallery {
+                width: 460px;
+                margin: 0 auto;
+                h2 {
+                    margin: 50px 0 50px 0;
+                }
+    
+                .first-line, .second-line {
+                    margin-bottom: 0px;
+                    flex-direction: column;
+    
+                    .card {
+                        width: 100%;
+                        padding-bottom: 40px;
+    
+                        .cover {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+    
+                .second-line {
+                    margin-bottom: 50px;
+                    flex-direction: column;
+                }
+            }
+
+            .wrap-click {
+                .slider {
+                    .slider-images {
+                        display: none;
+                    }
                 }
             }
         }
@@ -227,6 +277,10 @@
 
 
 @media screen and (max-width: 520px) {
+    h2 {
+        font-size: 35px;
+    }
+
     #second-screen {
         height: auto;
         padding: 40px 0 50px 0;
@@ -291,6 +345,15 @@
             }
         }
     }
+
+    #six-screen {
+        article #portfolio-gallery {
+            width: 320px;
+                .card {
+                    width: 320px;
+                }
+            }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -352,6 +415,23 @@
                         font-size: 16px;
                     }
                 }
+            }
+        }
+    }
+
+    #fifth-screen {
+        padding: 35px 0;
+        height: auto;
+
+        article .wrap {
+            flex-direction: column;
+            width: auto;
+
+            .guaranty {
+                height: 120px;
+            }
+            p {
+                font-size: 18px;
             }
         }
     }
