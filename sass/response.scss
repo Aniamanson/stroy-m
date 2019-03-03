@@ -1,6 +1,5 @@
 @media screen and (max-width: 1020px) {
 
-
     article {
         width: auto;
         padding: 0 30px;
@@ -20,9 +19,15 @@
                 height: 110px;
                 align-items: center;
                 padding-top: 0;
+                padding-top: 20px;
+                height: 150px;
+                flex-direction: column;
+                justify-content: flex-start;
+
                 
                 .left-side {
                     align-items: center;
+                    margin-bottom: 20px;
 
                     .logo {
                         align-self: unset;
@@ -51,6 +56,14 @@
             .content {
                 margin: 0;
 
+                h1 {
+                    text-align: center;
+                }
+
+                .services {
+                    margin: 0 auto;
+                }
+
                 .contact-buttons {
                     margin: 0 auto;
                     padding-top: 60px;
@@ -62,40 +75,6 @@
             }
         }
             
-    }
-
-}
-
-@media screen and (max-width: 1020px) {
-
-    #first-screen {
-
-        header {
-            article {
-                padding-top: 20px;
-                height: 150px;
-                flex-direction: column;
-                justify-content: flex-start;
-
-                .left-side {
-                    margin-bottom: 20px;
-                }
-            }
-        }
-
-        article {
-
-            .content {
-
-                h1 {
-                    text-align: center;
-                }
-
-                .services {
-                    margin: 0 auto;
-                }
-            }
-        }
     }
 
     #second-screen {
@@ -116,6 +95,42 @@
     }
 
     #third-screen {
+        padding: 35px 0;
+        height: auto;
+
+        article .wrap {
+            p {
+                width: auto;
+                padding: 15px 25px;
+                text-align: center;
+        
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #forth-screen {
+        height: auto;
+
+        article .content {
+            .line {
+                display: none;
+            }
+
+            .list {
+                p {
+                    text-align: justify;
+                }
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #fifth-screen {
         padding: 35px 0;
         height: auto;
 
@@ -186,6 +201,23 @@
 
                 #scroll {
                     padding-top: 30px;
+                }
+            }
+        }
+    }
+
+    #forth-screen {
+        padding-top: 40px;
+
+        article {
+            h3 {
+                margin-bottom: 40px;
+            }
+
+            .content {
+
+                .list {
+                    padding: 0 0 30px 0;
                 }
             }
         }
@@ -307,6 +339,19 @@
         article .wrap {
             p {
                 font-size: 18px;
+            }
+        }
+    }
+
+    #forth-screen {
+        article {
+            .content {
+                .list {
+                    p {
+                        
+                        font-size: 16px;
+                    }
+                }
             }
         }
     }
