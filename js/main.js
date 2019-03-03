@@ -127,12 +127,27 @@
     window.Modal = exportModal;
 }());
 
+
 ;(function(){
     function exportСarousel(){}
+    let countLogos;
     let carouselContainer = document.getElementsByClassName('carousel');
     let nodes = carouselContainer[0].children;
     let step = 0;
-    let countLogos = 4;
+    let windowSize = function() { return document.documentElement.clientWidth; }
+    countLogosWindow(windowSize); //init count logos
+
+    window.addEventListener("resize", function(){
+        countLogosWindow(windowSize); //set count logos when resize 
+    });
+
+    function countLogosWindow (size){
+        if(size() > 1020) countLogos = 4;
+        if(size() <= 1020)  countLogos = 3;
+        if(size() <= 780) countLogos = 2;
+        if(size() <= 520) countLogos = 1;
+        start();
+    }
 
     function start(){
         for ( let i = 0; i < nodes.length; i++ ) {
@@ -160,7 +175,7 @@
         }
     }
 
-    start();
+    // start();
     exportСarousel.next = next;
     exportСarousel.prev = prev;
     window.Carousel = exportСarousel;
