@@ -188,7 +188,26 @@
             }
 
             .wrap-click {
+                margin: 50px 0 30px 0;
+
+                .upper {
+                    margin-bottom: 30px;
+                }
                 .slider {
+                    .main-slide {
+                        height: auto;
+                        width: 100%;
+
+                        .arrow {
+                            width: 48px;
+                        }
+
+                        .slides {
+                            width: 100%;
+                            margin: 0 15px;
+                        }
+                    }
+
                     .slider-images {
                         display: none;
                     }
@@ -197,6 +216,26 @@
         }
     }
     
+    #seven-screen {
+        article {
+            width: 660px;
+            margin: 0 auto;
+
+            h2 {
+                padding-top: 50px;
+                font-size: 35px;
+            }
+
+            .ic-wrap {
+                margin-top: 50px;
+                .card {
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -268,6 +307,55 @@
 
                 .list {
                     padding: 0 0 30px 0;
+                }
+            }
+        }
+    }
+
+    #six-screen {
+        article {
+            .wrap-click {
+
+                .upper {
+                    .button-close {
+                        width: 55px;
+                        height: 55px;
+
+                        .close {
+                            padding-top: 12px;
+                        }
+                    }
+                }
+                .slider {
+                    .main-slide {
+                        height: auto;
+                        width: 100%;
+
+                        .arrow {
+                            width: 48px;
+                        }
+
+                        .slides {
+                            width: 320px;
+                            height: 205px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #seven-screen {
+        article {
+            width: 280px;
+            margin: 0 auto;
+
+            .ic-wrap {
+                .card {
+                    p {
+                        font-size: 18px;
+
+                    }
                 }
             }
         }
@@ -347,12 +435,35 @@
     }
 
     #six-screen {
-        article #portfolio-gallery {
-            width: 320px;
+        article {
+            #portfolio-gallery {
+                width: 320px;
+        
                 .card {
                     width: 320px;
                 }
             }
+
+            .wrap-click {
+                .slider {
+                    .main-slide {
+                        height: auto;
+                        width: 100%;
+
+                        .arrow {
+                            width: 30px;
+                            height: 50px;   
+                        }
+
+                        .slides {
+                            width: 320px;
+                            height: 205px;
+                            box-shadow: 3px 30px 30px #848484;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -432,6 +543,49 @@
             }
             p {
                 font-size: 18px;
+            }
+        }
+    }
+
+    #six-screen {
+        article {
+            .wrap-click {
+                margin-bottom: 0px;
+                .slider {
+                    .main-slide {
+                        .arrow {
+                            width: 25px;
+                            height: 40px;
+                        }
+
+                        .slides {
+                            width: 230px;
+                            height: 147px;
+                            box-shadow: 1px 10px 20px #848484;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #six-screen {
+        article {
+            #portfolio-gallery {
+                width: 280px;
+
+                .first-line, .second-line {
+                    .card {
+                        width: 280px;
+                        height: auto;
+                        
+                        .cover a{
+                            height: 180px;
+                        }
+                    }
+                }
             }
         }
     }

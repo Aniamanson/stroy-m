@@ -459,7 +459,16 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #six-screen article #portfolio-gallery .first-line .card, #six-screen article #portfolio-gallery .second-line .card { width: 100%; padding-bottom: 40px; }
   #six-screen article #portfolio-gallery .first-line .card .cover, #six-screen article #portfolio-gallery .second-line .card .cover { width: 100%; height: auto; }
   #six-screen article #portfolio-gallery .second-line { margin-bottom: 50px; flex-direction: column; }
-  #six-screen article .wrap-click .slider .slider-images { display: none; } }
+  #six-screen article .wrap-click { margin: 50px 0 30px 0; }
+  #six-screen article .wrap-click .upper { margin-bottom: 30px; }
+  #six-screen article .wrap-click .slider .main-slide { height: auto; width: 100%; }
+  #six-screen article .wrap-click .slider .main-slide .arrow { width: 48px; }
+  #six-screen article .wrap-click .slider .main-slide .slides { width: 100%; margin: 0 15px; }
+  #six-screen article .wrap-click .slider .slider-images { display: none; }
+  #seven-screen article { width: 660px; margin: 0 auto; }
+  #seven-screen article h2 { padding-top: 50px; font-size: 35px; }
+  #seven-screen article .ic-wrap { margin-top: 50px; }
+  #seven-screen article .ic-wrap .card p { font-size: 18px; } }
 
 @media screen and (max-width: 780px) { #first-screen header article { flex-direction: column; height: auto; padding-bottom: 30px; }
   #first-screen header article .right-side .contacts { flex-direction: column; }
@@ -471,7 +480,14 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #first-screen article .content #scroll { padding-top: 30px; }
   #forth-screen { padding-top: 40px; }
   #forth-screen article h3 { margin-bottom: 40px; }
-  #forth-screen article .content .list { padding: 0 0 30px 0; } }
+  #forth-screen article .content .list { padding: 0 0 30px 0; }
+  #six-screen article .wrap-click .upper .button-close { width: 55px; height: 55px; }
+  #six-screen article .wrap-click .upper .button-close .close { padding-top: 12px; }
+  #six-screen article .wrap-click .slider .main-slide { height: auto; width: 100%; }
+  #six-screen article .wrap-click .slider .main-slide .arrow { width: 48px; }
+  #six-screen article .wrap-click .slider .main-slide .slides { width: 320px; height: 205px; }
+  #seven-screen article { width: 280px; margin: 0 auto; }
+  #seven-screen article .ic-wrap .card p { font-size: 18px; } }
 
 @media screen and (max-width: 520px) { h2 { font-size: 35px; }
   #second-screen { height: auto; padding: 40px 0 50px 0; }
@@ -487,7 +503,10 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #second-screen article .wrapper .right .down .right-p span { display: block; margin-bottom: 5px; }
   #second-screen article .wrapper .right .down .right-p p { margin: 0; margin-bottom: 20px; }
   #six-screen article #portfolio-gallery { width: 320px; }
-  #six-screen article #portfolio-gallery .card { width: 320px; } }
+  #six-screen article #portfolio-gallery .card { width: 320px; }
+  #six-screen article .wrap-click .slider .main-slide { height: auto; width: 100%; }
+  #six-screen article .wrap-click .slider .main-slide .arrow { width: 30px; height: 50px; }
+  #six-screen article .wrap-click .slider .main-slide .slides { width: 320px; height: 205px; box-shadow: 3px 30px 30px #848484; } }
 
 @media screen and (max-width: 480px) { article { padding: 0 20px; }
   #first-screen header article { flex-direction: column; height: auto; padding: 20px; }
@@ -500,4 +519,11 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #fifth-screen { padding: 35px 0; height: auto; }
   #fifth-screen article .wrap { flex-direction: column; width: auto; }
   #fifth-screen article .wrap .guaranty { height: 120px; }
-  #fifth-screen article .wrap p { font-size: 18px; } }
+  #fifth-screen article .wrap p { font-size: 18px; }
+  #six-screen article .wrap-click { margin-bottom: 0px; }
+  #six-screen article .wrap-click .slider .main-slide .arrow { width: 25px; height: 40px; }
+  #six-screen article .wrap-click .slider .main-slide .slides { width: 230px; height: 147px; box-shadow: 1px 10px 20px #848484; } }
+
+@media screen and (max-width: 480px) { #six-screen article #portfolio-gallery { width: 280px; }
+  #six-screen article #portfolio-gallery .first-line .card, #six-screen article #portfolio-gallery .second-line .card { width: 280px; height: auto; }
+  #six-screen article #portfolio-gallery .first-line .card .cover a, #six-screen article #portfolio-gallery .second-line .card .cover a { height: 180px; } }
