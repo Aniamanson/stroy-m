@@ -7,6 +7,68 @@
         overflow: hidden;
     }
 
+    .modal {
+        .modal-content {
+            margin: 12% auto;
+            width: 500px;
+            height: 275px;
+   
+            .close-modal {
+                display: block;
+                width: 50px;
+                height: 50px;
+    
+                .close {
+                    margin: 0 25%;
+                    padding-top: 5px;
+                }
+            }
+    
+            .headline {
+                font-family: "ProximaNovaBold";
+                font-size: 48px;
+                text-align: center;
+                color: black;
+                margin: 60px 0 30px 0;
+            }
+    
+            p {
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+
+    #mobile {
+        .modal-content {
+            height: auto;
+            .modal-wrap {
+                padding: 30px 0 30px 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: auto;
+
+                p {
+                    font-size: 40px;
+                }
+
+                a {
+                    font-size: 20px;
+                    color: #949393;
+                    padding-bottom: 15px;
+                }
+
+                a:hover {
+                    color: $yellow;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    
+
     #first-screen {
         height: 100%;
         
@@ -236,10 +298,82 @@
             }
         }
     }
+
+    #eight-screen {
+        article {
+            width: 490px;
+            margin: 0 auto;
+            h2 {
+                padding-top: 50px;
+                margin-bottom: 40px;
+            }
+
+            .content {
+                margin-bottom: 0;
+
+                .card {
+                    height: auto;
+                }
+            }
+        }
+    }
 }
 
 
+@media screen and (max-width: 860px) {
+    #nine-screen {
+        height: auto;
+        article {
+            width: 280px;
+            margin: 0 auto;
+            h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+                padding-top: 50px;
+            }
 
+            p {
+                font-size: 20px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 280px;
+                height: 300px;
+                align-items: center;
+
+                input {
+                    margin: 0 0 20px 0;
+                    width: 100%;
+                }
+
+                .button {
+                    margin-top: 20px;
+                }
+
+                .checkbox-wrap {
+                    margin-top: 10px;
+
+                    label {
+                        font-size: 14px;
+                        .checkbox-custom {
+                            width: 15px;
+                            height: 15px;
+
+                            &::before {
+                                background-size: cover;
+                                width: 10px;
+                                height: 10px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 780px) {
 
@@ -354,7 +488,6 @@
                 .card {
                     p {
                         font-size: 18px;
-
                     }
                 }
             }
@@ -362,9 +495,65 @@
     }
 }
 
+@media screen and (max-width: 560px) {
+    #eight-screen {
+        article {
+            width: 280px;
 
+            h2 {
+                margin-bottom: 15px;
+            }
+
+            .content {
+                width: auto;
+
+                .card {
+                    width: 280px;
+                    padding: 30px 0;
+                    border: none;
+                    margin-bottom: 15px;
+
+                    .left {
+                        display: none;
+                    }
+
+                    .right {
+                        width: 100%;
+
+                        img {
+                            background-size: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 520px) {
+
+    #mobile {
+        .modal-content {
+            width: 260px;
+            .modal-wrap {
+                padding: 30px 0 30px 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: auto;
+
+                p {
+                    font-size: 40px;
+                }
+
+                a {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
     h2 {
         font-size: 35px;
     }
@@ -570,7 +759,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
     #six-screen {
         article {
             #portfolio-gallery {

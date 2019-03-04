@@ -90,19 +90,19 @@ input:hover { border-bottom: 2px solid white; color: white; }
 
 .modal .modal-content p { font-size: 24px; text-align: center; }
 
-#backcall .modal-content, #tender .modal-content, #master .modal-content, #offer .modal-content, #errorModal .modal-content { height: 345px; }
+#backcall .modal-content, #tender .modal-content, #master .modal-content, #offer .modal-content, #errorModal .modal-content, #mobile .modal-content { height: 345px; }
 
-#backcall .modal-content .modal-wrap, #tender .modal-content .modal-wrap, #master .modal-content .modal-wrap, #offer .modal-content .modal-wrap, #errorModal .modal-content .modal-wrap { padding: 50px 0 0 60px; }
+#backcall .modal-content .modal-wrap, #tender .modal-content .modal-wrap, #master .modal-content .modal-wrap, #offer .modal-content .modal-wrap, #errorModal .modal-content .modal-wrap, #mobile .modal-content .modal-wrap { padding: 50px 0 0 60px; }
 
-#backcall .modal-content .modal-wrap p, #tender .modal-content .modal-wrap p, #master .modal-content .modal-wrap p, #offer .modal-content .modal-wrap p, #errorModal .modal-content .modal-wrap p { font-family: "ProximaNovaBold"; font-size: 30px; color: black; margin-bottom: 30px; text-align: left; }
+#backcall .modal-content .modal-wrap p, #tender .modal-content .modal-wrap p, #master .modal-content .modal-wrap p, #offer .modal-content .modal-wrap p, #errorModal .modal-content .modal-wrap p, #mobile .modal-content .modal-wrap p { font-family: "ProximaNovaBold"; font-size: 30px; color: black; margin-bottom: 30px; text-align: left; }
 
-#backcall .modal-content .modal-wrap input:hover, #tender .modal-content .modal-wrap input:hover, #master .modal-content .modal-wrap input:hover, #offer .modal-content .modal-wrap input:hover, #errorModal .modal-content .modal-wrap input:hover { border-bottom: 2px solid #313131; color: #313131; }
+#backcall .modal-content .modal-wrap input:hover, #tender .modal-content .modal-wrap input:hover, #master .modal-content .modal-wrap input:hover, #offer .modal-content .modal-wrap input:hover, #errorModal .modal-content .modal-wrap input:hover, #mobile .modal-content .modal-wrap input:hover { border-bottom: 2px solid #313131; color: #313131; }
 
-#backcall .modal-content .modal-wrap .button, #tender .modal-content .modal-wrap .button, #master .modal-content .modal-wrap .button, #offer .modal-content .modal-wrap .button, #errorModal .modal-content .modal-wrap .button { color: black; }
+#backcall .modal-content .modal-wrap .button, #tender .modal-content .modal-wrap .button, #master .modal-content .modal-wrap .button, #offer .modal-content .modal-wrap .button, #errorModal .modal-content .modal-wrap .button, #mobile .modal-content .modal-wrap .button { color: black; }
 
-#backcall .modal-content .modal-wrap .button:hover, #tender .modal-content .modal-wrap .button:hover, #master .modal-content .modal-wrap .button:hover, #offer .modal-content .modal-wrap .button:hover, #errorModal .modal-content .modal-wrap .button:hover { border: none; background: #ffd007; }
+#backcall .modal-content .modal-wrap .button:hover, #tender .modal-content .modal-wrap .button:hover, #master .modal-content .modal-wrap .button:hover, #offer .modal-content .modal-wrap .button:hover, #errorModal .modal-content .modal-wrap .button:hover, #mobile .modal-content .modal-wrap .button:hover { border: none; background: #ffd007; }
 
-#backcall .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #tender .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #master .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #offer .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #errorModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before { background: url(../img/check2.png) no-repeat center; }
+#backcall .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #tender .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #master .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #offer .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #errorModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #mobile .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before { background: url(../img/check2.png) no-repeat center; }
 
 #errorModal #message_list_err { margin: 0 auto; padding-top: 20px; width: 500px; list-style: none; color: #b2141d; font-size: 18px; }
 
@@ -423,6 +423,16 @@ input:hover { border-bottom: 2px solid white; color: white; }
 #twelwe-screen .footer nav { width: 800px; }
 
 @media screen and (max-width: 1020px) { article { width: auto; padding: 0 30px; margin: 0; overflow: hidden; }
+  .modal .modal-content { margin: 12% auto; width: 500px; height: 275px; }
+  .modal .modal-content .close-modal { display: block; width: 50px; height: 50px; }
+  .modal .modal-content .close-modal .close { margin: 0 25%; padding-top: 5px; }
+  .modal .modal-content .headline { font-family: "ProximaNovaBold"; font-size: 48px; text-align: center; color: black; margin: 60px 0 30px 0; }
+  .modal .modal-content p { font-size: 24px; text-align: center; }
+  #mobile .modal-content { height: auto; }
+  #mobile .modal-content .modal-wrap { padding: 30px 0 30px 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: auto; }
+  #mobile .modal-content .modal-wrap p { font-size: 40px; }
+  #mobile .modal-content .modal-wrap a { font-size: 20px; color: #949393; padding-bottom: 15px; }
+  #mobile .modal-content .modal-wrap a:hover { color: #ffd007; font-size: 25px; }
   #first-screen { height: 100%; }
   #first-screen header { height: auto; }
   #first-screen header article { flex-wrap: wrap; height: 110px; align-items: center; padding-top: 0; padding-top: 20px; height: 150px; flex-direction: column; justify-content: flex-start; }
@@ -468,7 +478,23 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #seven-screen article { width: 660px; margin: 0 auto; }
   #seven-screen article h2 { padding-top: 50px; font-size: 35px; }
   #seven-screen article .ic-wrap { margin-top: 50px; }
-  #seven-screen article .ic-wrap .card p { font-size: 18px; } }
+  #seven-screen article .ic-wrap .card p { font-size: 18px; }
+  #eight-screen article { width: 490px; margin: 0 auto; }
+  #eight-screen article h2 { padding-top: 50px; margin-bottom: 40px; }
+  #eight-screen article .content { margin-bottom: 0; }
+  #eight-screen article .content .card { height: auto; } }
+
+@media screen and (max-width: 860px) { #nine-screen { height: auto; }
+  #nine-screen article { width: 280px; margin: 0 auto; }
+  #nine-screen article h2 { font-size: 30px; margin-bottom: 20px; padding-top: 50px; }
+  #nine-screen article p { font-size: 20px; }
+  #nine-screen article form { display: flex; flex-direction: column; width: 280px; height: 300px; align-items: center; }
+  #nine-screen article form input { margin: 0 0 20px 0; width: 100%; }
+  #nine-screen article form .button { margin-top: 20px; }
+  #nine-screen article form .checkbox-wrap { margin-top: 10px; }
+  #nine-screen article form .checkbox-wrap label { font-size: 14px; }
+  #nine-screen article form .checkbox-wrap label .checkbox-custom { width: 15px; height: 15px; }
+  #nine-screen article form .checkbox-wrap label .checkbox-custom::before { background-size: cover; width: 10px; height: 10px; } }
 
 @media screen and (max-width: 780px) { #first-screen header article { flex-direction: column; height: auto; padding-bottom: 30px; }
   #first-screen header article .right-side .contacts { flex-direction: column; }
@@ -489,7 +515,19 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #seven-screen article { width: 280px; margin: 0 auto; }
   #seven-screen article .ic-wrap .card p { font-size: 18px; } }
 
-@media screen and (max-width: 520px) { h2 { font-size: 35px; }
+@media screen and (max-width: 560px) { #eight-screen article { width: 280px; }
+  #eight-screen article h2 { margin-bottom: 15px; }
+  #eight-screen article .content { width: auto; }
+  #eight-screen article .content .card { width: 280px; padding: 30px 0; border: none; margin-bottom: 15px; }
+  #eight-screen article .content .card .left { display: none; }
+  #eight-screen article .content .card .right { width: 100%; }
+  #eight-screen article .content .card .right img { background-size: cover; } }
+
+@media screen and (max-width: 520px) { #mobile .modal-content { width: 260px; }
+  #mobile .modal-content .modal-wrap { padding: 30px 0 30px 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: auto; }
+  #mobile .modal-content .modal-wrap p { font-size: 40px; }
+  #mobile .modal-content .modal-wrap a { text-align: center; }
+  h2 { font-size: 35px; }
   #second-screen { height: auto; padding: 40px 0 50px 0; }
   #second-screen article .wrapper { flex-direction: column; width: 100%; margin: 0 auto; }
   #second-screen article .wrapper .left { width: 100%; }
@@ -524,6 +562,6 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #six-screen article .wrap-click .slider .main-slide .arrow { width: 25px; height: 40px; }
   #six-screen article .wrap-click .slider .main-slide .slides { width: 230px; height: 147px; box-shadow: 1px 10px 20px #848484; } }
 
-@media screen and (max-width: 480px) { #six-screen article #portfolio-gallery { width: 280px; }
+@media screen and (max-width: 400px) { #six-screen article #portfolio-gallery { width: 280px; }
   #six-screen article #portfolio-gallery .first-line .card, #six-screen article #portfolio-gallery .second-line .card { width: 280px; height: auto; }
   #six-screen article #portfolio-gallery .first-line .card .cover a, #six-screen article #portfolio-gallery .second-line .card .cover a { height: 180px; } }
