@@ -317,6 +317,102 @@
             }
         }
     }
+
+    #ten-screen {
+        height: auto;
+        article {
+            h2 {
+                padding-top: 50px;
+                margin-bottom: 30px; 
+            }
+
+            .slider {
+                padding-bottom: 30px;
+
+                .arrow {
+                    width: 55px;
+                }
+
+                .carousel {
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+
+    #eleven-screen{
+        height: auto;
+        article {
+            padding-bottom: 30px;
+            h2 {
+                padding-top: 50px;
+                margin-bottom: 30px;
+                font-size: 35px;
+            }
+
+            .areas {
+                margin-top: 30px;
+                flex-wrap: wrap;
+                width: 760px;
+                margin: 0 auto;
+
+                .table {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+
+    #twelwe-screen {
+        padding-top: 50px;
+        height: auto;
+
+        .content {
+            article {
+                .upper {
+                    width: 520px;
+                    margin: 0 auto;
+
+                    #button-up {
+                        display: none;
+                    }
+                }
+
+                .wrapper {
+                    flex-direction: column;
+                    padding-top: 30px;
+
+                    .left {
+                        max-width: 520px;
+                        margin: 0 auto;
+                        .contact {
+                            a, p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .right {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            article {
+                .wrapper {
+                    .menu {
+                        display: block;
+                    }
+
+                    nav {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -369,6 +465,24 @@
                         }
 
                     }
+                }
+            }
+        }
+    }
+
+    
+    #eleven-screen{
+        article {
+            #map {
+                height: auto;
+            }
+            .areas {
+                width: 380px;
+                padding-top: 30px;
+
+                .table {
+                    text-align: center;
+                    height: auto;
                 }
             }
         }
@@ -493,6 +607,24 @@
             }
         }
     }
+
+    #ten-screen {
+        height: auto;
+        article {
+            .slider {
+                .arrow {
+                    width: 30px;
+                    height: 35px;
+                    margin-top: 5px;
+                }
+
+                .carousel {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 560px) {
@@ -522,6 +654,62 @@
 
                         img {
                             background-size: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+    #ten-screen {
+        height: auto;
+        article {
+            .slider {
+                .arrow {
+                    width: 40px;
+                    height: 30px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    #twelwe-screen {
+        .content {
+            article {
+                .upper {
+                    width: auto;
+                }
+
+                .wrapper {
+                    .left {
+                        width: auto;
+                        .contact {
+                            margin-bottom: 20px;
+                            flex-direction: column;
+                            .ic-phone, .ic-mail-2 {
+                                margin: 0 0 15px 0;
+                            }
+                            a {
+                                font-size: 20px;
+                                padding-bottom: 10px;
+                            }
+                            p {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .right {
+                        margin: 0 auto;
+                        width: auto;
+                        padding-bottom: 15px;
+
+                        form {
+                            input {
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -654,6 +842,43 @@
             }
         }
     }
+
+    #ten-screen {
+        height: auto;
+        article {
+            .slider {
+                .arrow {
+                    width: 40px;
+                    height: 20px;
+                    margin-top: 10px;
+                }
+
+                .carousel {
+                   padding: 0 15px;
+                }
+            }
+        }
+    }
+
+    #eleven-screen{
+        article {
+            padding-bottom: 0;
+            h2 {
+                font-size: 25px;
+            }
+            .areas {
+                width: 280px;
+                padding-top: 30px;
+
+                .table {
+                    width: 100%;
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -775,6 +1000,17 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    #ten-screen {
+        article {
+            h2 {
+                margin-bottom: 45px;
+            }
+            h2::after {
+                width: 270px;
             }
         }
     }

@@ -80,6 +80,14 @@ h2:after {
 .hidden {
     display: none;
 }
+.menu {
+    display: none;
+    background: url(../img/menu.svg) no-repeat center;
+    background-size: cover;
+    width: 48px;
+    height: 39px;
+    cursor: pointer;
+}
 
 #six-screen, #ten-screen {
     .arrow {
@@ -507,7 +515,7 @@ input:hover {
 
                 .menu {
                     display: none;
-                    background: url(../img/menu.png) no-repeat center;
+                    background: url(../img/menu.svg) no-repeat center;
                     background-size: cover;
                     width: 48px;
                     height: 39px;

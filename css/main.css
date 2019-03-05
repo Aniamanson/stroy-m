@@ -32,6 +32,8 @@ h2:after { content: ""; display: block; width: 190px; height: 5px; background-co
 
 .hidden { display: none; }
 
+.menu { display: none; background: url(../img/menu.svg) no-repeat center; background-size: cover; width: 48px; height: 39px; cursor: pointer; }
+
 #six-screen .arrow, #ten-screen .arrow { display: block; width: 40px; height: 70px; }
 
 #six-screen .left, #ten-screen .left { width: 40px; height: 70px; display: block; background: url(../img/arrow-left.png) no-repeat center; background-size: cover; }
@@ -164,7 +166,7 @@ input:hover { border-bottom: 2px solid white; color: white; }
 
 #first-screen header article .left-side .logo { width: 200px; height: 57px; background: url(../img/logo.png) no-repeat center; background-size: cover; margin-bottom: 18px; align-self: center; }
 
-#first-screen header article .left-side .menu { display: none; background: url(../img/menu.png) no-repeat center; background-size: cover; width: 48px; height: 39px; cursor: pointer; }
+#first-screen header article .left-side .menu { display: none; background: url(../img/menu.svg) no-repeat center; background-size: cover; width: 48px; height: 39px; cursor: pointer; }
 
 #first-screen header article .right-side { width: 780px; display: flex; flex-direction: column; justify-content: space-between; height: 90px; }
 
@@ -482,7 +484,26 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #eight-screen article { width: 490px; margin: 0 auto; }
   #eight-screen article h2 { padding-top: 50px; margin-bottom: 40px; }
   #eight-screen article .content { margin-bottom: 0; }
-  #eight-screen article .content .card { height: auto; } }
+  #eight-screen article .content .card { height: auto; }
+  #ten-screen { height: auto; }
+  #ten-screen article h2 { padding-top: 50px; margin-bottom: 30px; }
+  #ten-screen article .slider { padding-bottom: 30px; }
+  #ten-screen article .slider .arrow { width: 55px; }
+  #ten-screen article .slider .carousel { justify-content: space-around; }
+  #eleven-screen { height: auto; }
+  #eleven-screen article { padding-bottom: 30px; }
+  #eleven-screen article h2 { padding-top: 50px; margin-bottom: 30px; font-size: 35px; }
+  #eleven-screen article .areas { margin-top: 30px; flex-wrap: wrap; width: 760px; margin: 0 auto; }
+  #eleven-screen article .areas .table { margin-bottom: 25px; }
+  #twelwe-screen { padding-top: 50px; height: auto; }
+  #twelwe-screen .content article .upper { width: 520px; margin: 0 auto; }
+  #twelwe-screen .content article .upper #button-up { display: none; }
+  #twelwe-screen .content article .wrapper { flex-direction: column; padding-top: 30px; }
+  #twelwe-screen .content article .wrapper .left { max-width: 520px; margin: 0 auto; }
+  #twelwe-screen .content article .wrapper .left .contact a, #twelwe-screen .content article .wrapper .left .contact p { font-size: 16px; }
+  #twelwe-screen .content article .wrapper .right { margin: 0 auto; }
+  #twelwe-screen .footer article .wrapper .menu { display: block; }
+  #twelwe-screen .footer article .wrapper nav { display: none; } }
 
 @media screen and (max-width: 860px) { #nine-screen { height: auto; }
   #nine-screen article { width: 280px; margin: 0 auto; }
@@ -494,7 +515,10 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #nine-screen article form .checkbox-wrap { margin-top: 10px; }
   #nine-screen article form .checkbox-wrap label { font-size: 14px; }
   #nine-screen article form .checkbox-wrap label .checkbox-custom { width: 15px; height: 15px; }
-  #nine-screen article form .checkbox-wrap label .checkbox-custom::before { background-size: cover; width: 10px; height: 10px; } }
+  #nine-screen article form .checkbox-wrap label .checkbox-custom::before { background-size: cover; width: 10px; height: 10px; }
+  #eleven-screen article #map { height: auto; }
+  #eleven-screen article .areas { width: 380px; padding-top: 30px; }
+  #eleven-screen article .areas .table { text-align: center; height: auto; } }
 
 @media screen and (max-width: 780px) { #first-screen header article { flex-direction: column; height: auto; padding-bottom: 30px; }
   #first-screen header article .right-side .contacts { flex-direction: column; }
@@ -513,7 +537,10 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #six-screen article .wrap-click .slider .main-slide .arrow { width: 48px; }
   #six-screen article .wrap-click .slider .main-slide .slides { width: 320px; height: 205px; }
   #seven-screen article { width: 280px; margin: 0 auto; }
-  #seven-screen article .ic-wrap .card p { font-size: 18px; } }
+  #seven-screen article .ic-wrap .card p { font-size: 18px; }
+  #ten-screen { height: auto; }
+  #ten-screen article .slider .arrow { width: 30px; height: 35px; margin-top: 5px; }
+  #ten-screen article .slider .carousel { align-items: flex-start; } }
 
 @media screen and (max-width: 560px) { #eight-screen article { width: 280px; }
   #eight-screen article h2 { margin-bottom: 15px; }
@@ -521,7 +548,17 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #eight-screen article .content .card { width: 280px; padding: 30px 0; border: none; margin-bottom: 15px; }
   #eight-screen article .content .card .left { display: none; }
   #eight-screen article .content .card .right { width: 100%; }
-  #eight-screen article .content .card .right img { background-size: cover; } }
+  #eight-screen article .content .card .right img { background-size: cover; }
+  #ten-screen { height: auto; }
+  #ten-screen article .slider .arrow { width: 40px; height: 30px; margin-top: 5px; }
+  #twelwe-screen .content article .upper { width: auto; }
+  #twelwe-screen .content article .wrapper .left { width: auto; }
+  #twelwe-screen .content article .wrapper .left .contact { margin-bottom: 20px; flex-direction: column; }
+  #twelwe-screen .content article .wrapper .left .contact .ic-phone, #twelwe-screen .content article .wrapper .left .contact .ic-mail-2 { margin: 0 0 15px 0; }
+  #twelwe-screen .content article .wrapper .left .contact a { font-size: 20px; padding-bottom: 10px; }
+  #twelwe-screen .content article .wrapper .left .contact p { text-align: center; }
+  #twelwe-screen .content article .wrapper .right { margin: 0 auto; width: auto; padding-bottom: 15px; }
+  #twelwe-screen .content article .wrapper .right form input { width: 100%; } }
 
 @media screen and (max-width: 520px) { #mobile .modal-content { width: 260px; }
   #mobile .modal-content .modal-wrap { padding: 30px 0 30px 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: auto; }
@@ -544,7 +581,15 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #six-screen article #portfolio-gallery .card { width: 320px; }
   #six-screen article .wrap-click .slider .main-slide { height: auto; width: 100%; }
   #six-screen article .wrap-click .slider .main-slide .arrow { width: 30px; height: 50px; }
-  #six-screen article .wrap-click .slider .main-slide .slides { width: 320px; height: 205px; box-shadow: 3px 30px 30px #848484; } }
+  #six-screen article .wrap-click .slider .main-slide .slides { width: 320px; height: 205px; box-shadow: 3px 30px 30px #848484; }
+  #ten-screen { height: auto; }
+  #ten-screen article .slider .arrow { width: 40px; height: 20px; margin-top: 10px; }
+  #ten-screen article .slider .carousel { padding: 0 15px; }
+  #eleven-screen article { padding-bottom: 0; }
+  #eleven-screen article h2 { font-size: 25px; }
+  #eleven-screen article .areas { width: 280px; padding-top: 30px; }
+  #eleven-screen article .areas .table { width: 100%; }
+  #eleven-screen article .areas .table p { font-size: 16px; } }
 
 @media screen and (max-width: 480px) { article { padding: 0 20px; }
   #first-screen header article { flex-direction: column; height: auto; padding: 20px; }
@@ -564,4 +609,6 @@ input:hover { border-bottom: 2px solid white; color: white; }
 
 @media screen and (max-width: 400px) { #six-screen article #portfolio-gallery { width: 280px; }
   #six-screen article #portfolio-gallery .first-line .card, #six-screen article #portfolio-gallery .second-line .card { width: 280px; height: auto; }
-  #six-screen article #portfolio-gallery .first-line .card .cover a, #six-screen article #portfolio-gallery .second-line .card .cover a { height: 180px; } }
+  #six-screen article #portfolio-gallery .first-line .card .cover a, #six-screen article #portfolio-gallery .second-line .card .cover a { height: 180px; }
+  #ten-screen article h2 { margin-bottom: 45px; }
+  #ten-screen article h2::after { width: 270px; } }
