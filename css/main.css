@@ -435,6 +435,23 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #mobile .modal-content .modal-wrap p { font-size: 40px; }
   #mobile .modal-content .modal-wrap a { font-size: 20px; color: #949393; padding-bottom: 15px; }
   #mobile .modal-content .modal-wrap a:hover { color: #ffd007; font-size: 25px; }
+  #backcall .modal-content { height: auto; }
+  #backcall .modal-content .modal-wrap { padding: 50px 0 50px 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: auto; }
+  #backcall .modal-content .modal-wrap p { font-size: 20px; text-align: center; }
+  #backcall .modal-content .modal-wrap p br { display: none; }
+  #backcall .modal-content .modal-wrap form { width: 300px; }
+  #backcall .modal-content .modal-wrap form input { width: 100%; margin: 0 0 27px 0; }
+  #backcall .modal-content .modal-wrap form .button { margin-top: 15px; }
+  #backcall .modal-content .modal-wrap form .checkbox-wrap { width: 260px; margin-top: 10px; }
+  #backcall .modal-content .modal-wrap form .checkbox-wrap label { text-align: right; }
+  #offer .modal-content, #master .modal-content { height: auto; }
+  #offer .modal-content .content-wrap, #master .modal-content .content-wrap { width: auto; padding: 50px 0 50px 50px; }
+  #offer .modal-content .content-wrap .modal-wrap, #master .modal-content .content-wrap .modal-wrap { height: auto; padding: 0; }
+  #offer .modal-content .content-wrap .modal-wrap form, #master .modal-content .content-wrap .modal-wrap form { align-items: center; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap, #master .modal-content .content-wrap .modal-wrap form .wrap { align-items: center; display: flex; flex-direction: column; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .left p, #master .modal-content .content-wrap .modal-wrap form .wrap .left p { text-align: center; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .right, #master .modal-content .content-wrap .modal-wrap form .wrap .right { width: 300px; padding-top: 20px; align-self: auto; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .right textarea, #master .modal-content .content-wrap .modal-wrap form .wrap .right textarea { width: 290px; text-align: center; padding: 15px 0; }
   #first-screen { height: 100%; }
   #first-screen header { height: auto; }
   #first-screen header article { flex-wrap: wrap; height: 110px; align-items: center; padding-top: 0; padding-top: 20px; height: 150px; flex-direction: column; justify-content: flex-start; }
@@ -560,10 +577,39 @@ input:hover { border-bottom: 2px solid white; color: white; }
   #twelwe-screen .content article .wrapper .right { margin: 0 auto; width: auto; padding-bottom: 15px; }
   #twelwe-screen .content article .wrapper .right form input { width: 100%; } }
 
-@media screen and (max-width: 520px) { #mobile .modal-content { width: 260px; }
+@media screen and (max-width: 520px) { #mobile .modal-content { width: 300px; }
   #mobile .modal-content .modal-wrap { padding: 30px 0 30px 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: auto; }
   #mobile .modal-content .modal-wrap p { font-size: 40px; }
   #mobile .modal-content .modal-wrap a { text-align: center; }
+  #backcall .modal-content { width: 300px; }
+  #backcall .modal-content .modal-wrap { padding: 50px 0 50px 50px; }
+  #backcall .modal-content .modal-wrap p { font-size: 20px; text-align: center; }
+  #backcall .modal-content .modal-wrap form { width: 260px; }
+  #backcall .modal-content .modal-wrap form input { width: 100%; margin: 0 0 27px 0; }
+  #backcall .modal-content .modal-wrap form .button { margin-top: 15px; }
+  #backcall .modal-content .modal-wrap form .checkbox-wrap { width: 240px; margin-top: 10px; }
+  #backcall .modal-content .modal-wrap form .checkbox-wrap label { text-align: right; }
+  #tender .modal-content { width: 300px; height: auto; }
+  #tender .modal-content .modal-wrap { width: auto; }
+  #tender .modal-content .modal-wrap p { font-size: 25px; text-align: center; }
+  #tender .modal-content .modal-wrap form { width: 260px; margin: 0 auto; }
+  #tender .modal-content .modal-wrap form input { width: 100%; margin: 0 0 27px 0; }
+  #tender .modal-content .modal-wrap form .button { margin: 25px 0 40px 0; }
+  #tender .modal-content .modal-wrap form .checkbox-wrap { width: 240px; margin-top: 10px; }
+  #tender .modal-content .modal-wrap form .checkbox-wrap label { text-align: right; padding-right: 20px; }
+  #offer .modal-content, #master .modal-content { width: 300px; }
+  #offer .modal-content .content-wrap, #master .modal-content .content-wrap { width: auto; padding: 50px 0 50px 50px; }
+  #offer .modal-content .content-wrap .modal-wrap, #master .modal-content .content-wrap .modal-wrap { height: auto; padding: 0; }
+  #offer .modal-content .content-wrap .modal-wrap form, #master .modal-content .content-wrap .modal-wrap form { align-items: center; }
+  #offer .modal-content .content-wrap .modal-wrap form .button, #master .modal-content .content-wrap .modal-wrap form .button { width: 100%; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap, #master .modal-content .content-wrap .modal-wrap form .wrap { width: 260px; align-items: center; display: flex; flex-direction: column; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .left, #master .modal-content .content-wrap .modal-wrap form .wrap .left { width: 100%; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .left p, #master .modal-content .content-wrap .modal-wrap form .wrap .left p { font-size: 25px; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .left input, #master .modal-content .content-wrap .modal-wrap form .wrap .left input { width: 100%; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .right, #master .modal-content .content-wrap .modal-wrap form .wrap .right { width: 260px; padding-top: 20px; align-self: auto; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .right textarea, #master .modal-content .content-wrap .modal-wrap form .wrap .right textarea { width: 255px; text-align: center; padding: 15px 0; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .checkbox-wrap, #master .modal-content .content-wrap .modal-wrap form .wrap .checkbox-wrap { width: 260px; margin-top: 10px; }
+  #offer .modal-content .content-wrap .modal-wrap form .wrap .checkbox-wrap label, #master .modal-content .content-wrap .modal-wrap form .wrap .checkbox-wrap label { text-align: right; padding-right: 20px; }
   h2 { font-size: 35px; }
   #second-screen { height: auto; padding: 40px 0 50px 0; }
   #second-screen article .wrapper { flex-direction: column; width: 100%; margin: 0 auto; }

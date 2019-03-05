@@ -67,7 +67,90 @@
             }
         }
     }
+
+    #backcall {
+        .modal-content {
+            height: auto;
+            .modal-wrap {
+                padding: 50px 0 50px 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: auto;
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                form {
+                    width: 300px;
+
+
+                    input {
+                        width: 100%;
+                        margin: 0 0 27px 0;
+                    }
+
+                    .button {
+                        margin-top: 15px;
+                    }
+
+                    .checkbox-wrap {
+                        width: 260px;
+                        margin-top: 10px;
+
+                        label {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
+    #offer,  #master {
+        .modal-content {
+            height: auto;
+            .content-wrap {
+                width: auto;
+                padding: 50px 0 50px 50px;
+
+                .modal-wrap {
+                    height: auto;
+                    padding: 0;
+                    form {
+                        align-items: center;
+                        .wrap {
+                            align-items: center;
+                            display: flex;
+                            flex-direction: column;
+                            .left {
+                                p {
+                                    text-align: center;
+                                }
+                            }
+                            .right {
+                                width: 300px;
+                                padding-top: 20px;
+                                align-self: auto;
+                                textarea {
+                                    width: 290px;
+                                    text-align: center;
+                                    padding: 15px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #first-screen {
         height: 100%;
@@ -722,7 +805,7 @@
 
     #mobile {
         .modal-content {
-            width: 260px;
+            width: 300px;
             .modal-wrap {
                 padding: 30px 0 30px 50px;
                 display: flex;
@@ -737,6 +820,141 @@
 
                 a {
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    #backcall {
+        .modal-content {
+            width: 300px;
+            .modal-wrap {
+                padding: 50px 0 50px 50px;
+
+                p {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                form {
+                    width: 260px;
+
+                    input {
+                        width: 100%;
+                        margin: 0 0 27px 0;
+                    }
+
+                    .button {
+                        margin-top: 15px;
+                    }
+
+                    .checkbox-wrap {
+                        width: 240px;
+                        margin-top: 10px;
+
+                        label {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #tender {
+        .modal-content {
+            width: 300px;
+            height: auto;
+            .modal-wrap {
+                width:auto ;
+                p {
+                    font-size: 25px;
+                    text-align: center;
+                }
+
+                form {
+                    width: 260px;
+                    margin: 0 auto;
+
+                    input {
+                        width: 100%;
+                        margin: 0 0 27px 0;
+                    }
+
+                    .button {
+                        margin: 25px 0 40px 0;
+                    }
+
+                    .checkbox-wrap {
+                        width: 240px;
+                        margin-top: 10px;
+
+                        label {
+                            text-align: right;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #offer,  #master {
+        .modal-content {
+            width: 300px;
+            .content-wrap {
+                width: auto;
+                padding: 50px 0 50px 50px;
+
+                .modal-wrap {
+                    height: auto;
+                    padding: 0;
+                    form {
+                        align-items: center;
+
+                        
+                        .button {
+                            width: 100%;
+                        }
+                        .wrap {
+                            width: 260px;
+                            align-items: center;
+                            display: flex;
+                            flex-direction: column;
+
+                            .left {
+                                width: 100%;
+                                p {
+                                    font-size: 25px;
+                                }
+
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                            .right {
+                                width: 260px;
+                                padding-top: 20px;
+                                align-self: auto;
+                                textarea {
+                                    width: 255px;
+                                    text-align: center;
+                                    padding: 15px 0;
+                                }
+                            }
+
+                            .checkbox-wrap {
+                                width: 260px;
+                                margin-top: 10px;
+                                
+        
+                                label {
+                                    text-align: right;
+                                    padding-right: 20px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
