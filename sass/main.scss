@@ -284,22 +284,24 @@ input:hover {
             }
         }
 
-        .headline {
-            font-family: "ProximaNovaBold";
-            font-size: 48px;
-            text-align: center;
-            color: black;
-            margin: 60px 0 30px 0;
-        }
-
-        p {
-            font-size: 24px;
-            text-align: center;
+        .modal-wrap {
+            .headline {
+                font-family: "ProximaNovaBold";
+                font-size: 48px;
+                text-align: center;
+                color: black;
+                margin: 40px 0 30px 0;
+            }
+    
+            p {
+                font-size: 24px;
+                text-align: center;
+            }
         }
     }
 }
 
-#backcall, #tender, #master, #offer, #errorModal, #mobile {
+#backcall, #tender, #master, #offer, #errorModal, #mobile, #othererrorModal {
     .modal-content {
         height: 345px;
 
@@ -335,7 +337,26 @@ input:hover {
     }
 }
 
-#errorModal {
+#errorModal, #othererrorModal {
+    .modal-content {
+        .modal-wrap {
+            width: 500px;
+            margin: 0 auto;
+            .headline {
+                font-size: 48px;
+                margin-top: 0;
+            }
+            p {
+                margin: 20px 0 0 0;
+                font-size: 20px;
+            }
+
+            ul {
+                padding-top: 0;
+            }
+        }
+    }
+
     #message_list_err {
         margin: 0 auto;
         padding-top: 20px;
@@ -349,6 +370,8 @@ input:hover {
         }
     }
 }
+
+
 
 #tender {
 

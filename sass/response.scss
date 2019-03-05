@@ -39,6 +39,27 @@
         }
     }
 
+    #errorModal, #othererrorModal {
+        .modal-content {
+            .modal-wrap {
+                width: 440px;
+                margin: 0 auto;
+                .headline {
+                    font-size: 48px;
+                    margin-top: 0;
+                }
+                p {
+                    margin: 20px 0 0 0;
+                    font-size: 20px;
+                }
+    
+                #message_list_err {
+                    width: 440px;
+                }
+            }
+        }
+    }
+
     #mobile {
         .modal-content {
             height: auto;
@@ -62,7 +83,6 @@
 
                 a:hover {
                     color: $yellow;
-                    font-size: 25px;
                 }
             }
         }
@@ -820,6 +840,47 @@
 
                 a {
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    #thankyouModal, #errorModal, #othererrorModal {
+        .modal-content {
+            width: 300px;
+            height: auto;
+            
+            .modal-wrap {
+                width: 270px;
+                padding: 0 15px 40px 15px;
+                .headline {
+                    font-size: 35px;
+                    padding-top: 30px;
+                }
+    
+                p {
+                    font-size: 18px;
+                    br {display: none;}
+                }
+
+                #message_list_err {
+                    width: 270px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    #othererrorModal {
+        .modal-content {
+            .modal-wrap {
+                .headline {
+                    font-size: 35px;
+                }
+                p {
+                    font-size: 20px;
+                    br {display: none;}
+                    margin-bottom: 20px;
                 }
             }
         }

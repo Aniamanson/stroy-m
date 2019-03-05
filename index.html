@@ -530,9 +530,11 @@
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
             </a>
-            <p class="headline">Спасибо за обращение!</p>
-            <p>Наш менеджер свяжется с вами<br>
-                в ближайшее время.</p>
+            <div class="modal-wrap">
+                <p class="headline">Спасибо за обращение!</p>
+                <p>Наш менеджер свяжется с вами<br>
+                    в ближайшее время.</p>
+            </div>
         </div>
     </div>
 
@@ -541,12 +543,14 @@
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
             </a>
-            <p class="headline">Ошибка!</p>
-            <p>Введенные вами данные некорректны,<br>
-                проверьте следующие поля:</p>
+            <div class="modal-wrap">
+                <p class="headline">Ошибка!</p>
+                <p>Введенные вами данные некорректны,<br>
+                    проверьте следующие поля:</p>
                 <ul id="message_list_err">
                     <li>Вы должны дать соглашение на обработку персональных данных</li>
                 </ul>
+            </div>
         </div>
     </div>
 
@@ -555,8 +559,10 @@
             <a href="#" class="close-modal" onclick="Modal.close(); return false;">
                 <img class="close" src="img/close.png">
             </a>
-            <p class="headline">Произошла ошибка!</p>
-            <p>Попробуйте выполнить действие позже</p>
+            <div class="modal-wrap">            
+                <p class="headline">Произошла ошибка!</p>
+                <p>Попробуйте выполнить действие позже</p>
+            </div>
         </div>
     </div>
 <!-------------------------------------------------------------------->
