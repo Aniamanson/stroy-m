@@ -92,31 +92,39 @@ input:hover { border-bottom: 2px solid white; color: white; }
 
 .modal .modal-content .modal-wrap p { font-size: 24px; text-align: center; }
 
-#backcall .modal-content, #tender .modal-content, #master .modal-content, #offer .modal-content, #errorModal .modal-content, #mobile .modal-content, #othererrorModal .modal-content { height: 345px; }
+#backcall .modal-content, #tender .modal-content, #master .modal-content, #offer .modal-content, #errorModal .modal-content, #mobile .modal-content, #othererrorModal .modal-content, #thankyouModal .modal-content { height: 345px; }
 
-#backcall .modal-content .modal-wrap, #tender .modal-content .modal-wrap, #master .modal-content .modal-wrap, #offer .modal-content .modal-wrap, #errorModal .modal-content .modal-wrap, #mobile .modal-content .modal-wrap, #othererrorModal .modal-content .modal-wrap { padding: 50px 0 0 60px; }
+#backcall .modal-content .modal-wrap, #tender .modal-content .modal-wrap, #master .modal-content .modal-wrap, #offer .modal-content .modal-wrap, #errorModal .modal-content .modal-wrap, #mobile .modal-content .modal-wrap, #othererrorModal .modal-content .modal-wrap, #thankyouModal .modal-content .modal-wrap { padding: 50px 0 0 60px; }
 
-#backcall .modal-content .modal-wrap p, #tender .modal-content .modal-wrap p, #master .modal-content .modal-wrap p, #offer .modal-content .modal-wrap p, #errorModal .modal-content .modal-wrap p, #mobile .modal-content .modal-wrap p, #othererrorModal .modal-content .modal-wrap p { font-family: "ProximaNovaBold"; font-size: 30px; color: black; margin-bottom: 30px; text-align: left; }
+#backcall .modal-content .modal-wrap p, #tender .modal-content .modal-wrap p, #master .modal-content .modal-wrap p, #offer .modal-content .modal-wrap p, #errorModal .modal-content .modal-wrap p, #mobile .modal-content .modal-wrap p, #othererrorModal .modal-content .modal-wrap p, #thankyouModal .modal-content .modal-wrap p { font-family: "ProximaNovaBold"; font-size: 30px; color: black; margin-bottom: 30px; text-align: left; }
 
-#backcall .modal-content .modal-wrap input:hover, #tender .modal-content .modal-wrap input:hover, #master .modal-content .modal-wrap input:hover, #offer .modal-content .modal-wrap input:hover, #errorModal .modal-content .modal-wrap input:hover, #mobile .modal-content .modal-wrap input:hover, #othererrorModal .modal-content .modal-wrap input:hover { border-bottom: 2px solid #313131; color: #313131; }
+#backcall .modal-content .modal-wrap input:hover, #tender .modal-content .modal-wrap input:hover, #master .modal-content .modal-wrap input:hover, #offer .modal-content .modal-wrap input:hover, #errorModal .modal-content .modal-wrap input:hover, #mobile .modal-content .modal-wrap input:hover, #othererrorModal .modal-content .modal-wrap input:hover, #thankyouModal .modal-content .modal-wrap input:hover { border-bottom: 2px solid #313131; color: #313131; }
 
-#backcall .modal-content .modal-wrap .button, #tender .modal-content .modal-wrap .button, #master .modal-content .modal-wrap .button, #offer .modal-content .modal-wrap .button, #errorModal .modal-content .modal-wrap .button, #mobile .modal-content .modal-wrap .button, #othererrorModal .modal-content .modal-wrap .button { color: black; }
+#backcall .modal-content .modal-wrap .button, #tender .modal-content .modal-wrap .button, #master .modal-content .modal-wrap .button, #offer .modal-content .modal-wrap .button, #errorModal .modal-content .modal-wrap .button, #mobile .modal-content .modal-wrap .button, #othererrorModal .modal-content .modal-wrap .button, #thankyouModal .modal-content .modal-wrap .button { color: black; }
 
-#backcall .modal-content .modal-wrap .button:hover, #tender .modal-content .modal-wrap .button:hover, #master .modal-content .modal-wrap .button:hover, #offer .modal-content .modal-wrap .button:hover, #errorModal .modal-content .modal-wrap .button:hover, #mobile .modal-content .modal-wrap .button:hover, #othererrorModal .modal-content .modal-wrap .button:hover { border: none; background: #ffd007; }
+#backcall .modal-content .modal-wrap .button:hover, #tender .modal-content .modal-wrap .button:hover, #master .modal-content .modal-wrap .button:hover, #offer .modal-content .modal-wrap .button:hover, #errorModal .modal-content .modal-wrap .button:hover, #mobile .modal-content .modal-wrap .button:hover, #othererrorModal .modal-content .modal-wrap .button:hover, #thankyouModal .modal-content .modal-wrap .button:hover { border: none; background: #ffd007; }
 
-#backcall .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #tender .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #master .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #offer .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #errorModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #mobile .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #othererrorModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before { background: url(../img/check2.png) no-repeat center; }
+#backcall .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #tender .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #master .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #offer .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #errorModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #mobile .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #othererrorModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before, #thankyouModal .modal-content .modal-wrap .checkbox:checked + .checkbox-custom:before { background: url(../img/check2.png) no-repeat center; }
 
-#errorModal .modal-content .modal-wrap, #othererrorModal .modal-content .modal-wrap { width: 500px; margin: 0 auto; }
+#errorModal .modal-content .modal-wrap, #othererrorModal .modal-content .modal-wrap, #thankyouModal .modal-content .modal-wrap { width: 500px; margin: 0 auto; }
 
-#errorModal .modal-content .modal-wrap .headline, #othererrorModal .modal-content .modal-wrap .headline { font-size: 48px; margin-top: 0; }
+#errorModal .modal-content .modal-wrap .headline, #othererrorModal .modal-content .modal-wrap .headline, #thankyouModal .modal-content .modal-wrap .headline { font-size: 48px; margin-top: 0; }
 
-#errorModal .modal-content .modal-wrap p, #othererrorModal .modal-content .modal-wrap p { margin: 20px 0 0 0; font-size: 20px; }
+#errorModal .modal-content .modal-wrap p, #othererrorModal .modal-content .modal-wrap p, #thankyouModal .modal-content .modal-wrap p { margin: 20px 0 0 0; font-size: 20px; }
 
-#errorModal .modal-content .modal-wrap ul, #othererrorModal .modal-content .modal-wrap ul { padding-top: 0; }
+#errorModal .modal-content .modal-wrap ul, #othererrorModal .modal-content .modal-wrap ul, #thankyouModal .modal-content .modal-wrap ul { padding-top: 0; }
 
-#errorModal #message_list_err, #othererrorModal #message_list_err { margin: 0 auto; padding-top: 20px; width: 500px; list-style: none; color: #b2141d; font-size: 18px; }
+#errorModal #message_list_err, #othererrorModal #message_list_err, #thankyouModal #message_list_err { margin: 0 auto; padding-top: 20px; width: 500px; list-style: none; color: #b2141d; font-size: 18px; }
 
-#errorModal #message_list_err li, #othererrorModal #message_list_err li { padding-top: 10px; }
+#errorModal #message_list_err li, #othererrorModal #message_list_err li, #thankyouModal #message_list_err li { padding-top: 10px; }
+
+#thankyouModal .modal-content { height: auto; }
+
+#thankyouModal .modal-content .modal-wrap { height: 200px; }
+
+#thankyouModal .modal-content .modal-wrap .headline { font-size: 40px; }
+
+#thankyouModal .modal-content .modal-wrap p { color: #313131; }
 
 #tender .modal-content { width: 495px; height: 520px; }
 
@@ -438,10 +446,10 @@ input:hover { border-bottom: 2px solid white; color: white; }
   .modal .modal-content .close-modal .close { margin: 0 25%; padding-top: 5px; }
   .modal .modal-content .headline { font-family: "ProximaNovaBold"; font-size: 48px; text-align: center; color: black; margin: 60px 0 30px 0; }
   .modal .modal-content p { font-size: 24px; text-align: center; }
-  #errorModal .modal-content .modal-wrap, #othererrorModal .modal-content .modal-wrap { width: 440px; margin: 0 auto; }
-  #errorModal .modal-content .modal-wrap .headline, #othererrorModal .modal-content .modal-wrap .headline { font-size: 48px; margin-top: 0; }
-  #errorModal .modal-content .modal-wrap p, #othererrorModal .modal-content .modal-wrap p { margin: 20px 0 0 0; font-size: 20px; }
-  #errorModal .modal-content .modal-wrap #message_list_err, #othererrorModal .modal-content .modal-wrap #message_list_err { width: 440px; }
+  #errorModal .modal-content .modal-wrap, #othererrorModal .modal-content .modal-wrap, #thankyouModal .modal-content .modal-wrap { width: 440px; margin: 0 auto; }
+  #errorModal .modal-content .modal-wrap .headline, #othererrorModal .modal-content .modal-wrap .headline, #thankyouModal .modal-content .modal-wrap .headline { font-size: 48px; margin-top: 0; }
+  #errorModal .modal-content .modal-wrap p, #othererrorModal .modal-content .modal-wrap p, #thankyouModal .modal-content .modal-wrap p { margin: 20px 0 0 0; font-size: 20px; }
+  #errorModal .modal-content .modal-wrap #message_list_err, #othererrorModal .modal-content .modal-wrap #message_list_err, #thankyouModal .modal-content .modal-wrap #message_list_err { width: 440px; }
   #mobile .modal-content { height: auto; }
   #mobile .modal-content .modal-wrap { padding: 30px 0 30px 50px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: auto; }
   #mobile .modal-content .modal-wrap p { font-size: 40px; }

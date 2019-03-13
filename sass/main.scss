@@ -301,7 +301,7 @@ input:hover {
     }
 }
 
-#backcall, #tender, #master, #offer, #errorModal, #mobile, #othererrorModal {
+#backcall, #tender, #master, #offer, #errorModal, #mobile, #othererrorModal, #thankyouModal {
     .modal-content {
         height: 345px;
 
@@ -337,7 +337,7 @@ input:hover {
     }
 }
 
-#errorModal, #othererrorModal {
+#errorModal, #othererrorModal, #thankyouModal {
     .modal-content {
         .modal-wrap {
             width: 500px;
@@ -367,6 +367,21 @@ input:hover {
 
         li {
             padding-top: 10px;
+        }
+    }
+}
+
+#thankyouModal {
+    .modal-content {
+        height: auto;
+        .modal-wrap {
+            height: 200px;
+            .headline {
+                font-size: 40px;
+            }
+            p {
+                color: $dark-g;
+            }
         }
     }
 }
